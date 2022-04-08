@@ -25,3 +25,8 @@ material_override = SubResource( 5 )
 mesh = SubResource( 3 )
 skin = SubResource( 4 )
 material/0 = null
+
+[node name="JumpTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="JumpTimer" to="." method="_on_JumpTimer_timeout"]
