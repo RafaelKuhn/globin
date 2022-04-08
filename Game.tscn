@@ -7,4 +7,4 @@
 [node name="player" parent="." instance=ExtResource( 1 )]
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0.437527, 1.92737 )
+transform = Transform( 1, 0, 0, 0, 0.984537, 0.175178, 0, -0.175178, 0.984537, 2, 1, 2 )
