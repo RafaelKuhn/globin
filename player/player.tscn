@@ -34,6 +34,7 @@ material/0 = null
 one_shot = true
 
 [node name="LaneTimer" type="Timer" parent="."]
+one_shot = true
 
 [connection signal="timeout" from="JumpTimer" to="." method="_on_JumpTimer_timeout"]
 [connection signal="timeout" from="LaneTimer" to="." method="_on_LaneTimer_timeout"]

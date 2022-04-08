@@ -6,17 +6,20 @@ enum HorizontalState { RUNNING, SWITCHIG }
 var vertical_state = VerticalStates.DEFAULT
 var horizontal_state = HorizontalState.RUNNING
 
-var lane: int
-
-
 export var lane_switch_delay := 0.2
+
+var lane: int
+var previous_lane: int
+
+var anim_progress := 0.0
 
 
 func _ready():
+	previous_lane = 2
 	lane = 2
 	translation.x = lane
 
-func _process(_delta):
+func _process(delta: float):
 	if Input.is_action_just_pressed("W_key"):
 		try_jumping()
 		
@@ -29,7 +32,9 @@ func _process(_delta):
 	if Input.is_action_just_pressed("A_key"):
 		try_switching_left()
 
-			
+	update_animation(delta)
+
+# vertical:
 func try_jumping():
 	if vertical_state != VerticalStates.DEFAULT:
 		return
@@ -49,6 +54,7 @@ func _on_JumpTimer_timeout():
 	print("time out vertical")
 
 
+# horizontal:
 func try_switching_right():
 	if horizontal_state != HorizontalState.RUNNING:
 		return
@@ -71,11 +77,24 @@ func try_switching_left():
 
 func _on_LaneTimer_timeout():
 	horizontal_state = HorizontalState.RUNNING
+	print("animation progress: %f " % anim_progress)
 
 func switch_right():
+	previous_lane = lane
 	lane = lane + 1
-	translation.x = lane
+	anim_progress = 0.0
+	print("animation progress: %f " % anim_progress)
 
 func switch_left():
+	previous_lane = lane
 	lane = lane - 1
-	translation.x = lane
+	anim_progress = 0.0
+	print("animation progress: %f " % anim_progress)
+
+
+func update_animation(delta: float):
+	if horizontal_state != HorizontalState.SWITCHIG:
+		return
+
+	anim_progress += delta * 1/lane_switch_delay
+	translation.x = lerp(previous_lane, lane, anim_progress)
