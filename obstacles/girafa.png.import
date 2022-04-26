@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/csharp-anime-girl-book.png-eb02779cc6436e89cb5232a7ea9a5c52.s3tc.stex"
-path.etc="res://.import/csharp-anime-girl-book.png-eb02779cc6436e89cb5232a7ea9a5c52.etc.stex"
+path.s3tc="res://.import/girafa.png-6951da8e385e3126eb5b5a01162ff4cf.s3tc.stex"
+path.etc="res://.import/girafa.png-6951da8e385e3126eb5b5a01162ff4cf.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://player/csharp-anime-girl-book.png"
-dest_files=[ "res://.import/csharp-anime-girl-book.png-eb02779cc6436e89cb5232a7ea9a5c52.s3tc.stex", "res://.import/csharp-anime-girl-book.png-eb02779cc6436e89cb5232a7ea9a5c52.etc.stex" ]
+source_file="res://obstacles/girafa.png"
+dest_files=[ "res://.import/girafa.png-6951da8e385e3126eb5b5a01162ff4cf.s3tc.stex", "res://.import/girafa.png-6951da8e385e3126eb5b5a01162ff4cf.etc.stex" ]
 
 [params]
 

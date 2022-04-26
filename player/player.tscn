@@ -8,7 +8,6 @@
 [sub_resource type="SpatialMaterial" id=5]
 flags_transparent = true
 flags_unshaded = true
-params_cull_mode = 2
 albedo_texture = ExtResource( 1 )
 
 [sub_resource type="QuadMesh" id=3]
