@@ -98,3 +98,8 @@ func update_animation(delta: float):
 
 	anim_progress += delta * 1/lane_switch_delay
 	translation.x = lerp(previous_lane, lane, anim_progress)
+
+
+func _on_Obstacles1_on_any_collision(lane_obstacle, tipo):
+	if lane_obstacle == lane:
+		print("colidiu")

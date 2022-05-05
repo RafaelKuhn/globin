@@ -14,7 +14,7 @@ albedo_texture = ExtResource( 1 )
 
 [sub_resource type="Skin" id=4]
 
-[node name="player" type="KinematicBody"]
+[node name="player" type="KinematicBody" groups=["player"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
 script = ExtResource( 2 )
 

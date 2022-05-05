@@ -9,7 +9,7 @@
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 2, 2.78191, 4.94258 )
+transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 2, 2.782, 3.5 )
 fov = 30.0
 size = 2.0
 __meta__ = {
@@ -20,6 +20,29 @@ __meta__ = {
 "
 }
 
-[node name="Obstacles" parent="." instance=ExtResource( 2 )]
+[node name="Obstacles1" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3.00021 )
+
+[node name="Obstacles2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -22.3538 )
+
+[node name="Obstacles3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -14.8097 )
+
+[node name="Obstacles4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -11.2845 )
+
+[node name="Obstacles5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5.25749 )
+
+[node name="Obstacles7" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -9.09368 )
 
 [node name="Map" parent="." instance=ExtResource( 3 )]
+
+[connection signal="on_any_collision" from="Obstacles1" to="Player" method="_on_Obstacles1_on_any_collision"]
+[connection signal="on_any_collision" from="Obstacles2" to="Player" method="_on_Obstacles1_on_any_collision"]
+[connection signal="on_any_collision" from="Obstacles3" to="Player" method="_on_Obstacles1_on_any_collision"]
+[connection signal="on_any_collision" from="Obstacles4" to="Player" method="_on_Obstacles1_on_any_collision"]
+[connection signal="on_any_collision" from="Obstacles5" to="Player" method="_on_Obstacles1_on_any_collision"]
+[connection signal="on_any_collision" from="Obstacles7" to="Player" method="_on_Obstacles1_on_any_collision"]
