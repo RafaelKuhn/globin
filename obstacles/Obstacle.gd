@@ -2,7 +2,7 @@ extends Spatial
 
 signal on_any_collision(lane, tipo)
 
-export var supeedo := 1 
+var supeedo := 5
 var has_collided := false
 
 func _ready():

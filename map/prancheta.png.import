@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arvore.png-3b0f2ea97a2f32a2980fe969f2183934.stex"
+path="res://.import/prancheta.png-657cb18dd16441b553f97623481fec6d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://obstacles/arvore.png"
-dest_files=[ "res://.import/arvore.png-3b0f2ea97a2f32a2980fe969f2183934.stex" ]
+source_file="res://map/prancheta.png"
+dest_files=[ "res://.import/prancheta.png-657cb18dd16441b553f97623481fec6d.stex" ]
 
 [params]
 

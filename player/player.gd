@@ -1,7 +1,7 @@
 extends KinematicBody
 
 enum VerticalStates { DEFAULT, JUMPING, ROLLING }
-enum HorizontalState { RUNNING, SWITCHIG }
+enum HorizontalState { RUNNING, SWITCHING }
 
 var vertical_state = VerticalStates.DEFAULT
 var horizontal_state = HorizontalState.RUNNING
@@ -34,6 +34,7 @@ func _process(delta: float):
 
 	update_animation(delta)
 
+
 # vertical:
 func try_jumping():
 	if vertical_state != VerticalStates.DEFAULT:
@@ -62,7 +63,7 @@ func try_switching_right():
 		return
 	
 	switch_right()
-	horizontal_state = HorizontalState.SWITCHIG
+	horizontal_state = HorizontalState.SWITCHING
 	$LaneTimer.start(lane_switch_delay)
 	
 func try_switching_left():
@@ -72,34 +73,41 @@ func try_switching_left():
 		return
 	
 	switch_left()
-	horizontal_state = HorizontalState.SWITCHIG
+	horizontal_state = HorizontalState.SWITCHING
 	$LaneTimer.start(lane_switch_delay)
 
-func _on_LaneTimer_timeout():
-	horizontal_state = HorizontalState.RUNNING
-	print("animation progress: %f " % anim_progress)
 
+# início da troca de lane
 func switch_right():
 	previous_lane = lane
 	lane = lane + 1
 	anim_progress = 0.0
-	print("animation progress: %f " % anim_progress)
+	# print("vai trocar, animation progress: %f " % anim_progress)
 
 func switch_left():
 	previous_lane = lane
 	lane = lane - 1
 	anim_progress = 0.0
-	print("animation progress: %f " % anim_progress)
+	# print("vai trocar, animation progress: %f " % anim_progress)
+
+
+# fim da troca de lane
+func _on_LaneTimer_timeout():
+	horizontal_state = HorizontalState.RUNNING
+	# print("trocou, animation progress: %f " % anim_progress)
 
 
 func update_animation(delta: float):
-	if horizontal_state != HorizontalState.SWITCHIG:
+	if horizontal_state != HorizontalState.SWITCHING:
 		return
 
 	anim_progress += delta * 1/lane_switch_delay
 	translation.x = lerp(previous_lane, lane, anim_progress)
 
 
-func _on_Obstacles1_on_any_collision(lane_obstacle, tipo):
-	if lane_obstacle == lane:
+# eventos
+func _on_any_obstacle_z_collision(lane_obstacle_x, _obj_type):
+	print("chegou no Z")
+	if lane_obstacle_x == lane:
 		print("colidiu")
+	# deve checar tbm se é a msm lane que ele estava && interval < 0.5

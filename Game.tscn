@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://obstacles/Obstacles.tscn" type="PackedScene" id=2]
+[ext_resource path="res://obstacles/Obstacle.tscn" type="PackedScene" id=2]
 [ext_resource path="res://map/Map.tscn" type="PackedScene" id=3]
 
 [node name="Game" type="Spatial"]
@@ -20,29 +20,33 @@ __meta__ = {
 "
 }
 
-[node name="Obstacles1" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3.00021 )
+[node name="Obstacle1" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -12.5754 )
 
-[node name="Obstacles2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -22.3538 )
+[node name="Obstacle2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -31.929 )
 
-[node name="Obstacles3" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -14.8097 )
+[node name="Obstacle3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -24.3849 )
 
-[node name="Obstacles4" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -11.2845 )
+[node name="Obstacle4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -20.8597 )
 
-[node name="Obstacles5" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5.25749 )
+[node name="Obstacle5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -14.8327 )
 
-[node name="Obstacles7" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -9.09368 )
+[node name="Obstacle7" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -18.6689 )
+
+[node name="Obstacle8" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -21.794 )
 
 [node name="Map" parent="." instance=ExtResource( 3 )]
 
-[connection signal="on_any_collision" from="Obstacles1" to="Player" method="_on_Obstacles1_on_any_collision"]
-[connection signal="on_any_collision" from="Obstacles2" to="Player" method="_on_Obstacles1_on_any_collision"]
-[connection signal="on_any_collision" from="Obstacles3" to="Player" method="_on_Obstacles1_on_any_collision"]
-[connection signal="on_any_collision" from="Obstacles4" to="Player" method="_on_Obstacles1_on_any_collision"]
-[connection signal="on_any_collision" from="Obstacles5" to="Player" method="_on_Obstacles1_on_any_collision"]
-[connection signal="on_any_collision" from="Obstacles7" to="Player" method="_on_Obstacles1_on_any_collision"]
+[connection signal="on_any_collision" from="Obstacle1" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacle2" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacle3" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacle4" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacle5" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacle7" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacle8" to="Player" method="_on_any_obstacle_z_collision"]
