@@ -1,12 +1,13 @@
-extends KinematicBody
+extends Spatial
 
 enum VerticalStates { DEFAULT, JUMPING, ROLLING }
 enum HorizontalState { RUNNING, SWITCHING }
 
+export var lane_switch_delay := 0.2
+export var lane_switch_allowed_gap := 0.7
+
 var vertical_state = VerticalStates.DEFAULT
 var horizontal_state = HorizontalState.RUNNING
-
-export var lane_switch_delay := 0.2
 
 var lane: int
 var previous_lane: int
@@ -105,9 +106,22 @@ func update_animation(delta: float):
 	translation.x = lerp(previous_lane, lane, anim_progress)
 
 
+var Globals = preload("res://globals.gd")
+
 # eventos
-func _on_any_obstacle_z_collision(lane_obstacle_x, _obj_type):
-	print("chegou no Z")
-	if lane_obstacle_x == lane:
-		print("colidiu")
-	# deve checar tbm se é a msm lane que ele estava && interval < 0.5
+func _on_any_obstacle_z_collision(lane_obstacle_x: int, obj_type):
+	var is_collision_in_the_same_lane = lane_obstacle_x == lane
+	var is_coliision_while_switching_lanes = lane_obstacle_x == previous_lane && anim_progress < lane_switch_allowed_gap
+	if is_collision_in_the_same_lane || is_coliision_while_switching_lanes:
+		try_to_collide_based_on_type(obj_type)
+		
+
+
+func try_to_collide_based_on_type(obj_type):
+	match obj_type:
+		Globals.OBSTACLE_TYPE.PREDA:
+			print("preda pegou você, se fudeu")
+		Globals.OBSTACLE_TYPE.GIFA:
+			print("girafa pegou você, ta abaixado meo?")
+		Globals.OBSTACLE_TYPE.TOCO:
+			print("toco pegou você, ta pulando meo?")

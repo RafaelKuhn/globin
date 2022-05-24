@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/girafa-2.png-93b236abf6b1ea078a0df78c8235b5ef.s3tc.stex"
-path.etc="res://.import/girafa-2.png-93b236abf6b1ea078a0df78c8235b5ef.etc.stex"
+path.s3tc="res://.import/arvore-alta.png-145967916c46c492fd652a4ed927b65a.s3tc.stex"
+path.etc="res://.import/arvore-alta.png-145967916c46c492fd652a4ed927b65a.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://obstacles/girafa-2.png"
-dest_files=[ "res://.import/girafa-2.png-93b236abf6b1ea078a0df78c8235b5ef.s3tc.stex", "res://.import/girafa-2.png-93b236abf6b1ea078a0df78c8235b5ef.etc.stex" ]
+source_file="res://map/sprites/arvore-alta.png"
+dest_files=[ "res://.import/arvore-alta.png-145967916c46c492fd652a4ed927b65a.s3tc.stex", "res://.import/arvore-alta.png-145967916c46c492fd652a4ed927b65a.etc.stex" ]
 
 [params]
 

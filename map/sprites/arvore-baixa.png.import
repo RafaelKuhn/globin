@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/dev_girafa.png-8ee390891ff361cc9702cf370c507300.s3tc.stex"
-path.etc="res://.import/dev_girafa.png-8ee390891ff361cc9702cf370c507300.etc.stex"
+path.s3tc="res://.import/arvore-baixa.png-71522d34317cdf614c5f751d5b4fbf24.s3tc.stex"
+path.etc="res://.import/arvore-baixa.png-71522d34317cdf614c5f751d5b4fbf24.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://obstacles/dev_girafa.png"
-dest_files=[ "res://.import/dev_girafa.png-8ee390891ff361cc9702cf370c507300.s3tc.stex", "res://.import/dev_girafa.png-8ee390891ff361cc9702cf370c507300.etc.stex" ]
+source_file="res://map/sprites/arvore-baixa.png"
+dest_files=[ "res://.import/arvore-baixa.png-71522d34317cdf614c5f751d5b4fbf24.s3tc.stex", "res://.import/arvore-baixa.png-71522d34317cdf614c5f751d5b4fbf24.etc.stex" ]
 
 [params]
 

@@ -1,37 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://obstacles/Obstacle.gd" type="Script" id=1]
-[ext_resource path="res://obstacles/dev_pedra.png" type="Texture" id=2]
-[ext_resource path="res://obstacles/toco-com-cogumelos.png" type="Texture" id=3]
-[ext_resource path="res://obstacles/girafa-1.png" type="Texture" id=4]
-[ext_resource path="res://obstacles/girafa-2.png" type="Texture" id=5]
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "default",
-"speed": 2.5
-} ]
+[ext_resource path="res://obstacles/obstacle.gd" type="Script" id=1]
 
 [node name="Obstacle" type="Spatial"]
 script = ExtResource( 1 )
-
-[node name="Pedra" type="Sprite3D" parent="."]
-transform = Transform( 0.1, 0, 0, 0, 0.25, 0, 0, 0, 0.1, -0.270795, 0, 0 )
-visible = false
-centered = false
-texture = ExtResource( 2 )
-
-[node name="Toco" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0, 0 )
-visible = false
-centered = false
-texture = ExtResource( 3 )
-
-[node name="Girafa" type="AnimatedSprite3D" parent="."]
-transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.397951, 0, 0 )
-centered = false
-frames = SubResource( 1 )
-frame = 1
-playing = true

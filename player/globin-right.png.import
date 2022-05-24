@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/chao-completo.png-3b9bbee404c78d8d35830df98398067b.s3tc.stex"
-path.etc="res://.import/chao-completo.png-3b9bbee404c78d8d35830df98398067b.etc.stex"
+path.s3tc="res://.import/globin-right.png-eb1ceea4a0fc021ad575d8de489d04f9.s3tc.stex"
+path.etc="res://.import/globin-right.png-eb1ceea4a0fc021ad575d8de489d04f9.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://map/chao-completo.png"
-dest_files=[ "res://.import/chao-completo.png-3b9bbee404c78d8d35830df98398067b.s3tc.stex", "res://.import/chao-completo.png-3b9bbee404c78d8d35830df98398067b.etc.stex" ]
+source_file="res://player/globin-right.png"
+dest_files=[ "res://.import/globin-right.png-eb1ceea4a0fc021ad575d8de489d04f9.s3tc.stex", "res://.import/globin-right.png-eb1ceea4a0fc021ad575d8de489d04f9.etc.stex" ]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/toco-com-cogumelos.png-4892464e5fee6d20a8beaea19422a028.s3tc.stex"
-path.etc="res://.import/toco-com-cogumelos.png-4892464e5fee6d20a8beaea19422a028.etc.stex"
+path.s3tc="res://.import/globin-left.png-bf24c66c5816b7ad50e9498417be049c.s3tc.stex"
+path.etc="res://.import/globin-left.png-bf24c66c5816b7ad50e9498417be049c.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://obstacles/toco-com-cogumelos.png"
-dest_files=[ "res://.import/toco-com-cogumelos.png-4892464e5fee6d20a8beaea19422a028.s3tc.stex", "res://.import/toco-com-cogumelos.png-4892464e5fee6d20a8beaea19422a028.etc.stex" ]
+source_file="res://player/globin-left.png"
+dest_files=[ "res://.import/globin-left.png-bf24c66c5816b7ad50e9498417be049c.s3tc.stex", "res://.import/globin-left.png-bf24c66c5816b7ad50e9498417be049c.etc.stex" ]
 
 [params]
 

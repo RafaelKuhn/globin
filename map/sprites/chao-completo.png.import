@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/girafa-1.png-aa42f963169929f1ef256b476d6679d7.s3tc.stex"
-path.etc="res://.import/girafa-1.png-aa42f963169929f1ef256b476d6679d7.etc.stex"
+path.s3tc="res://.import/chao-completo.png-e9eac1b12b83ed4826baa7a54c33f934.s3tc.stex"
+path.etc="res://.import/chao-completo.png-e9eac1b12b83ed4826baa7a54c33f934.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://obstacles/girafa-1.png"
-dest_files=[ "res://.import/girafa-1.png-aa42f963169929f1ef256b476d6679d7.s3tc.stex", "res://.import/girafa-1.png-aa42f963169929f1ef256b476d6679d7.etc.stex" ]
+source_file="res://map/sprites/chao-completo.png"
+dest_files=[ "res://.import/chao-completo.png-e9eac1b12b83ed4826baa7a54c33f934.s3tc.stex", "res://.import/chao-completo.png-e9eac1b12b83ed4826baa7a54c33f934.etc.stex" ]
 
 [params]
 

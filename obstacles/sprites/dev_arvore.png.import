@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arvore-alta.png-f9d75cc68fb66f296a8230d8678301a8.stex"
+path="res://.import/dev_arvore.png-313d768a8ad0f691161c0256c48bf194.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/arvore-alta.png"
-dest_files=[ "res://.import/arvore-alta.png-f9d75cc68fb66f296a8230d8678301a8.stex" ]
+source_file="res://obstacles/sprites/dev_arvore.png"
+dest_files=[ "res://.import/dev_arvore.png-313d768a8ad0f691161c0256c48bf194.stex" ]
 
 [params]
 

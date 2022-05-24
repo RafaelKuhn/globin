@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/prancheta.png-657cb18dd16441b553f97623481fec6d.stex"
+path="res://.import/chao-completo - Copy - Copy.png-8c27542067bed4b1183eac5882fd466d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/prancheta.png"
-dest_files=[ "res://.import/prancheta.png-657cb18dd16441b553f97623481fec6d.stex" ]
+source_file="res://map/sprites/chao-completo - Copy - Copy.png"
+dest_files=[ "res://.import/chao-completo - Copy - Copy.png-8c27542067bed4b1183eac5882fd466d.stex" ]
 
 [params]
 

@@ -8,6 +8,22 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "Globals",
+"language": "GDScript",
+"path": "res://globals.gd"
+}, {
+"base": "Spatial",
+"class": "Obstacle",
+"language": "GDScript",
+"path": "res://obstacles/obstacle.gd"
+} ]
+_global_script_class_icons={
+"Globals": "",
+"Obstacle": ""
+}
+
 [application]
 
 config/name="Globin"

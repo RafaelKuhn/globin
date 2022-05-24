@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/dev_pedra.png-995d43a7fc2f1a2534ad991208abfb07.s3tc.stex"
-path.etc="res://.import/dev_pedra.png-995d43a7fc2f1a2534ad991208abfb07.etc.stex"
+path.s3tc="res://.import/prancheta.png-836b9db0fcd5533493e69b3ec6f6e4b9.s3tc.stex"
+path.etc="res://.import/prancheta.png-836b9db0fcd5533493e69b3ec6f6e4b9.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://obstacles/dev_pedra.png"
-dest_files=[ "res://.import/dev_pedra.png-995d43a7fc2f1a2534ad991208abfb07.s3tc.stex", "res://.import/dev_pedra.png-995d43a7fc2f1a2534ad991208abfb07.etc.stex" ]
+source_file="res://map/sprites/prancheta.png"
+dest_files=[ "res://.import/prancheta.png-836b9db0fcd5533493e69b3ec6f6e4b9.s3tc.stex", "res://.import/prancheta.png-836b9db0fcd5533493e69b3ec6f6e4b9.etc.stex" ]
 
 [params]
 
