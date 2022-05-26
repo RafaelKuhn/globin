@@ -8,7 +8,12 @@
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 1 ) ],
 "loop": true,
-"name": "default",
+"name": "running",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "jumping",
 "speed": 5.0
 } ]
 
@@ -16,12 +21,13 @@ animations = [ {
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
 script = ExtResource( 2 )
 
-[node name="Sprite pivot" type="Spatial" parent="."]
+[node name="Sprite" type="Spatial" parent="."]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, -0.0999212, 0.00837302, -0.0125802 )
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Sprite pivot"]
+[node name="Animated" type="AnimatedSprite3D" parent="Sprite"]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.426, 0 )
 frames = SubResource( 1 )
+animation = "running"
 playing = true
 
 [node name="JumpTimer" type="Timer" parent="."]
