@@ -10,7 +10,6 @@
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 lane_switch_delay = 0.2
-rolling_delay = 0.7
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 1.871, 3.493, 2.888 )
@@ -79,3 +78,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -38.353 )
 [connection signal="on_any_collision" from="Obstacles/Obstacle12" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Obstacle6" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Obstacle10" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Obstacle11" to="Player" method="_on_any_obstacle_z_collision"]
