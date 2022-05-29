@@ -5,6 +5,8 @@ enum HorizontalStates { RUNNING, SWITCHING }
 
 export var lane_switch_delay := 0.3
 export var lane_switch_allowed_gap := 0.7
+export var jump_delay := 0.85
+export var rolling_delay := 0.7
 
 var vertical_state = VerticalStates.DEFAULT
 var horizontal_state = HorizontalStates.RUNNING
@@ -43,14 +45,14 @@ func try_jumping():
 		return
 	vertical_state = VerticalStates.JUMPING
 	print("jumping")
-	$JumpTimer.start(1.3)
+	$JumpTimer.start(jump_delay)
 	
 func try_rolling():
 	if vertical_state != VerticalStates.DEFAULT:
 		return
 	vertical_state = VerticalStates.ROLLING
 	print("rolling")
-	$JumpTimer.start(1.0)
+	$JumpTimer.start(rolling_delay)
 
 func _on_JumpTimer_timeout():
 	vertical_state = VerticalStates.DEFAULT
@@ -136,9 +138,13 @@ func _on_any_obstacle_z_collision(lane_obstacle_x: int, obj_type):
 func try_to_collide_based_on_type(obj_type):
 	match obj_type:
 		Globals.OBSTACLE_TYPE.PREDA:
-			
-			print("preda pegou você, se fudeu")
+			lose_hp()
 		Globals.OBSTACLE_TYPE.GIFA:
-			print("girafa pegou você, ta abaixado meo?")
+			if (vertical_state != VerticalStates.ROLLING):
+				lose_hp()
 		Globals.OBSTACLE_TYPE.TOCO:
-			print("toco pegou você, ta pulando meo?")
+			if (vertical_state != VerticalStates.JUMPING):
+				lose_hp()
+
+func lose_hp():
+	get_tree().quit()
