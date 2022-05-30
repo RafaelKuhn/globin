@@ -44,19 +44,18 @@ func try_jumping():
 	if vertical_state != VerticalStates.DEFAULT:
 		return
 	vertical_state = VerticalStates.JUMPING
-	print("jumping")
+	# print("jumping")
 	$JumpTimer.start(jump_delay)
 	
 func try_rolling():
 	if vertical_state != VerticalStates.DEFAULT:
 		return
 	vertical_state = VerticalStates.ROLLING
-	print("rolling")
+	# print("rolling")
 	$JumpTimer.start(rolling_delay)
 
 func _on_JumpTimer_timeout():
 	vertical_state = VerticalStates.DEFAULT
-	print("time out vertical")
 
 
 # horizontal:
