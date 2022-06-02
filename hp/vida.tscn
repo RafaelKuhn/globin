@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://hp/heart pixel art 64x64.png" type="Texture" id=1]
+[ext_resource path="res://hp/coracao-vida.png" type="Texture" id=2]
 
 [node name="vida" type="Sprite"]
 position = Vector2( 0, 38 )
-scale = Vector2( 0.7, 0.7 )
-texture = ExtResource( 1 )
+scale = Vector2( 0.07, 0.07 )
+texture = ExtResource( 2 )
