@@ -5,7 +5,7 @@ enum HorizontalStates { RUNNING, SWITCHING }
 
 export var lane_switch_delay := 0.3
 export var lane_switch_allowed_gap := 0.7
-export var jump_delay := 0.85
+export var jump_delay := 0.75
 export var rolling_delay := 0.7
 
 var vertical_state = VerticalStates.DEFAULT
@@ -14,7 +14,8 @@ var horizontal_state = HorizontalStates.RUNNING
 var lane: int
 var previous_lane: int
 
-var anim_h_progress := 0.0
+var lane_switch_progress := 0.0
+var jump_progress := 0.0
 
 
 func _ready():
@@ -84,51 +85,55 @@ func try_switching_left():
 func switch_right():
 	previous_lane = lane
 	lane = lane + 1
-	anim_h_progress = 0.0
-	# print("vai trocar, animation progress: %f " % anim_h_progress)
+	lane_switch_progress = 0.0
+	# print("vai trocar, animation progress: %f " % lane_switch_progress)
 
 func switch_left():
 	previous_lane = lane
 	lane = lane - 1
-	anim_h_progress = 0.0
-	# print("vai trocar, animation progress: %f " % anim_h_progress)
+	lane_switch_progress = 0.0
+	# print("vai trocar, animation progress: %f " % lane_switch_progress)
 
 
 # fim da troca de lane
 func _on_LaneTimer_timeout():
 	horizontal_state = HorizontalStates.RUNNING
-	# print("trocou, animation progress: %f " % anim_h_progress)
+	# print("trocou, animation progress: %f " % lane_switch_progress)
 
 
 func update_horizontal_animation(delta: float):
 	if horizontal_state != HorizontalStates.SWITCHING:
 		return
 
-	anim_h_progress += delta * 1/lane_switch_delay
-	translation.x = lerp(previous_lane, lane, anim_h_progress)
+	lane_switch_progress += delta * 1/lane_switch_delay
+	translation.x = lerp(previous_lane, lane, lane_switch_progress)
 
 func update_vertical_animation(_delta: float):
 	match vertical_state:
 		VerticalStates.JUMPING:
 			$Sprite/Animated.animation = "jumping"
-			translation.y = 2
+			jump_progress = 1.0 - $JumpTimer.time_left / $JumpTimer.wait_time
+			translation.y = 1.5 * tween_expo_in_out(jump_progress)
 		VerticalStates.ROLLING:
 			scale.y = 0.7
-			scale.x = 1.5		
+			scale.x = 1.5
 		VerticalStates.DEFAULT:
 			$Sprite/Animated.animation = "running"
 			translation.y = 0
 			scale.y = 1
 			scale.x = 1
 			
-
+func tween_expo_in_out(x: float) -> float:
+	# t remaps 0->1 to 0->1->0
+	var t = 1 - abs(2 * fmod(x,1) - 1)
+	return 1 - pow(2, -10 * t)
 
 var Globals = preload("res://globals.gd")
 
 # eventos
 func _on_any_obstacle_z_collision(lane_obstacle_x: int, obj_type):
 	var is_collision_in_the_same_lane = lane_obstacle_x == lane
-	var is_coliision_while_switching_lanes = lane_obstacle_x == previous_lane && anim_h_progress < lane_switch_allowed_gap
+	var is_coliision_while_switching_lanes = lane_obstacle_x == previous_lane && lane_switch_progress < lane_switch_allowed_gap
 	if is_collision_in_the_same_lane || is_coliision_while_switching_lanes:
 		try_to_collide_based_on_type(obj_type)
 		
