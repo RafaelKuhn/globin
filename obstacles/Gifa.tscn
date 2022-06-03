@@ -12,10 +12,11 @@ animations = [ {
 "speed": 2.5
 } ]
 
-[node name="Obstacle" instance=ExtResource( 1 )]
+[node name="Gifa0" instance=ExtResource( 1 )]
 
 [node name="Sprite" type="AnimatedSprite3D" parent="." index="0"]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.397951, 0, 0 )
 centered = false
 frames = SubResource( 1 )
+frame = 1
 playing = true

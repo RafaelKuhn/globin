@@ -28,43 +28,46 @@ __meta__ = {
 
 [node name="Obstacles" type="Spatial" parent="."]
 
-[node name="Obstacle1" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa0" parent="Obstacles" instance=ExtResource( 6 )]
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -9.5754 )
+
+[node name="Gifa1" parent="Obstacles" instance=ExtResource( 6 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -12.5754 )
 
-[node name="Obstacle2" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa2" parent="Obstacles" instance=ExtResource( 6 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -31.929 )
 
-[node name="Obstacle3" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa3" parent="Obstacles" instance=ExtResource( 6 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 2, 0, -24.3849 )
 
-[node name="Obstacle4" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa4" parent="Obstacles" instance=ExtResource( 6 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -20.8597 )
 
-[node name="Obstacle5" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa5" parent="Obstacles" instance=ExtResource( 6 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 2, 0, -14.8327 )
 
-[node name="Obstacle7" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa7" parent="Obstacles" instance=ExtResource( 6 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -18.6689 )
 
-[node name="Obstacle8" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa8" parent="Obstacles" instance=ExtResource( 6 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -21.794 )
 
-[node name="Obstacle9" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa9" parent="Obstacles" instance=ExtResource( 6 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -25.9991 )
 
-[node name="Obstacle" parent="Obstacles" instance=ExtResource( 5 )]
+[node name="Preda0" parent="Obstacles" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -29.75 )
 
-[node name="Obstacle12" parent="Obstacles" instance=ExtResource( 5 )]
+[node name="Preda1" parent="Obstacles" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -18.551 )
 
-[node name="Obstacle6" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco0" parent="Obstacles" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -27.8246 )
 
-[node name="Obstacle10" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco1" parent="Obstacles" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -35.066 )
 
-[node name="Obstacle11" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco2" parent="Obstacles" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -38.353 )
 
 [node name="UI" type="Node2D" parent="."]
@@ -72,16 +75,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -38.353 )
 [node name="HP" type="Node2D" parent="UI"]
 script = ExtResource( 7 )
 
-[connection signal="on_any_collision" from="Obstacles/Obstacle1" to="Player" method="_on_any_obstacle_z_collision"]
-[connection signal="on_any_collision" from="Obstacles/Obstacle2" to="Player" method="_on_any_obstacle_z_collision"]
-[connection signal="on_any_collision" from="Obstacles/Obstacle3" to="Player" method="_on_any_obstacle_z_collision"]
-[connection signal="on_any_collision" from="Obstacles/Obstacle4" to="Player" method="_on_any_obstacle_z_collision"]
-[connection signal="on_any_collision" from="Obstacles/Obstacle5" to="Player" method="_on_any_obstacle_z_collision"]
-[connection signal="on_any_collision" from="Obstacles/Obstacle7" to="Player" method="_on_any_obstacle_z_collision"]
-[connection signal="on_any_collision" from="Obstacles/Obstacle8" to="Player" method="_on_any_obstacle_z_collision"]
-[connection signal="on_any_collision" from="Obstacles/Obstacle9" to="Player" method="_on_any_obstacle_z_collision"]
-[connection signal="on_any_collision" from="Obstacles/Obstacle" to="Player" method="_on_any_obstacle_z_collision"]
-[connection signal="on_any_collision" from="Obstacles/Obstacle12" to="Player" method="_on_any_obstacle_z_collision"]
-[connection signal="on_any_collision" from="Obstacles/Obstacle6" to="Player" method="_on_any_obstacle_z_collision"]
-[connection signal="on_any_collision" from="Obstacles/Obstacle10" to="Player" method="_on_any_obstacle_z_collision"]
-[connection signal="on_any_collision" from="Obstacles/Obstacle11" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Gifa0" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Gifa1" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Gifa2" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Gifa3" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Gifa4" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Gifa5" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Gifa7" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Gifa8" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Gifa9" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda0" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda1" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Toco0" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Toco1" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Toco2" to="Player" method="_on_any_obstacle_z_collision"]
