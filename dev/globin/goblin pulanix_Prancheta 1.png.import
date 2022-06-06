@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/dev_girafa.png-888b66576e04716315df7be030ce1f3a.s3tc.stex"
-path.etc="res://.import/dev_girafa.png-888b66576e04716315df7be030ce1f3a.etc.stex"
+path.s3tc="res://.import/goblin pulanix_Prancheta 1.png-e41f56ab3768c2e7fa1e0e9bc875cde2.s3tc.stex"
+path.etc="res://.import/goblin pulanix_Prancheta 1.png-e41f56ab3768c2e7fa1e0e9bc875cde2.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://obstacles/sprites/dev_girafa.png"
-dest_files=[ "res://.import/dev_girafa.png-888b66576e04716315df7be030ce1f3a.s3tc.stex", "res://.import/dev_girafa.png-888b66576e04716315df7be030ce1f3a.etc.stex" ]
+source_file="res://dev/globin/goblin pulanix_Prancheta 1.png"
+dest_files=[ "res://.import/goblin pulanix_Prancheta 1.png-e41f56ab3768c2e7fa1e0e9bc875cde2.s3tc.stex", "res://.import/goblin pulanix_Prancheta 1.png-e41f56ab3768c2e7fa1e0e9bc875cde2.etc.stex" ]
 
 [params]
 

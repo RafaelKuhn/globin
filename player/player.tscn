@@ -22,7 +22,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Spatial" parent="."]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, -0.0999212, 0.00837302, -0.0125802 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Animated" type="AnimatedSprite3D" parent="Sprite"]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.426, 0 )

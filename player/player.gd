@@ -1,17 +1,19 @@
 extends Spatial
 
 var Globals = preload("res://globals.gd")
-enum VerticalStates { DEFAULT, JUMPING, ROLLING }
-enum HorizontalStates { RUNNING, SWITCHING }
+enum VerticalState { DEFAULT, JUMPING, ROLLING }
+enum HorizontalState { RUNNING, SWITCHING }
 
-export var lane_switch_delay := 0.3
-export var lane_switch_allowed_gap := 0.7
-export var jump_delay := 0.75
-export var rolling_delay := 0.7
-export var jump_height := 1.5
+# constantes
+var lane_switch_delay := 0.3
+var lane_switch_allowed_gap := 0.7
+var jump_delay := 0.75
+var rolling_delay := 0.7
+var jump_height := 1.5
 
-var vertical_state = VerticalStates.DEFAULT
-var horizontal_state = HorizontalStates.RUNNING
+# estado
+var vertical_state = VerticalState.DEFAULT
+var horizontal_state = HorizontalState.RUNNING
 
 var lane: int
 var previous_lane: int
@@ -26,7 +28,7 @@ func _ready() -> void:
 	lane = 2
 	translation.x = lane
 
-func _process(delta: float) -> void:
+func _input(_event) -> void:
 	if Input.is_action_just_pressed("W_key"):
 		try_jumping()
 		
@@ -39,55 +41,48 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("A_key"):
 		try_switching_left()
 
-	update_horizontal_animation(delta)
-	update_vertical_animation(delta)
+func _process(delta: float) -> void:
+	update_horizontal_movement(delta)
+	update_vertical_movement(delta)
 
 
-##################### vertical #####################
+##################### movimento vertical #####################
 func try_jumping() -> void:
-	if vertical_state != VerticalStates.DEFAULT:
+	if vertical_state != VerticalState.DEFAULT:
 		return
-	vertical_state = VerticalStates.JUMPING
-	# print("jumping")
+	vertical_state = VerticalState.JUMPING
 	$JumpTimer.start(jump_delay)
 	
 func try_rolling() -> void:
-	if vertical_state != VerticalStates.DEFAULT:
+	if vertical_state != VerticalState.DEFAULT:
 		return
-	vertical_state = VerticalStates.ROLLING
-	# print("rolling")
+	vertical_state = VerticalState.ROLLING
 	$JumpTimer.start(rolling_delay)
 
 func _on_JumpTimer_timeout() -> void:
-	vertical_state = VerticalStates.DEFAULT
+	vertical_state = VerticalState.DEFAULT
 
 
-##################### horizontal #####################
+##################### movimento horizontal #####################
 func try_switching_right() -> void:
-	if horizontal_state != HorizontalStates.RUNNING:
+	if horizontal_state != HorizontalState.RUNNING:
 		return
 	if lane == 3:
 		return
 	
 	switch_right()
-	horizontal_state = HorizontalStates.SWITCHING
+	horizontal_state = HorizontalState.SWITCHING
 	$LaneTimer.start(lane_switch_delay)
 	
 func try_switching_left() -> void:
-	if horizontal_state != HorizontalStates.RUNNING:
+	if horizontal_state != HorizontalState.RUNNING:
 		return
 	if lane == 1:
 		return
 	
 	switch_left()
-	horizontal_state = HorizontalStates.SWITCHING
+	horizontal_state = HorizontalState.SWITCHING
 	$LaneTimer.start(lane_switch_delay)
-
-# fim da troca de lane
-func _on_LaneTimer_timeout() -> void:
-	horizontal_state = HorizontalStates.RUNNING
-	# print("trocou de lane, animation progress: %f " % lane_switch_progress)
-
 
 # início da troca de lane
 func switch_right() -> void:
@@ -102,41 +97,54 @@ func switch_left() -> void:
 	lane_switch_progress = 0.0
 	# print("vai trocar de lane, animation progress: %f " % lane_switch_progress)
 
-##################### animações (chamado todo frame) #####################
-func update_horizontal_animation(delta: float) -> void:
-	if horizontal_state != HorizontalStates.SWITCHING:
+# fim da troca de lane
+func _on_LaneTimer_timeout() -> void:
+	horizontal_state = HorizontalState.RUNNING
+	# print("trocou de lane, animation progress: %f " % lane_switch_progress)
+
+##################### movimento / animações (chamado todo frame) #####################
+func update_horizontal_movement(delta: float) -> void:
+	if horizontal_state != HorizontalState.SWITCHING:
 		return
 
 	lane_switch_progress += delta * 1/lane_switch_delay
 	translation.x = lerp(previous_lane, lane, lane_switch_progress)
 
-func update_vertical_animation(_delta: float) -> void:
+func update_vertical_movement(_delta: float) -> void:
 	match vertical_state:
-		VerticalStates.JUMPING:
+		VerticalState.JUMPING:
 			$Sprite/Animated.animation = "jumping"
 			jump_progress = 1.0 - $JumpTimer.time_left / $JumpTimer.wait_time
 			translation.y = jump_height * tween_expo_in_out(jump_progress)
-		VerticalStates.ROLLING:
-			scale.y = 0.7
-			scale.x = 1.5
-		VerticalStates.DEFAULT:
+			DEV_desamassa()
+		VerticalState.ROLLING:
+			$Sprite/Animated.animation = "running"
+			DEV_amassa()
+		VerticalState.DEFAULT:
 			$Sprite/Animated.animation = "running"
 			translation.y = 0
-			scale.y = 1
-			scale.x = 1
+			DEV_desamassa()
 
 func tween_expo_in_out(x: float) -> float:
-	# t remaps 0->1 to 0->1->0
+	# t mapeia 0->1 para 0->1->0
 	var t = 1 - abs(2 * fmod(x, 1) - 1)
 	return 1 - pow(2, -10 * t)
 
+func DEV_amassa() -> void:
+	scale.y = 0.7
+	scale.x = 1.5
+
+func DEV_desamassa() -> void:
+	scale.y = 1
+	scale.x = 1
 
 ##################### colisão dos objetos #####################
-# quando algum objeto chega na posição z do player
+# callback para quando algum objeto chega na posição z do player
 func _on_any_obstacle_z_collision(lane_obstacle_x: int, obj_type) -> void:
-	var is_obstacle_in_the_same_lane = lane_obstacle_x == lane
-	var is_collision_while_switching_lanes = lane_obstacle_x == previous_lane && lane_switch_progress < lane_switch_allowed_gap
-	if is_obstacle_in_the_same_lane || is_collision_while_switching_lanes:
+	var has_collided_in_current_lane = lane_obstacle_x == lane && lane_switch_progress > lane_switch_allowed_gap
+	var has_collided_while_switching_lanes = lane_obstacle_x == previous_lane && lane_switch_progress < lane_switch_allowed_gap
+
+	if has_collided_in_current_lane || has_collided_while_switching_lanes:
 		try_to_collide_based_on_type(obj_type)
 
 func try_to_collide_based_on_type(obj_type):
@@ -144,10 +152,10 @@ func try_to_collide_based_on_type(obj_type):
 		Globals.OBSTACLE_TYPE.PREDA:
 			lose_hp()
 		Globals.OBSTACLE_TYPE.GIFA:
-			if (vertical_state != VerticalStates.ROLLING):
+			if (vertical_state != VerticalState.ROLLING):
 				lose_hp()
 		Globals.OBSTACLE_TYPE.TOCO:
-			if (vertical_state != VerticalStates.JUMPING):
+			if (vertical_state != VerticalState.JUMPING):
 				lose_hp()
 
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arvore-alta-manual-normal.png-b4eed880ead68ac32616fc81a6e5c753.stex"
+path="res://.import/arvore-alta-normal.png-bc53483f699907779b805af097bbc904.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/sprites/arvore-alta-manual-normal.png"
-dest_files=[ "res://.import/arvore-alta-manual-normal.png-b4eed880ead68ac32616fc81a6e5c753.stex" ]
+source_file="res://dev/map/arvore-alta-normal.png"
+dest_files=[ "res://.import/arvore-alta-normal.png-bc53483f699907779b805af097bbc904.stex" ]
 
 [params]
 

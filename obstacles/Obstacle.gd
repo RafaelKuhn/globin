@@ -13,4 +13,7 @@ func _process(delta: float) -> void:
 	translate(Vector3(0, 0, delta * speed))
 	if !has_collided && translation.z >= 0:
 		has_collided = true
-		emit_signal("on_any_collision", translation.x, type)
+		emit_signal("on_any_collision", round(translation.x), type)
+	
+	if translation.z > 3:
+		queue_free()

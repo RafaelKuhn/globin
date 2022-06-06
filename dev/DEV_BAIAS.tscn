@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CubeMesh" id=4]
+
+[sub_resource type="SpatialMaterial" id=5]
+
+[node name="DEV_BAIAS" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
+
+[node name="CSGMesh" type="CSGMesh" parent="."]
+transform = Transform( 0.0539526, 0, 0, 0, 0.588061, 0, 0, 0, 0.0539526, 0.5, 0.5, 0 )
+mesh = SubResource( 4 )
+material = SubResource( 5 )
+
+[node name="CSGMesh2" type="CSGMesh" parent="."]
+transform = Transform( 0.0539526, 0, 0, 0, 0.588061, 0, 0, 0, 0.0539526, 1.5, 0.522, 0 )
+mesh = SubResource( 4 )
+material = SubResource( 5 )
+
+[node name="CSGMesh3" type="CSGMesh" parent="."]
+transform = Transform( 0.0539526, 0, 0, 0, 0.588061, 0, 0, 0, 0.0539526, 2.5, 0.522, 0 )
+mesh = SubResource( 4 )
+material = SubResource( 5 )
+
+[node name="CSGMesh4" type="CSGMesh" parent="."]
+transform = Transform( 0.0539526, 0, 0, 0, 0.588061, 0, 0, 0, 0.0539526, 3.5, 0.522, 0 )
+mesh = SubResource( 4 )
+material = SubResource( 5 )

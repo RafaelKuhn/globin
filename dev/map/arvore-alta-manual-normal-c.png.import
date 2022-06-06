@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/goblin deslizando-02.png-ff45329157f483c09191c54fe01f2c26.stex"
+path="res://.import/arvore-alta-manual-normal-c.png-1f81920275b3804df35a015fd23c92f6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/goblin deslizando-02.png"
-dest_files=[ "res://.import/goblin deslizando-02.png-ff45329157f483c09191c54fe01f2c26.stex" ]
+source_file="res://dev/map/arvore-alta-manual-normal-c.png"
+dest_files=[ "res://.import/arvore-alta-manual-normal-c.png-1f81920275b3804df35a015fd23c92f6.stex" ]
 
 [params]
 
