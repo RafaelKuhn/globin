@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/goblin pulanix-02.png-fe4ed0e4d40ae4da936afcf49f44960e.s3tc.stex"
-path.etc="res://.import/goblin pulanix-02.png-fe4ed0e4d40ae4da936afcf49f44960e.etc.stex"
+path.s3tc="res://.import/falling.png-5db2415f87ede5ed16f4def388956673.s3tc.stex"
+path.etc="res://.import/falling.png-5db2415f87ede5ed16f4def388956673.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://dev/globin/goblin pulanix-02.png"
-dest_files=[ "res://.import/goblin pulanix-02.png-fe4ed0e4d40ae4da936afcf49f44960e.s3tc.stex", "res://.import/goblin pulanix-02.png-fe4ed0e4d40ae4da936afcf49f44960e.etc.stex" ]
+source_file="res://player/falling.png"
+dest_files=[ "res://.import/falling.png-5db2415f87ede5ed16f4def388956673.s3tc.stex", "res://.import/falling.png-5db2415f87ede5ed16f4def388956673.etc.stex" ]
 
 [params]
 

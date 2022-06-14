@@ -1,12 +1,31 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://obstacles/Obstacle.tscn" type="PackedScene" id=1]
-[ext_resource path="res://dev/obstacles/dev_pedra.png" type="Texture" id=2]
+[ext_resource path="res://dev/pedra .png" type="Texture" id=2]
 
 [node name="Preda0" instance=ExtResource( 1 )]
 type = 1
 
-[node name="Sprite" type="Sprite3D" parent="." index="0"]
-transform = Transform( 0.112759, 0, 0, 0, 0.281897, 0, 0, 0, 0.112759, -0.372453, -0.0137443, -0.000988007 )
+[node name="Spatial" type="Spatial" parent="." index="0"]
+transform = Transform( 0.801266, 0, 0, 0, 0.801266, 0, 0, 0, 0.801266, 0, 0, 0 )
+
+[node name="Sprite" type="Sprite3D" parent="Spatial" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.372453, -0.0911772, -0.000988007 )
 centered = false
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite3D" parent="Spatial" index="1"]
+transform = Transform( 0.911791, 0.410655, 0, -0.410655, 0.911791, 0, 0, 0, 1, 0.333648, 1.0806, -0.0453773 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite3D" parent="Spatial" index="2"]
+transform = Transform( 0.971924, -0.229203, 0.0531883, 0.229485, 0.973312, 0.000821968, -0.0519572, 0.0114071, 0.998584, -0.284007, 1.17493, -0.0584283 )
+texture = ExtResource( 2 )
+
+[node name="Sprite5" type="Sprite3D" parent="Spatial" index="3"]
+transform = Transform( 0.97983, 0.193793, 0.0487676, -0.192962, 0.980976, -0.0212459, -0.0519572, 0.0114071, 0.998584, 0.133091, 1.73328, -0.0937297 )
+texture = ExtResource( 2 )
+
+[node name="Sprite4" type="Sprite3D" parent="Spatial" index="4"]
+transform = Transform( 0.998177, -0.0603517, 0, 0.0603517, 0.998177, 0, 0, 0, 1, -0.270758, 0.513901, -0.0362845 )
 texture = ExtResource( 2 )

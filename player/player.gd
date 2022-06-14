@@ -108,27 +108,31 @@ func update_horizontal_movement(delta: float) -> void:
 		return
 
 	lane_switch_progress += delta * 1/lane_switch_delay
-	translation.x = lerp(previous_lane, lane, lane_switch_progress)
+	translation.x = lerp(previous_lane, lane, tween_quad(lane_switch_progress))
+	
 
 func update_vertical_movement(_delta: float) -> void:
 	match vertical_state:
 		VerticalState.JUMPING:
-			$Sprite/Animated.animation = "jumping"
 			jump_progress = 1.0 - $JumpTimer.time_left / $JumpTimer.wait_time
 			translation.y = jump_height * tween_expo_in_out(jump_progress)
+			$Sprite/Animated.animation = "jumping" if jump_progress < 0.8 else "falling"
 			DEV_desamassa()
 		VerticalState.ROLLING:
 			$Sprite/Animated.animation = "running"
 			DEV_amassa()
 		VerticalState.DEFAULT:
-			$Sprite/Animated.animation = "running"
 			translation.y = 0
+			$Sprite/Animated.animation = "running"
 			DEV_desamassa()
 
 func tween_expo_in_out(x: float) -> float:
 	# t mapeia 0->1 para 0->1->0
 	var t = 1 - abs(2 * fmod(x, 1) - 1)
 	return 1 - pow(2, -10 * t)
+
+func tween_quad(x: float) -> float:
+	return 1 - (1 - x) * (1 - x)
 
 func DEV_amassa() -> void:
 	scale.y = 0.7

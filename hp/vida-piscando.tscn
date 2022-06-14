@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://hp/coracao-vida.png" type="Texture" id=1]
+
+[sub_resource type="CanvasItemMaterial" id=1]
 
 [sub_resource type="Animation" id=2]
 resource_name = "piscando"
@@ -15,14 +17,15 @@ tracks/0/keys = {
 "times": PoolRealArray( 0.000795781, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.3 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.6 ) ]
 }
 
 [node name="vida-piscando" type="Node2D"]
 position = Vector2( 0, 38 )
 
 [node name="vida-piscando" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.3 )
+modulate = Color( 1, 1, 1, 0.7 )
+material = SubResource( 1 )
 scale = Vector2( 0.07, 0.07 )
 texture = ExtResource( 1 )
 

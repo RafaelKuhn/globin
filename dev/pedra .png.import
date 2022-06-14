@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/pedra.png-f2a5d67b6bf6924f14cffb8f6671aee0.s3tc.stex"
-path.etc="res://.import/pedra.png-f2a5d67b6bf6924f14cffb8f6671aee0.etc.stex"
+path.s3tc="res://.import/pedra .png-1c8239b3847c00918b1eab184749bd29.s3tc.stex"
+path.etc="res://.import/pedra .png-1c8239b3847c00918b1eab184749bd29.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://dev/obstacles/pedra.png"
-dest_files=[ "res://.import/pedra.png-f2a5d67b6bf6924f14cffb8f6671aee0.s3tc.stex", "res://.import/pedra.png-f2a5d67b6bf6924f14cffb8f6671aee0.etc.stex" ]
+source_file="res://dev/pedra .png"
+dest_files=[ "res://.import/pedra .png-1c8239b3847c00918b1eab184749bd29.s3tc.stex", "res://.import/pedra .png-1c8239b3847c00918b1eab184749bd29.etc.stex" ]
 
 [params]
 
