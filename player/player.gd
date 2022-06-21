@@ -1,15 +1,15 @@
 extends Spatial
 
-var Globals = preload("res://globals.gd")
+var Global = preload("res://global.gd")
 enum VerticalState { DEFAULT, JUMPING, ROLLING }
 enum HorizontalState { RUNNING, SWITCHING }
 
 # constantes
-var lane_switch_delay := 0.3
-var lane_switch_allowed_gap := 0.7
-var jump_delay := 0.75
-var rolling_delay := 0.7
-var jump_height := 1.5
+const lane_switch_delay := 0.3
+const lane_switch_allowed_gap := 0.7
+const jump_delay := 0.75
+const rolling_delay := 0.7
+const jump_height := 1.5
 
 # estado
 var vertical_state = VerticalState.DEFAULT
@@ -153,12 +153,12 @@ func _on_any_obstacle_z_collision(lane_obstacle_x: int, obj_type) -> void:
 
 func try_to_collide_based_on_type(obj_type):
 	match obj_type:
-		Globals.OBSTACLE_TYPE.PREDA:
+		Global.OBSTACLE_TYPE.PREDA:
 			lose_hp()
-		Globals.OBSTACLE_TYPE.GIFA:
+		Global.OBSTACLE_TYPE.GIFA:
 			if (vertical_state != VerticalState.ROLLING):
 				lose_hp()
-		Globals.OBSTACLE_TYPE.TOCO:
+		Global.OBSTACLE_TYPE.TOCO:
 			if (vertical_state != VerticalState.JUMPING):
 				lose_hp()
 

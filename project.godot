@@ -10,9 +10,9 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
-"class": "Globals",
+"class": "Global",
 "language": "GDScript",
-"path": "res://globals.gd"
+"path": "res://global.gd"
 }, {
 "base": "Spatial",
 "class": "Obstacle",
@@ -20,7 +20,7 @@ _global_script_classes=[ {
 "path": "res://obstacles/obstacle.gd"
 } ]
 _global_script_class_icons={
-"Globals": "",
+"Global": "",
 "Obstacle": ""
 }
 

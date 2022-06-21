@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://map/sprites/chao-completo.png" type="Texture" id=1]
 [ext_resource path="res://map/sprites/toco-com-cogumelos.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://map/sprites/arvore-baixa.png" type="Texture" id=6]
 [ext_resource path="res://map/sprites/cogumelos.png" type="Texture" id=7]
 [ext_resource path="res://map/sprites/pedaco-l.png" type="Texture" id=8]
+[ext_resource path="res://map/environment.gd" type="Script" id=9]
 [ext_resource path="res://map/scrolling-ground.gd" type="Script" id=10]
 
 [sub_resource type="Shader" id=1]
@@ -111,69 +112,7 @@ double_sided = false
 texture = ExtResource( 8 )
 
 [node name="Environment" type="Spatial" parent="."]
-
-[node name="DEV_PALLETTE" type="Spatial" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4119, 0, 0 )
-
-[node name="prancheta" type="Spatial" parent="Environment/DEV_PALLETTE"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.07655, 0, 0 )
-
-[node name="Sprite3D" type="Sprite3D" parent="Environment/DEV_PALLETTE/prancheta"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.74, 0 )
-cast_shadow = 0
-generate_lightmap = false
-double_sided = false
-texture = ExtResource( 3 )
-
-[node name="pinheiro" type="Spatial" parent="Environment/DEV_PALLETTE"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4487, 0, 0 )
-
-[node name="Sprite3D" type="Sprite3D" parent="Environment/DEV_PALLETTE/pinheiro"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.74, 0 )
-cast_shadow = 0
-generate_lightmap = false
-double_sided = false
-texture = ExtResource( 4 )
-
-[node name="arvore-alta" type="Spatial" parent="Environment/DEV_PALLETTE"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.21275, 0, 0 )
-
-[node name="Sprite3D" type="Sprite3D" parent="Environment/DEV_PALLETTE/arvore-alta"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.97, 0 )
-cast_shadow = 0
-generate_lightmap = false
-double_sided = false
-texture = ExtResource( 5 )
-
-[node name="arvore-baixa" type="Spatial" parent="Environment/DEV_PALLETTE"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.23506, -0.0947258, 0 )
-
-[node name="Sprite3D" type="Sprite3D" parent="Environment/DEV_PALLETTE/arvore-baixa"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0 )
-cast_shadow = 0
-generate_lightmap = false
-double_sided = false
-texture = ExtResource( 6 )
-
-[node name="coguzinho" type="Spatial" parent="Environment/DEV_PALLETTE"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0452, 0, 0 )
-
-[node name="Sprite3D" type="Sprite3D" parent="Environment/DEV_PALLETTE/coguzinho"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0 )
-cast_shadow = 0
-generate_lightmap = false
-double_sided = false
-texture = ExtResource( 7 )
-
-[node name="toco" type="Spatial" parent="Environment/DEV_PALLETTE"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0796, 0, 0 )
-
-[node name="Sprite3D" type="Sprite3D" parent="Environment/DEV_PALLETTE/toco"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54, 0 )
-cast_shadow = 0
-generate_lightmap = false
-double_sided = false
-texture = ExtResource( 2 )
+script = ExtResource( 9 )
 
 [node name="prancheta2" type="Spatial" parent="Environment"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.58253, -4.76837e-07, -1.16845 )
@@ -405,13 +344,6 @@ generate_lightmap = false
 double_sided = false
 texture = ExtResource( 6 )
 
-[node name="Sprite3D2" type="Sprite3D" parent="Environment/arvore-baixa3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.92867, 1.6, -11.7729 )
-cast_shadow = 0
-generate_lightmap = false
-double_sided = false
-texture = ExtResource( 6 )
-
 [node name="arvore-baixa4" type="Spatial" parent="Environment"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.34057, -0.0947258, -4.52048 )
 
@@ -616,6 +548,69 @@ texture = ExtResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.28498, -0.185834, -10.7432 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Environment/toco5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 2 )
+
+[node name="DEV_PALLETTE" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4119, 0, 0 )
+
+[node name="prancheta" type="Spatial" parent="DEV_PALLETTE"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.07655, 0, 0 )
+
+[node name="Sprite3D" type="Sprite3D" parent="DEV_PALLETTE/prancheta"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.74, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 3 )
+
+[node name="pinheiro" type="Spatial" parent="DEV_PALLETTE"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4487, 0, 0 )
+
+[node name="Sprite3D" type="Sprite3D" parent="DEV_PALLETTE/pinheiro"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.74, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 4 )
+
+[node name="arvore-alta" type="Spatial" parent="DEV_PALLETTE"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.21275, 0, 0 )
+
+[node name="Sprite3D" type="Sprite3D" parent="DEV_PALLETTE/arvore-alta"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.97, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 5 )
+
+[node name="arvore-baixa" type="Spatial" parent="DEV_PALLETTE"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.23506, -0.0947258, 0 )
+
+[node name="Sprite3D" type="Sprite3D" parent="DEV_PALLETTE/arvore-baixa"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 6 )
+
+[node name="coguzinho" type="Spatial" parent="DEV_PALLETTE"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0452, 0, 0 )
+
+[node name="Sprite3D" type="Sprite3D" parent="DEV_PALLETTE/coguzinho"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 7 )
+
+[node name="toco" type="Spatial" parent="DEV_PALLETTE"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0796, 0, 0 )
+
+[node name="Sprite3D" type="Sprite3D" parent="DEV_PALLETTE/toco"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54, 0 )
 cast_shadow = 0
 generate_lightmap = false
