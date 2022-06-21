@@ -19,4 +19,5 @@ transform = Transform( 0.98545, 0, 0, 0, 0.98545, 0, 0, 0, 0.98545, 0, 0, 0 )
 transform = Transform( 0.135237, 0, 0, 0, 0.135237, 0, 0, 0, 0.135237, -0.511708, -0.0204241, -0.000744137 )
 centered = false
 frames = SubResource( 1 )
+frame = 1
 playing = true

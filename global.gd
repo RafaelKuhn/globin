@@ -6,5 +6,7 @@ enum OBSTACLE_TYPE { GIFA, PREDA, TOCO }
 const GAME_SPEED := 5.0
 const GAME_Z_END := 3.0
 
-# TODO: implement GAME Z START to limit the distance the user can see (shader?)
-# var GAME_Z_START := -10.0
+# TODO: sync with environment
+const GAME_Z_START := -12.7
+
+const ALPHA_INCREMENT_SPEED := 3.0

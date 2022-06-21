@@ -7,7 +7,7 @@
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
 type = 2
 
-[node name="Toco" type="Sprite3D" parent="." index="0"]
+[node name="Sprite" type="Sprite3D" parent="." index="0"]
 transform = Transform( 0.622904, 0.0162787, 0, -0.0162787, 0.622904, 0, 0, 0, 0.890166, -1.12228, -0.268227, 0 )
 centered = false
 texture = ExtResource( 2 )
