@@ -1,5 +1,7 @@
 extends Spatial
 
+signal damage_taken()
+
 var Global = preload("res://global.gd")
 enum VerticalState { DEFAULT, JUMPING, ROLLING }
 enum HorizontalState { RUNNING, SWITCHING }
@@ -21,12 +23,9 @@ var previous_lane: int
 var lane_switch_progress := 0.0
 var jump_progress := 0.0
 
-
 ##################### callbacks #####################
 func _ready() -> void:
-	previous_lane = 2
-	lane = 2
-	translation.x = lane
+	start_in_second_lane()
 
 func _input(_event) -> void:
 	if Input.is_action_just_pressed("W_key"):
@@ -45,6 +44,10 @@ func _process(delta: float) -> void:
 	update_horizontal_movement(delta)
 	update_vertical_movement(delta)
 
+func start_in_second_lane():
+	previous_lane = 2
+	lane = 2
+	translation.x = lane
 
 ##################### movimento vertical #####################
 func try_jumping() -> void:
@@ -162,6 +165,5 @@ func try_to_collide_based_on_type(obj_type):
 			if (vertical_state != VerticalState.JUMPING):
 				lose_hp()
 
-
 func lose_hp():
-	get_tree().quit()
+	emit_signal("damage_taken")

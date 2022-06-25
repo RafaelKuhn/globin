@@ -99,8 +99,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -38.353 )
 
 [node name="HP" type="Node2D" parent="UI"]
 script = ExtResource( 7 )
-current_hp = 1
 
+[node name="HP Regen Timer" type="Timer" parent="UI/HP"]
+one_shot = true
+
+[node name="GameEndPanel" type="Node2D" parent="UI"]
+
+[node name="Menu" type="Node2D" parent="UI"]
+
+[connection signal="damage_taken" from="Player" to="UI/HP" method="_on_Player_damage_taken"]
 [connection signal="on_any_collision" from="Obstacles/Gifa0" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Gifa1" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Gifa2" to="Player" method="_on_any_obstacle_z_collision"]
@@ -117,3 +124,4 @@ current_hp = 1
 [connection signal="on_any_collision" from="Obstacles/Toco0" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Toco1" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Toco2" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="timeout" from="UI/HP/HP Regen Timer" to="UI/HP" method="_on_HP_Regen_Timer_timeout"]
