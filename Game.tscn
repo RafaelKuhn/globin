@@ -48,52 +48,283 @@ __meta__ = {
 [node name="Obstacles" type="Spatial" parent="."]
 
 [node name="Gifa0" parent="Obstacles" instance=ExtResource( 6 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -9.5754 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -8.19611 )
 
 [node name="Gifa1" parent="Obstacles" instance=ExtResource( 6 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -12.5754 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -23.8371 )
 
 [node name="Gifa2" parent="Obstacles" instance=ExtResource( 6 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -31.929 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -19.8162 )
 
 [node name="Gifa3" parent="Obstacles" instance=ExtResource( 6 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 2, 0, -24.3849 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -25.0027 )
 
 [node name="Gifa4" parent="Obstacles" instance=ExtResource( 6 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -20.8597 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -38.1278 )
 
 [node name="Gifa5" parent="Obstacles" instance=ExtResource( 6 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 2, 0, -14.8327 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 2, 0, -31.861 )
+
+[node name="Gifa6" parent="Obstacles" instance=ExtResource( 6 )]
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -44.1692 )
 
 [node name="Gifa7" parent="Obstacles" instance=ExtResource( 6 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -18.6689 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -53.2113 )
 
 [node name="Gifa8" parent="Obstacles" instance=ExtResource( 6 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -21.794 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -21.1586 )
 
 [node name="Gifa9" parent="Obstacles" instance=ExtResource( 6 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -25.9991 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -38.9047 )
+
+[node name="Gifa10" parent="Obstacles" instance=ExtResource( 6 )]
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -83.9493 )
+
+[node name="Gifa11" parent="Obstacles" instance=ExtResource( 6 )]
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -92.024 )
+
+[node name="Gifa12" parent="Obstacles" instance=ExtResource( 6 )]
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -107.272 )
+
+[node name="Gifa13" parent="Obstacles" instance=ExtResource( 6 )]
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -115.925 )
 
 [node name="Preda0" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -29.75 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -26.0302 )
 
 [node name="Preda1" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -18.551 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -18.493 )
 
 [node name="Preda2" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -46.6999 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -18.488 )
 
 [node name="Preda3" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -59.9455 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -26.03 )
+
+[node name="Preda4" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -29.5532 )
+
+[node name="Preda5" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -29.553 )
+
+[node name="Preda6" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -30.8358 )
+
+[node name="Preda7" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -32.0418 )
+
+[node name="Preda8" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -33.3977 )
+
+[node name="Preda9" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -34.6684 )
+
+[node name="Preda10" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -38.9675 )
+
+[node name="Preda11" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -38.9675 )
+
+[node name="Preda12" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -38.967 )
+
+[node name="Preda13" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -41.9923 )
+
+[node name="Preda14" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -44.884 )
+
+[node name="Preda15" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -47.4156 )
+
+[node name="Preda16" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -47.416 )
+
+[node name="Preda17" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -52.1381 )
+
+[node name="Preda18" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -52.1292 )
+
+[node name="Preda19" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -53.1518 )
+
+[node name="Preda20" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -77.3614 )
+
+[node name="Preda21" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -77.361 )
+
+[node name="Preda22" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -79.9798 )
+
+[node name="Preda23" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -80.0121 )
+
+[node name="Preda24" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -83.901 )
+
+[node name="Preda25" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -88.001 )
+
+[node name="Preda26" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -88.001 )
+
+[node name="Preda27" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -92.0035 )
+
+[node name="Preda28" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -95.0264 )
+
+[node name="Preda29" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -95.026 )
+
+[node name="Preda30" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -97.897 )
+
+[node name="Preda31" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -99.0176 )
+
+[node name="Preda35" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -99.018 )
+
+[node name="Preda36" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -100.507 )
+
+[node name="Preda37" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -102.057 )
+
+[node name="Preda38" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -105.171 )
+
+[node name="Preda39" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -106.068 )
+
+[node name="Preda40" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -107.146 )
+
+[node name="Preda41" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -106.573 )
+
+[node name="Preda42" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -107.165 )
+
+[node name="Preda32" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -100.637 )
+
+[node name="Preda33" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -102.174 )
+
+[node name="Preda34" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -103.68 )
+
+[node name="Preda43" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -108.776 )
+
+[node name="Preda44" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -108.776 )
+
+[node name="Preda45" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -111.81 )
+
+[node name="Preda46" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -111.762 )
+
+[node name="Preda47" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -113.527 )
+
+[node name="Preda49" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -114.163 )
+
+[node name="Preda48" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -114.615 )
+
+[node name="Preda50" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -115.472 )
+
+[node name="Preda51" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -118.35 )
+
+[node name="Preda52" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -119.722 )
+
+[node name="Preda53" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -119.079 )
+
+[node name="Preda54" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -121.709 )
+
+[node name="Preda55" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -122.878 )
+
+[node name="Preda56" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -120.435 )
+
+[node name="Preda57" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -121.432 )
+
+[node name="Preda58" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -122.133 )
+
+[node name="Preda59" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -123.158 )
+
+[node name="Preda60" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -124.158 )
+
+[node name="Preda61" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -124.158 )
+
+[node name="Preda62" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -125.386 )
+
+[node name="Preda66" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -126.15 )
+
+[node name="Preda63" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -125.386 )
+
+[node name="Preda64" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -127.862 )
+
+[node name="Preda65" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -127.862 )
 
 [node name="Toco0" parent="Obstacles" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -27.8246 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -12.734 )
 
 [node name="Toco1" parent="Obstacles" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -35.066 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -22.6359 )
 
 [node name="Toco2" parent="Obstacles" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -38.353 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -26.03 )
+
+[node name="Toco3" parent="Obstacles" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -22.634 )
+
+[node name="Toco4" parent="Obstacles" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -31.9751 )
+
+[node name="Toco5" parent="Obstacles" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -44.1617 )
+
+[node name="Toco6" parent="Obstacles" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -47.4654 )
+
+[node name="Toco7" parent="Obstacles" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -83.928 )
+
+[node name="Toco8" parent="Obstacles" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -92.021 )
+
+[node name="Toco9" parent="Obstacles" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -122.873 )
+
+[node name="Toco11" parent="Obstacles" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -128.068 )
+
+[node name="Toco10" parent="Obstacles" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -111.824 )
 
 [node name="UI" type="Node2D" parent="."]
 
@@ -114,14 +345,91 @@ one_shot = true
 [connection signal="on_any_collision" from="Obstacles/Gifa3" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Gifa4" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Gifa5" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Gifa6" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Gifa7" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Gifa8" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Gifa9" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Gifa10" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Gifa11" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Gifa12" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Gifa13" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Preda0" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Preda1" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Preda2" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Preda3" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda4" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda5" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda6" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda7" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda8" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda9" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda10" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda11" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda12" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda13" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda14" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda15" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda16" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda17" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda18" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda19" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda20" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda21" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda22" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda23" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda24" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda25" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda26" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda27" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda28" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda29" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda30" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda31" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda35" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda36" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda37" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda38" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda39" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda40" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda41" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda42" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda32" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda33" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda34" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda43" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda44" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda45" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda46" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda47" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda49" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda48" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda50" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda51" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda52" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda53" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda54" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda55" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda56" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda57" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda58" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda59" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda60" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda61" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda62" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda66" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda63" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda64" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Preda65" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Toco0" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Toco1" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Toco2" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Toco3" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Toco4" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Toco5" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Toco6" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Toco7" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Toco8" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Toco9" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Toco11" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Toco10" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="timeout" from="UI/HP/HP Regen Timer" to="UI/HP" method="_on_HP_Regen_Timer_timeout"]
