@@ -1,9 +1,9 @@
 extends Spatial
-class_name Obstacle
+# class_name Obstacle
 
 signal on_any_collision(lane, tipo)
 
-var Global = preload("res://global.gd")
+const Global = preload("res://global.gd")
 export(Global.OBSTACLE_TYPE) var type
 
 var has_collided := false

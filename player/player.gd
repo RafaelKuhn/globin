@@ -2,7 +2,7 @@ extends Spatial
 
 signal damage_taken()
 
-var Global = preload("res://global.gd")
+const Global = preload("res://global.gd")
 enum VerticalState { DEFAULT, JUMPING, ROLLING }
 enum HorizontalState { RUNNING, SWITCHING }
 

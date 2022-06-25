@@ -1,17 +1,16 @@
 extends Node2D
 
-signal lost_all_hp() # TODO: implement
-
 const NodeHP = preload("res://hp/vida.tscn")
 const NodeBlinkingHP = preload("res://hp/vida-piscando.tscn")
 const NodeLostHP = preload("res://hp/vida-perdida.tscn")
 
 const HP_REGEN_TIME_SEC := 5
-const MAX_HP := 3
+const MAX_HP := 2
 
 var instanced_hp_sprites := []
 var current_hp := MAX_HP
 
+const Global = preload("res://global.gd")
 
 ##################### callbacks #####################
 func _ready() -> void:
@@ -23,6 +22,9 @@ func _on_Player_damage_taken():
 ##################### HP #####################
 func decrement_health() -> void:
 	current_hp -= 1
+	if current_hp == 0:
+		get_node(Global.ROOT_GAME_PATH).lose_game()
+		
 	update_heart_sprites()
 	queue_hp_regen()
 

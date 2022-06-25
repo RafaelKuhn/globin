@@ -13,22 +13,22 @@ _global_script_classes=[ {
 "class": "Global",
 "language": "GDScript",
 "path": "res://global.gd"
-}, {
-"base": "Spatial",
-"class": "Obstacle",
-"language": "GDScript",
-"path": "res://obstacles/obstacle.gd"
 } ]
 _global_script_class_icons={
-"Global": "",
-"Obstacle": ""
+"Global": ""
 }
 
 [application]
 
 config/name="Globin"
-run/main_scene="res://Game.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Menu.tscn"
+config/icon="res://menus/GOBLIN-RUNNER-PNG.png"
+config/macos_native_icon="Globin"
+config/windows_native_icon="Globin"
+
+[autoload]
+
+Game="*res://game.gd"
 
 [input]
 

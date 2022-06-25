@@ -1,6 +1,6 @@
 extends Sprite3D
 
-var Global = preload("res://global.gd")
+const Global = preload("res://global.gd")
 
 var time := 0.0
 
