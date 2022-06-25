@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/jumping.png-1ce10273eaa5110acfde392e214f12eb.s3tc.stex"
-path.etc="res://.import/jumping.png-1ce10273eaa5110acfde392e214f12eb.etc.stex"
+path.s3tc="res://.import/falling.png-0d268e42c0517de1aed6eae37bc10de0.s3tc.stex"
+path.etc="res://.import/falling.png-0d268e42c0517de1aed6eae37bc10de0.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://player/jumping.png"
-dest_files=[ "res://.import/jumping.png-1ce10273eaa5110acfde392e214f12eb.s3tc.stex", "res://.import/jumping.png-1ce10273eaa5110acfde392e214f12eb.etc.stex" ]
+source_file="res://player/sprites/falling.png"
+dest_files=[ "res://.import/falling.png-0d268e42c0517de1aed6eae37bc10de0.s3tc.stex", "res://.import/falling.png-0d268e42c0517de1aed6eae37bc10de0.etc.stex" ]
 
 [params]
 

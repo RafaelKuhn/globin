@@ -22,11 +22,11 @@ __meta__ = {
 }
 
 [node name="Perdeu" type="Sprite" parent="."]
-position = Vector2( 495.251, 326.861 )
+position = Vector2( 699, 332 )
 scale = Vector2( 13.817, -10.524 )
 texture = ExtResource( 1 )
 
 [node name="Ganhou" type="Sprite" parent="."]
-position = Vector2( 494.251, 326.861 )
+position = Vector2( 326, 343 )
 scale = Vector2( 13.8168, 10.5241 )
 texture = ExtResource( 1 )

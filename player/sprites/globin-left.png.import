@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/falling.png-5db2415f87ede5ed16f4def388956673.s3tc.stex"
-path.etc="res://.import/falling.png-5db2415f87ede5ed16f4def388956673.etc.stex"
+path.s3tc="res://.import/globin-left.png-fa0f970a5f70c142fde5d40f1b366030.s3tc.stex"
+path.etc="res://.import/globin-left.png-fa0f970a5f70c142fde5d40f1b366030.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://player/falling.png"
-dest_files=[ "res://.import/falling.png-5db2415f87ede5ed16f4def388956673.s3tc.stex", "res://.import/falling.png-5db2415f87ede5ed16f4def388956673.etc.stex" ]
+source_file="res://player/sprites/globin-left.png"
+dest_files=[ "res://.import/globin-left.png-fa0f970a5f70c142fde5d40f1b366030.s3tc.stex", "res://.import/globin-left.png-fa0f970a5f70c142fde5d40f1b366030.etc.stex" ]
 
 [params]
 

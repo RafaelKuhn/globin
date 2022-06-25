@@ -1,5 +1,4 @@
 extends Spatial
-# class_name Obstacle
 
 signal on_any_collision(lane, tipo)
 
@@ -22,6 +21,6 @@ func _process(delta: float) -> void:
 		queue_free()
 	
 	if translation.z > Global.GAME_Z_START:
-	# var dist_to_world_start = translation.z - Global.GAME_Z_START
-		get_node("Sprite").modulate.a += delta * 3.0
+		# var dist_to_world_start = translation.z - Global.GAME_Z_START
+		get_node("Sprite").modulate.a += delta * Global.ALPHA_INCREMENT_SPEED
 

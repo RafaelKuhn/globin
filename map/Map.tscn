@@ -195,7 +195,7 @@ texture = ExtResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.15564, 4.76837e-07, -0.354438 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Environment/prancheta12"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.305262, 1.74, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.305262, 1.74, 0.574939 )
 cast_shadow = 0
 generate_lightmap = false
 double_sided = false

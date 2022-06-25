@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/globin-left.png-bf24c66c5816b7ad50e9498417be049c.s3tc.stex"
-path.etc="res://.import/globin-left.png-bf24c66c5816b7ad50e9498417be049c.etc.stex"
+path.s3tc="res://.import/globin-right.png-b3474c3b0595608598a40cae29da7e16.s3tc.stex"
+path.etc="res://.import/globin-right.png-b3474c3b0595608598a40cae29da7e16.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://player/globin-left.png"
-dest_files=[ "res://.import/globin-left.png-bf24c66c5816b7ad50e9498417be049c.s3tc.stex", "res://.import/globin-left.png-bf24c66c5816b7ad50e9498417be049c.etc.stex" ]
+source_file="res://player/sprites/globin-right.png"
+dest_files=[ "res://.import/globin-right.png-b3474c3b0595608598a40cae29da7e16.s3tc.stex", "res://.import/globin-right.png-b3474c3b0595608598a40cae29da7e16.etc.stex" ]
 
 [params]
 

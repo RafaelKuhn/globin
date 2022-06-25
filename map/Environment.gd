@@ -1,6 +1,6 @@
 extends Spatial
 
-var Global = preload("res://global.gd")
+const Global = preload("res://global.gd")
 
 var speed := 5.0
 
@@ -32,4 +32,4 @@ func find_last_z_position_of_objects():
 		if obj.translation.z < objects_last_z_position:
 			objects_last_z_position = obj.translation.z
 
-	print(objects_last_z_position) # TODO: sync with world end (Global const)
+	print("fim do mundo é %d" % objects_last_z_position) # TODO: sync with world end (Global const)
