@@ -13,15 +13,9 @@ _global_script_classes=[ {
 "class": "Global",
 "language": "GDScript",
 "path": "res://global.gd"
-}, {
-"base": "Spatial",
-"class": "Obstacle",
-"language": "GDScript",
-"path": "res://obstacles/obstacle.gd"
 } ]
 _global_script_class_icons={
-"Global": "",
-"Obstacle": ""
+"Global": ""
 }
 
 [application]
