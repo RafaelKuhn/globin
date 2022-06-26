@@ -1,8 +1,11 @@
 extends Spatial
 
 signal damage_taken()
+signal won_the_game()
 
 const Global = preload("res://global.gd")
+#const Game_node = preload("res://game.gd")
+
 enum VerticalState { DEFAULT, JUMPING, ROLLING }
 enum HorizontalState { RUNNING, SWITCHING }
 
@@ -167,7 +170,7 @@ func try_to_collide_based_on_type(obj_type):
 			if (vertical_state != VerticalState.JUMPING):
 				lose_hp()
 		Global.OBSTACLE_TYPE.WIN:
-			print("adasdasdad")
+			get_node(Global.GAME_MANAGER_PATH).win_game()
 
 func lose_hp():
 	emit_signal("damage_taken")
