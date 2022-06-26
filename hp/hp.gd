@@ -23,7 +23,7 @@ func _on_Player_damage_taken():
 func decrement_health() -> void:
 	current_hp -= 1
 	if current_hp == 0:
-		get_node(Global.ROOT_GAME_PATH).lose_game()
+		get_node(Global.GAME_MANAGER_PATH).lose_game()
 		
 	update_heart_sprites()
 	queue_hp_regen()

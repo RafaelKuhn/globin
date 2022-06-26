@@ -7,11 +7,13 @@ enum VerticalState { DEFAULT, JUMPING, ROLLING }
 enum HorizontalState { RUNNING, SWITCHING }
 
 # constantes
-const lane_switch_delay := 0.3
-const lane_switch_allowed_gap := 0.7
+const lane_switch_duration := 0.3
+const lane_switch_cooldown := 0.2
 const jump_delay := 0.75
 const rolling_delay := 0.7
 const jump_height := 1.5
+
+const lane_switch_allowed_collision_gap := 0.7
 
 # estado
 var vertical_state = VerticalState.DEFAULT
@@ -20,7 +22,7 @@ var horizontal_state = HorizontalState.RUNNING
 var lane: int
 var previous_lane: int
 
-var lane_switch_progress := 0.0
+var lane_switch_progress := 1.0
 var jump_progress := 0.0
 
 ##################### callbacks #####################
@@ -68,24 +70,24 @@ func _on_JumpTimer_timeout() -> void:
 
 ##################### movimento horizontal #####################
 func try_switching_right() -> void:
-	if horizontal_state != HorizontalState.RUNNING:
+	if lane_switch_progress < (lane_switch_cooldown / lane_switch_duration):
 		return
 	if lane == 3:
 		return
 	
 	switch_right()
 	horizontal_state = HorizontalState.SWITCHING
-	$LaneTimer.start(lane_switch_delay)
+	$LaneTimer.start(lane_switch_duration)
 	
 func try_switching_left() -> void:
-	if horizontal_state != HorizontalState.RUNNING:
+	if lane_switch_progress < (lane_switch_cooldown / lane_switch_duration):
 		return
 	if lane == 1:
 		return
 	
 	switch_left()
 	horizontal_state = HorizontalState.SWITCHING
-	$LaneTimer.start(lane_switch_delay)
+	$LaneTimer.start(lane_switch_duration)
 
 # início da troca de lane
 func switch_right() -> void:
@@ -110,7 +112,7 @@ func update_horizontal_movement(delta: float) -> void:
 	if horizontal_state != HorizontalState.SWITCHING:
 		return
 
-	lane_switch_progress += delta * 1/lane_switch_delay
+	lane_switch_progress += delta * 1.0 / lane_switch_duration
 	translation.x = lerp(previous_lane, lane, tween_quad(lane_switch_progress))
 	
 
@@ -148,8 +150,8 @@ func DEV_desamassa() -> void:
 ##################### colisão dos objetos #####################
 # callback para quando algum objeto chega na posição z do player
 func _on_any_obstacle_z_collision(lane_obstacle_x: int, obj_type) -> void:
-	var has_collided_in_current_lane = lane_obstacle_x == lane && lane_switch_progress > lane_switch_allowed_gap
-	var has_collided_while_switching_lanes = lane_obstacle_x == previous_lane && lane_switch_progress < lane_switch_allowed_gap
+	var has_collided_in_current_lane = lane_obstacle_x == lane && lane_switch_progress > lane_switch_allowed_collision_gap
+	var has_collided_while_switching_lanes = lane_obstacle_x == previous_lane && lane_switch_progress < lane_switch_allowed_collision_gap
 
 	if has_collided_in_current_lane || has_collided_while_switching_lanes:
 		try_to_collide_based_on_type(obj_type)
