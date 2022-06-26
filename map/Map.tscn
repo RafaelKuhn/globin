@@ -361,6 +361,16 @@ generate_lightmap = false
 double_sided = false
 texture = ExtResource( 5 )
 
+[node name="arvore-alta14" type="Spatial" parent="Environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.15814, -0.0947258, 0.916746 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/arvore-alta14"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.97, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 5 )
+
 [node name="arvore-baixa2" type="Spatial" parent="Environment"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43947, -0.0947258, -2.2782 )
 
@@ -415,6 +425,26 @@ texture = ExtResource( 6 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.34057, -0.0947258, -4.52048 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Environment/arvore-baixa4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27801, 1.6, 0.376481 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 6 )
+
+[node name="arvore-baixa8" type="Spatial" parent="Environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.34057, -0.0947258, 1.85454 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/arvore-baixa8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27801, 1.6, 0.376481 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 6 )
+
+[node name="arvore-baixa9" type="Spatial" parent="Environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.230918, -0.0947258, 3.04014 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/arvore-baixa9"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27801, 1.6, 0.376481 )
 cast_shadow = 0
 generate_lightmap = false
@@ -541,6 +571,123 @@ generate_lightmap = false
 double_sided = false
 texture = ExtResource( 7 )
 
+[node name="coguzinho17" type="Spatial" parent="Environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.14936, 0, 0.269543 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/coguzinho17"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 7 )
+
+[node name="coguzinho18" type="Spatial" parent="Environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.26283, 0, 0.269543 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/coguzinho18"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 7 )
+
+[node name="coguzinho19" type="Spatial" parent="Environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.00662, 0, 1.13713 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/coguzinho19"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 7 )
+
+[node name="coguzinho21" type="Spatial" parent="Environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.820598, 0, 1.95598 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/coguzinho21"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 7 )
+
+[node name="coguzinho22" type="Spatial" parent="Environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0334375, 0, 1.66976 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/coguzinho22"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 7 )
+
+[node name="coguzinho23" type="Spatial" parent="Environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.40148, 0, 2.76331 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/coguzinho23"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 7 )
+
+[node name="coguzinho24" type="Spatial" parent="Environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.745397, 0, 2.52947 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/coguzinho24"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 7 )
+
+[node name="coguzinho25" type="Spatial" parent="Environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.262433, 0, 2.52947 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/coguzinho25"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, -0.237802 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 7 )
+
+[node name="Sprite3D2" type="Sprite3D" parent="Environment/coguzinho25"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.61029, 0.15, 0.178256 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 7 )
+
+[node name="coguzinho26" type="Spatial" parent="Environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.262433, 0, 3.13538 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/coguzinho26"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 7 )
+
+[node name="coguzinho27" type="Spatial" parent="Environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9667, 0, 3.13538 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/coguzinho27"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 7 )
+
+[node name="coguzinho20" type="Spatial" parent="Environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.367884, 0, 1.13713 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/coguzinho20"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 7 )
+
 [node name="coguzinho8" type="Spatial" parent="Environment"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.123706, 0, -5.74685 )
 
@@ -601,6 +748,26 @@ generate_lightmap = false
 double_sided = false
 texture = ExtResource( 2 )
 
+[node name="toco8" type="Spatial" parent="Environment"]
+transform = Transform( 0.696491, 0, 0, 0, 0.696491, 0, 0, 0, 0.696491, -2.3626, -0.119303, 1.80593 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/toco8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46873, 0.54, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 2 )
+
+[node name="toco9" type="Spatial" parent="Environment"]
+transform = Transform( 0.696491, 0, 0, 0, 0.696491, 0, 0, 0, 0.696491, 5.62691, -0.119303, 3.16558 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Environment/toco9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46873, 0.54, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 2 )
+
 [node name="toco5" type="Spatial" parent="Environment"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.28498, -0.185834, -10.7432 )
 
@@ -610,6 +777,16 @@ cast_shadow = 0
 generate_lightmap = false
 double_sided = false
 texture = ExtResource( 2 )
+
+[node name="pinheiro2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11317, 0, 0.981543 )
+
+[node name="Sprite3D" type="Sprite3D" parent="pinheiro2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.74, 0 )
+cast_shadow = 0
+generate_lightmap = false
+double_sided = false
+texture = ExtResource( 4 )
 
 [node name="DEV_PALLETTE" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4119, 0, 0 )
