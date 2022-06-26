@@ -1,7 +1,7 @@
 extends Node
 class_name Global
 
-enum OBSTACLE_TYPE { GIFA, PREDA, TOCO }
+enum OBSTACLE_TYPE { GIFA, PREDA, TOCO, WIN }
 
 const GAME_SPEED := 5.0
 

@@ -166,6 +166,8 @@ func try_to_collide_based_on_type(obj_type):
 		Global.OBSTACLE_TYPE.TOCO:
 			if (vertical_state != VerticalState.JUMPING):
 				lose_hp()
+		Global.OBSTACLE_TYPE.WIN:
+			print("adasdasdad")
 
 func lose_hp():
 	emit_signal("damage_taken")
