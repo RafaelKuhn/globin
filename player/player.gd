@@ -9,9 +9,10 @@ enum HorizontalState { RUNNING, SWITCHING }
 
 # constantes
 const lane_switch_duration := 0.3
-const lane_switch_cooldown := 0.2
-const jump_delay := 0.75
-const rolling_delay := 0.7
+const minimum_percentage_to_lane_switch_again := 0.35
+
+const rolling_duration := 1.7
+const jump_duration := 0.75
 const jump_height := 1.5
 
 const lane_switch_allowed_collision_gap := 0.7
@@ -57,13 +58,13 @@ func try_jumping() -> void:
 	if vertical_state != VerticalState.DEFAULT:
 		return
 	vertical_state = VerticalState.JUMPING
-	$JumpTimer.start(jump_delay)
+	$JumpTimer.start(jump_duration)
 	
 func try_rolling() -> void:
 	if vertical_state != VerticalState.DEFAULT:
 		return
 	vertical_state = VerticalState.ROLLING
-	$JumpTimer.start(rolling_delay)
+	$JumpTimer.start(rolling_duration)
 
 func _on_JumpTimer_timeout() -> void:
 	vertical_state = VerticalState.DEFAULT
@@ -71,7 +72,7 @@ func _on_JumpTimer_timeout() -> void:
 
 ##################### movimento horizontal #####################
 func try_switching_right() -> void:
-	if lane_switch_progress < (lane_switch_cooldown / lane_switch_duration):
+	if lane_switch_progress < minimum_percentage_to_lane_switch_again:
 		return
 	if lane == 3:
 		return
@@ -81,7 +82,7 @@ func try_switching_right() -> void:
 	$LaneTimer.start(lane_switch_duration)
 	
 func try_switching_left() -> void:
-	if lane_switch_progress < (lane_switch_cooldown / lane_switch_duration):
+	if lane_switch_progress < minimum_percentage_to_lane_switch_again:
 		return
 	if lane == 1:
 		return

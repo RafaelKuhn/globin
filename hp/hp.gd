@@ -1,5 +1,9 @@
 extends Node2D
 
+signal needs_to_shake_camera()
+
+const Global = preload("res://global.gd")
+
 const NodeHP = preload("res://hp/vida.tscn")
 const NodeBlinkingHP = preload("res://hp/vida-piscando.tscn")
 const NodeLostHP = preload("res://hp/vida-perdida.tscn")
@@ -10,7 +14,6 @@ const MAX_HP := 2
 var instanced_hp_sprites := []
 var current_hp := MAX_HP
 
-const Global = preload("res://global.gd")
 
 ##################### callbacks #####################
 func _ready() -> void:
@@ -18,6 +21,8 @@ func _ready() -> void:
 
 func _on_Player_damage_taken():
 	decrement_health()
+	emit_signal("needs_to_shake_camera")
+
 
 ##################### HP #####################
 func decrement_health() -> void:
