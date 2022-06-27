@@ -430,17 +430,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -180.303 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -187.853 )
 
 [node name="Win" parent="Obstacles" instance=ExtResource( 8 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 2, 0, -194.33 )
+transform = Transform( 0.237947, 0, 0, 0, 0.237947, 0, 0, 0, 1.18973, 2, 0.534384, -194.33 )
 script = ExtResource( 9 )
 type = 3
 
 [node name="Win2" parent="Obstacles" instance=ExtResource( 8 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 3, 0, -194.33 )
+transform = Transform( 0.237947, 0, 0, 0, 0.237947, 0, 0, 0, 1.18973, 3.18973, 0.534384, -194.33 )
 script = ExtResource( 9 )
 type = 3
 
 [node name="Win3" parent="Obstacles" instance=ExtResource( 8 )]
-transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 1, 0, -194.33 )
+transform = Transform( 0.237947, 0, 0, 0, 0.237947, 0, 0, 0, 1.18973, 0.810266, 0.534384, -194.33 )
 script = ExtResource( 9 )
 type = 3
 
