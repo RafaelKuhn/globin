@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://dev/obstacles/dev_arvore.png" type="Texture" id=1]
-[ext_resource path="res://obstacles/Obstacle.gd" type="Script" id=2]
+[ext_resource path="res://obstacles/obstacle.gd" type="Script" id=2]
 
 [node name="Win" type="Spatial"]
 script = ExtResource( 2 )
