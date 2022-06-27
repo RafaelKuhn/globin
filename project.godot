@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="Globin"
 run/main_scene="res://Menu.tscn"
-config/icon="res://menus/GOBLIN-RUNNER-PNG.png"
+config/icon="res://menus/sprites/GOBLIN-RUNNER-PNG.png"
 config/macos_native_icon="Globin"
 config/windows_native_icon="Globin"
 

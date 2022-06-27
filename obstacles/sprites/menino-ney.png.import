@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/dev_arvore.png-0aecf55e5070e649d36991ed5ac69cb5.s3tc.stex"
-path.etc="res://.import/dev_arvore.png-0aecf55e5070e649d36991ed5ac69cb5.etc.stex"
+path.s3tc="res://.import/menino-ney.png-e1d24250e0aa0ec8f4139d134fed0c2f.s3tc.stex"
+path.etc="res://.import/menino-ney.png-e1d24250e0aa0ec8f4139d134fed0c2f.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,13 +11,13 @@ metadata={
 
 [deps]
 
-source_file="res://dev/obstacles/dev_arvore.png"
-dest_files=[ "res://.import/dev_arvore.png-0aecf55e5070e649d36991ed5ac69cb5.s3tc.stex", "res://.import/dev_arvore.png-0aecf55e5070e649d36991ed5ac69cb5.etc.stex" ]
+source_file="res://obstacles/sprites/menino-ney.png"
+dest_files=[ "res://.import/menino-ney.png-e1d24250e0aa0ec8f4139d134fed0c2f.s3tc.stex", "res://.import/menino-ney.png-e1d24250e0aa0ec8f4139d134fed0c2f.etc.stex" ]
 
 [params]
 
 compress/mode=2
-compress/lossy_quality=0.7
+compress/lossy_quality=0.8
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

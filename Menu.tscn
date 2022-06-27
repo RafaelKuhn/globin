@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://menus/menu.gd" type="Script" id=1]
-[ext_resource path="res://menus/play(1).png" type="Texture" id=2]
-[ext_resource path="res://menus/GOBLIN-RUNNER-PNG.png" type="Texture" id=3]
+[ext_resource path="res://menus/sprites/play(1).png" type="Texture" id=2]
+[ext_resource path="res://menus/sprites/GOBLIN-RUNNER-PNG.png" type="Texture" id=3]
 
 [sub_resource type="ProceduralSky" id=2]
 sky_top_color = Color( 0.27339, 0.0858, 0.39, 1 )

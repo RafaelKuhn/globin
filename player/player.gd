@@ -153,6 +153,9 @@ func DEV_desamassa() -> void:
 ##################### colisão dos objetos #####################
 # callback para quando algum objeto chega na posição z do player
 func _on_any_obstacle_z_collision(lane_obstacle_x: int, obj_type) -> void:
+	if obj_type == Global.OBSTACLE_TYPE.WIN:
+		get_node(Global.GAME_MANAGER_PATH).win_game()
+	
 	var has_collided_in_current_lane = lane_obstacle_x == lane && lane_switch_progress > lane_switch_allowed_collision_gap
 	var has_collided_while_switching_lanes = lane_obstacle_x == previous_lane && lane_switch_progress < lane_switch_allowed_collision_gap
 
@@ -169,8 +172,6 @@ func try_to_collide_based_on_type(obj_type):
 		Global.OBSTACLE_TYPE.TOCO:
 			if (vertical_state != VerticalState.JUMPING):
 				lose_hp()
-		Global.OBSTACLE_TYPE.WIN:
-			get_node(Global.GAME_MANAGER_PATH).win_game()
 
 func lose_hp():
 	emit_signal("damage_taken")

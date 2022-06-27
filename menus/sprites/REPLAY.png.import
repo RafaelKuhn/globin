@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GANHOU.png-14dd5a8fe72c631ec4cd43efba07db99.stex"
+path="res://.import/REPLAY.png-2d84cf6d4fb9c95f5a552a3b23c3769c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dev/GANHOU.png"
-dest_files=[ "res://.import/GANHOU.png-14dd5a8fe72c631ec4cd43efba07db99.stex" ]
+source_file="res://menus/sprites/REPLAY.png"
+dest_files=[ "res://.import/REPLAY.png-2d84cf6d4fb9c95f5a552a3b23c3769c.stex" ]
 
 [params]
 

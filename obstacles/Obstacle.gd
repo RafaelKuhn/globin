@@ -9,20 +9,24 @@ onready var sprite = get_node("Sprite")
 
 var has_collided := false
 
-
+# TODO: make this work with global positions
 func _ready():
-	if translation.z < Global.GAME_Z_START:
+	# var global_pos = to_global(translation)
+	var global_pos = translation
+	if global_pos.z < Global.GAME_Z_START:
 		sprite.modulate.a = 0.0
 
 func _process(delta: float) -> void:
+	var global_pos = translation
 	translation.z += delta * Global.GAME_SPEED
-	if !has_collided && translation.z >= 0:
+	if global_pos.z > Global.GAME_Z_END:
+		has_collided = true
+		queue_free()
+
+	if !has_collided && global_pos.z >= Global.PLAYER_Z_POSITION:
 		has_collided = true
 		emit_signal("on_any_collision", round(translation.x), type)
 	
-	if translation.z > 3:
-		queue_free()
-	
-	if translation.z > Global.GAME_Z_START:
+	if global_pos.z > Global.GAME_Z_START:
 		sprite.modulate.a += delta * Global.ALPHA_INCREMENT_SPEED
 

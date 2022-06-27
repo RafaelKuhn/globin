@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://obstacles/Toco.tscn" type="PackedScene" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://obstacles/Gifa.tscn" type="PackedScene" id=6]
 [ext_resource path="res://hp/hp.gd" type="Script" id=7]
 [ext_resource path="res://obstacles/Win.tscn" type="PackedScene" id=8]
-[ext_resource path="res://obstacles/obstacle.gd" type="Script" id=9]
 
 [sub_resource type="ProceduralSky" id=2]
 sky_top_color = Color( 0.27339, 0.0858, 0.39, 1 )
@@ -430,18 +429,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -180.303 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -187.853 )
 
 [node name="Win" parent="Obstacles" instance=ExtResource( 8 )]
-transform = Transform( 0.237947, 0, 0, 0, 0.237947, 0, 0, 0, 1.18973, 2, 0.534384, -194.33 )
-script = ExtResource( 9 )
+transform = Transform( 0.13, 0, 0, 0, 0.13, 0, 0, 0, 1, 2, 0, -194.33 )
 type = 3
 
 [node name="Win2" parent="Obstacles" instance=ExtResource( 8 )]
-transform = Transform( 0.237947, 0, 0, 0, 0.237947, 0, 0, 0, 1.18973, 3.18973, 0.534384, -194.33 )
-script = ExtResource( 9 )
+transform = Transform( 0.13, 0, 0, 0, 0.13, 0, 0, 0, 1, 3.18973, 0, -194.33 )
 type = 3
 
 [node name="Win3" parent="Obstacles" instance=ExtResource( 8 )]
-transform = Transform( 0.237947, 0, 0, 0, 0.237947, 0, 0, 0, 1.18973, 0.810266, 0.534384, -194.33 )
-script = ExtResource( 9 )
+transform = Transform( 0.13, 0, 0, 0, 0.13, 0, 0, 0, 1, 0.810266, 0, -194.33 )
 type = 3
 
 [node name="UI" type="Node2D" parent="."]
