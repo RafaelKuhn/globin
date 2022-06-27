@@ -10,6 +10,8 @@ const GAME_INSTANCE_NAME = "GAME_INSTANCE"
 const WIN_INSTANCE_NAME = "WIN_INSTANCE"
 const LOST_INSTANCE_NAME = "LOST_INSTANCE"
 
+var game_speed := 8.0
+
 
 func lose_game():
 	load_lost_scene()
@@ -17,15 +19,8 @@ func lose_game():
 func win_game():
 	load_won_scene()
 
-
-# TODO: [prod]: nunca se volta pra cena do menu, a cena do menu limpa a si mesma, o game não
-# const MENU_INSTANCE_NAME = "MENU_INSTANCE"
-# func load_menu_scene():
-# 	var menu_instance = menu_scene.instance()
-# 	menu_instance.name = MENU_INSTANCE_NAME
-# 	var root = get_tree().get_root()
-# 	root.remove_child(root.get_node(GAME_INSTANCE_NAME))
-# 	root.add_child(menu_instance)
+# TODO: [prod]: nunca se volta pra cena do menu
+# a cena do menu limpa a si mesma, já o game não
 
 func load_game_scene():
 	var game_instance = game_scene.instance()

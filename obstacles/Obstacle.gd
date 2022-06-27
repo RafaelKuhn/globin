@@ -5,6 +5,8 @@ signal on_any_collision(lane, tipo)
 const Global = preload("res://global.gd")
 export(Global.OBSTACLE_TYPE) var type
 
+onready var speed: float = get_node("/root/Game").game_speed
+
 onready var sprite = get_node("Sprite")
 
 var has_collided := false
@@ -18,7 +20,7 @@ func _ready():
 
 func _process(delta: float) -> void:
 	var global_pos = translation
-	translation.z += delta * Global.GAME_SPEED
+	translation.z += delta * speed
 	if global_pos.z > Global.GAME_Z_END:
 		has_collided = true
 		queue_free()

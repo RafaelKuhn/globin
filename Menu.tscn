@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://menus/menu.gd" type="Script" id=1]
 [ext_resource path="res://menus/sprites/play(1).png" type="Texture" id=2]
 [ext_resource path="res://menus/sprites/GOBLIN-RUNNER-PNG.png" type="Texture" id=3]
+[ext_resource path="res://menus/EzTog.tscn" type="PackedScene" id=4]
+[ext_resource path="res://menus/VeryEzTog.tscn" type="PackedScene" id=5]
+[ext_resource path="res://menus/MedTog.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ProceduralSky" id=2]
 sky_top_color = Color( 0.27339, 0.0858, 0.39, 1 )
@@ -22,6 +25,8 @@ background_color = Color( 0.141176, 0.141176, 0.141176, 1 )
 dof_blur_far_distance = 29.95
 dof_blur_far_transition = 0.08
 glow_intensity = 3.69
+
+[sub_resource type="ButtonGroup" id=3]
 
 [node name="Global" type="Node"]
 
@@ -47,16 +52,30 @@ __meta__ = {
 }
 
 [node name="PlayButton" type="TextureButton" parent="Menu"]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_left = 372.0
-margin_top = 99.0
-margin_right = 1411.0
-margin_bottom = 324.0
+margin_left = 375.0
+margin_top = 302.0
+margin_right = 1414.0
+margin_bottom = 527.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="VeryEzTog" parent="Menu" instance=ExtResource( 5 )]
+margin_top = 431.0
+margin_bottom = 471.0
+group = SubResource( 3 )
+
+[node name="EzTog" parent="Menu" instance=ExtResource( 4 )]
+group = SubResource( 3 )
+
+[node name="MedTog" parent="Menu" instance=ExtResource( 6 )]
+margin_top = 503.0
+margin_bottom = 543.0
+group = SubResource( 3 )
+
 [connection signal="pressed" from="Menu/PlayButton" to="Menu" method="_on_PlayButton_pressed"]
+[connection signal="toggled" from="Menu/VeryEzTog" to="Menu" method="_on_VeryEzTog_toggled"]
+[connection signal="toggled" from="Menu/EzTog" to="Menu" method="_on_EzTog_toggled"]
+[connection signal="toggled" from="Menu/MedTog" to="Menu" method="_on_MedTog_toggled"]

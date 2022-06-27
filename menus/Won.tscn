@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://menus/menu.gd" type="Script" id=1]
-[ext_resource path="res://map/sprites/cogumelos.png" type="Texture" id=2]
+[ext_resource path="res://menus/VeryEzTog.tscn" type="PackedScene" id=2]
 [ext_resource path="res://menus/sprites/GANHOU.png" type="Texture" id=3]
 [ext_resource path="res://menus/sprites/REPLAY.png" type="Texture" id=4]
+[ext_resource path="res://menus/EzTog.tscn" type="PackedScene" id=5]
+[ext_resource path="res://menus/MedTog.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ProceduralSky" id=2]
 sky_top_color = Color( 0.27339, 0.0858, 0.39, 1 )
@@ -23,6 +25,8 @@ background_color = Color( 0.141176, 0.141176, 0.141176, 1 )
 dof_blur_far_distance = 29.95
 dof_blur_far_transition = 0.08
 glow_intensity = 3.69
+
+[sub_resource type="ButtonGroup" id=3]
 
 [node name="Global" type="Node"]
 
@@ -48,21 +52,30 @@ __meta__ = {
 }
 
 [node name="PlayButton" type="TextureButton" parent="Menu"]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_left = 372.0
-margin_top = 99.0
-margin_right = 1411.0
-margin_bottom = 324.0
+margin_left = 379.0
+margin_top = 284.0
+margin_right = 1418.0
+margin_bottom = 510.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture_normal = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="Menu"]
-position = Vector2( 529.5, 328 )
-scale = Vector2( 2.29986, 2.16689 )
-texture = ExtResource( 2 )
+[node name="EzTog" parent="Menu" instance=ExtResource( 5 )]
+group = SubResource( 3 )
+
+[node name="MedTog" parent="Menu" instance=ExtResource( 6 )]
+margin_top = 502.0
+margin_bottom = 542.0
+group = SubResource( 3 )
+
+[node name="VeryEzTog" parent="Menu" instance=ExtResource( 2 )]
+margin_top = 431.0
+margin_bottom = 471.0
+group = SubResource( 3 )
 
 [connection signal="pressed" from="Menu/PlayButton" to="Menu" method="_on_PlayButton_pressed"]
+[connection signal="toggled" from="Menu/EzTog" to="Menu" method="_on_EzTog_toggled"]
+[connection signal="toggled" from="Menu/MedTog" to="Menu" method="_on_MedTog_toggled"]
+[connection signal="toggled" from="Menu/VeryEzTog" to="Menu" method="_on_VeryEzTog_toggled"]

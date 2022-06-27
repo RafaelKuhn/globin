@@ -20,6 +20,8 @@ const JUMP_HEIGHT := 1.5
 
 const SWITCHING_LANES_COLLISION_GAP := 0.7
 
+onready var speed: float = get_node("/root/Game").game_speed
+
 # estado
 var vertical_state = VerticalState.DEFAULT
 var horizontal_state = HorizontalState.RUNNING
@@ -62,13 +64,13 @@ func try_jumping() -> void:
 	if vertical_state != VerticalState.DEFAULT:
 		return
 	vertical_state = VerticalState.JUMPING
-	$JumpTimer.start(Global.sync_inverse_game_speed(JUMP_DURATION))
+	$JumpTimer.start(Global.sync_inverse_game_speed(JUMP_DURATION, speed))
 	
 func try_rolling() -> void:
 	if vertical_state != VerticalState.DEFAULT:
 		return
 	vertical_state = VerticalState.ROLLING
-	$JumpTimer.start(Global.sync_inverse_game_speed(ROLLING_DURATION))
+	$JumpTimer.start(Global.sync_inverse_game_speed(ROLLING_DURATION, speed))
 
 func _on_JumpTimer_timeout() -> void:
 	vertical_state = VerticalState.DEFAULT
@@ -83,7 +85,7 @@ func try_switching_right() -> void:
 	
 	switch_right()
 	horizontal_state = HorizontalState.SWITCHING
-	$LaneTimer.start(Global.sync_inverse_game_speed(LANE_SWITCH_DURATION))
+	$LaneTimer.start(Global.sync_inverse_game_speed(LANE_SWITCH_DURATION, speed))
 	
 func try_switching_left() -> void:
 	if lane_switch_progress < MIN_PERCENTAGE_TO_SWITCH_LANE_AGAIN:
@@ -93,7 +95,7 @@ func try_switching_left() -> void:
 	
 	switch_left()
 	horizontal_state = HorizontalState.SWITCHING
-	$LaneTimer.start(Global.sync_inverse_game_speed(LANE_SWITCH_DURATION))
+	$LaneTimer.start(Global.sync_inverse_game_speed(LANE_SWITCH_DURATION, speed))
 
 # início da troca de lane
 func switch_right() -> void:
@@ -118,7 +120,7 @@ func update_horizontal_movement(delta: float) -> void:
 	if horizontal_state != HorizontalState.SWITCHING:
 		return
 
-	lane_switch_progress += delta * 1.0 / Global.sync_inverse_game_speed(LANE_SWITCH_DURATION)
+	lane_switch_progress += delta * 1.0 / Global.sync_inverse_game_speed(LANE_SWITCH_DURATION, speed)
 	translation.x = lerp(previous_lane, lane, tween_quad(lane_switch_progress))
 	
 
