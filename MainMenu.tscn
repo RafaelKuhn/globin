@@ -1,0 +1,124 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://menus/sprites/GOBLIN-RUNNER-PNG.png" type="Texture" id=1]
+[ext_resource path="res://menus/sprites/BTN2.png" type="Texture" id=2]
+[ext_resource path="res://menus/sprites/BTN3.png" type="Texture" id=4]
+[ext_resource path="res://menus/menu.gd" type="Script" id=5]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.333333, 0.715847 )
+colors = PoolColorArray( 0.109804, 0.215686, 0.0156863, 1, 0.377738, 0.399817, 0.0640796, 1, 0.631373, 0.572549, 0.109804, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 512
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.388235, 0.670588, 0.0784314, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GoblinRunner" type="TextureRect" parent="."]
+anchor_right = 1.0
+margin_top = -77.0
+margin_bottom = 441.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BtnFromGlobin" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+margin_left = 382.0
+margin_top = 275.363
+margin_right = -386.0
+margin_bottom = 404.363
+grow_horizontal = 0
+grow_vertical = 0
+rect_clip_content = true
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="."]
+visible = false
+anchor_right = 1.0
+margin_left = 383.0
+margin_top = 324.0
+margin_right = 398.0
+margin_bottom = 549.0
+rect_scale = Vector2( 0.257097, 0.257097 )
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+visible = false
+anchor_right = 1.0
+margin_left = 401.0
+margin_top = 8.0
+margin_right = 416.0
+margin_bottom = 233.0
+rect_scale = Vector2( 0.257097, 0.257097 )
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -158.0
+margin_top = 314.0
+margin_right = 881.0
+margin_bottom = 914.0
+rect_scale = Vector2( 0.28, 0.28 )
+custom_constants/separation = 60
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer2"]
+margin_right = 1039.0
+margin_bottom = 225.0
+size_flags_horizontal = 4
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer2"]
+visible = false
+margin_top = 285.0
+margin_right = 1039.0
+margin_bottom = 510.0
+size_flags_horizontal = 4
+texture_normal = ExtResource( 2 )
+
+[connection signal="pressed" from="VBoxContainer2/TextureButton" to="." method="_on_PlayButton_pressed"]

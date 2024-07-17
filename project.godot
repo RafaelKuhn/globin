@@ -21,8 +21,8 @@ _global_script_class_icons={
 [application]
 
 config/name="Globin"
-run/main_scene="res://Menu.tscn"
-config/icon="res://menus/sprites/GOBLIN-RUNNER-PNG.png"
+run/main_scene="res://MainMenu.tscn"
+config/icon="res://icon2.png"
 config/macos_native_icon="Globin"
 config/windows_native_icon="Globin"
 

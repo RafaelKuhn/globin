@@ -2,11 +2,10 @@ extends Spatial
 
 const Global = preload("res://global.gd")
 
-var speed := 5.0
-
 var objects: Array
 var objects_last_z_position: float
 
+onready var speed: float = get_node("/root/Game").game_speed
 
 func _ready():
 	objects = get_children()
@@ -15,7 +14,7 @@ func _ready():
 
 func _process(delta):
 	for obj in objects:
-		obj.translation.z += delta * Global.GAME_SPEED
+		obj.translation.z += delta * speed
 		if obj.translation.z > Global.GAME_Z_END:
 			obj.translation.z = objects_last_z_position
 			obj.get_child(0).modulate.a = 0.0
@@ -32,4 +31,5 @@ func find_last_z_position_of_objects():
 		if obj.translation.z < objects_last_z_position:
 			objects_last_z_position = obj.translation.z
 
-	print("fim do mundo é %d" % objects_last_z_position) # TODO: sync with world end (Global const)
+	# TODO: sync with world end (Global const)
+	# print("fim do mundo é %d" % objects_last_z_position)
