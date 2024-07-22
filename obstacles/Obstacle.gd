@@ -2,7 +2,7 @@ extends Spatial
 
 signal on_any_collision(lane, tipo)
 
-const Global = preload("res://global.gd")
+const Global = preload("res://game/global.gd")
 export(Global.OBSTACLE_TYPE) var type
 
 onready var speed: float = get_node("/root/Game").game_speed

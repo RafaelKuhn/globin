@@ -1,6 +1,6 @@
 extends Node
 
-const Global = preload("res://global.gd")
+const Global = preload("res://game/global.gd")
 
 # func _ready():
 # 	$"VeryEzTog".pressed = false
@@ -30,3 +30,8 @@ func _on_MedTog_toggled(_is_pressed: bool):
 	get_node("/root/Game").game_speed = 12.0
 
 
+func _on_rafa_press():
+	OS.shell_open("https://rafaelkuhn.com")
+
+func _on_mari_press():
+	OS.shell_open("https://www.behance.net/marianabiondo1")

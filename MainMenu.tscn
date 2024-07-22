@@ -1,9 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://menus/sprites/GOBLIN-RUNNER-PNG.png" type="Texture" id=1]
 [ext_resource path="res://menus/sprites/BTN2.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://menus/sprites/BTN3.png" type="Texture" id=4]
 [ext_resource path="res://menus/menu.gd" type="Script" id=5]
+[ext_resource path="res://menus/sprites/EU.png" type="Texture" id=6]
+[ext_resource path="res://menus/sprites/MARI_HOV.png" type="Texture" id=7]
+[ext_resource path="res://menus/sprites/MARI.png" type="Texture" id=8]
+[ext_resource path="res://menus/sprites/EU_HOV.png" type="Texture" id=9]
+[ext_resource path="res://custom-ui/scaler.gd" type="Script" id=10]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.333333, 0.715847 )
@@ -13,19 +19,10 @@ colors = PoolColorArray( 0.109804, 0.215686, 0.0156863, 1, 0.377738, 0.399817, 0
 gradient = SubResource( 1 )
 width = 512
 
-[node name="Control" type="Control"]
+[node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.388235, 0.670588, 0.0784314, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -39,10 +36,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="GoblinRunner" type="TextureRect" parent="."]
-anchor_right = 1.0
-margin_top = -77.0
-margin_bottom = 441.0
+[node name="MenuScaler" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+script = ExtResource( 10 )
+
+[node name="GoblinRunner" type="TextureRect" parent="MenuScaler"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -907.0
+margin_top = -657.0
+margin_right = 1013.0
+margin_bottom = 340.983
+rect_scale = Vector2( 0.94269, 0.94269 )
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 6
@@ -50,75 +60,146 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BtnFromGlobin" type="TextureRect" parent="."]
-visible = false
+[node name="Menu" type="Control" parent="MenuScaler"]
 anchor_right = 1.0
-margin_left = 382.0
-margin_top = 275.363
-margin_right = -386.0
-margin_bottom = 404.363
-grow_horizontal = 0
-grow_vertical = 0
-rect_clip_content = true
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 6
+anchor_bottom = 1.0
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="."]
-visible = false
-anchor_right = 1.0
-margin_left = 383.0
-margin_top = 324.0
-margin_right = 398.0
-margin_bottom = 549.0
-rect_scale = Vector2( 0.257097, 0.257097 )
-texture_normal = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureButton2" type="TextureButton" parent="."]
-visible = false
-anchor_right = 1.0
-margin_left = 401.0
-margin_top = 8.0
-margin_right = 416.0
-margin_bottom = 233.0
-rect_scale = Vector2( 0.257097, 0.257097 )
-texture_normal = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+[node name="OrPressSpace" type="Label" parent="MenuScaler/Menu"]
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-margin_left = -158.0
-margin_top = 314.0
-margin_right = 881.0
-margin_bottom = 914.0
-rect_scale = Vector2( 0.28, 0.28 )
-custom_constants/separation = 60
+anchor_bottom = 0.5
+margin_left = -121.0
+margin_top = 213.0
+margin_right = 1494.0
+margin_bottom = 298.0
+rect_scale = Vector2( 0.152021, 0.152021 )
+custom_fonts/font = ExtResource( 3 )
+text = "(press SPACE|ENTER)"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer2"]
-margin_right = 1039.0
+[node name="MenuItems" type="VBoxContainer" parent="MenuScaler/Menu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -351.0
+margin_top = 128.0
+margin_right = 1648.0
+margin_bottom = 1258.0
+rect_scale = Vector2( 0.35, 0.35 )
+custom_constants/separation = 140
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="MenuScaler/Menu/MenuItems"]
+margin_left = 480.0
+margin_right = 1519.0
 margin_bottom = 225.0
+focus_mode = 0
 size_flags_horizontal = 4
+enabled_focus_mode = 0
 texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 4 )
 
-[node name="TextureButton2" type="TextureButton" parent="VBoxContainer2"]
-visible = false
-margin_top = 285.0
-margin_right = 1039.0
-margin_bottom = 510.0
+[node name="Label" type="Label" parent="MenuScaler/Menu/MenuItems/TextureButton"]
+margin_left = 341.333
+margin_top = 68.7499
+margin_right = 355.333
+margin_bottom = 82.7499
+custom_fonts/font = ExtResource( 3 )
+text = "Play"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton2" type="TextureButton" parent="MenuScaler/Menu/MenuItems"]
+margin_left = 480.0
+margin_top = 365.0
+margin_right = 1519.0
+margin_bottom = 590.0
 size_flags_horizontal = 4
 texture_normal = ExtResource( 2 )
 
-[connection signal="pressed" from="VBoxContainer2/TextureButton" to="." method="_on_PlayButton_pressed"]
+[node name="Label2" type="Label" parent="MenuScaler/Menu/MenuItems/TextureButton2"]
+margin_left = 148.0
+margin_top = 81.0
+margin_right = 162.0
+margin_bottom = 95.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = ExtResource( 3 )
+text = "How To Play"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadeByScaler" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadeBy2" type="Label" parent="MadeByScaler"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -328.0
+margin_top = -228.0
+margin_right = 352.0
+margin_bottom = -143.0
+rect_scale = Vector2( 0.35, 0.35 )
+custom_fonts/font = ExtResource( 3 )
+text = "Made By:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadeBys2" type="HBoxContainer" parent="MadeByScaler"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -360.0
+margin_top = -180.0
+margin_right = -20.0
+margin_bottom = -20.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton4" type="TextureButton" parent="MadeByScaler/MadeBys2"]
+margin_right = 160.0
+margin_bottom = 160.0
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 9 )
+
+[node name="TextureButton5" type="TextureButton" parent="MadeByScaler/MadeBys2"]
+margin_left = 180.0
+margin_right = 340.0
+margin_bottom = 160.0
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 7 )
+
+[connection signal="pressed" from="MenuScaler/Menu/MenuItems/TextureButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="MadeByScaler/MadeBys2/TextureButton4" to="." method="_on_rafa_press"]
+[connection signal="pressed" from="MadeByScaler/MadeBys2/TextureButton5" to="." method="_on_mari_press"]

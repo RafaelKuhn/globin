@@ -2,7 +2,7 @@ extends Node2D
 
 signal needs_to_shake_camera()
 
-const Global = preload("res://global.gd")
+const Global = preload("res://game/global.gd")
 
 const NodeHP = preload("res://hp/vida.tscn")
 const NodeBlinkingHP = preload("res://hp/vida-piscando.tscn")

@@ -1,6 +1,6 @@
 extends Node
 
-const game_scene = preload("res://Game.tscn")
+const game_scene = preload("res://game/Game.tscn")
 
 const win_scene = preload("res://menus/Won.tscn")
 const lost_scene = preload("res://menus/Lost.tscn")

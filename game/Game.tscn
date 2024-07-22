@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://obstacles/Toco.tscn" type="PackedScene" id=2]
-[ext_resource path="res://map/Map.tscn" type="PackedScene" id=3]
-[ext_resource path="res://player/camera.gd" type="Script" id=4]
+[ext_resource path="res://obstacles/Toco.tscn" type="PackedScene" id=1]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://obstacles/Gifa.tscn" type="PackedScene" id=3]
+[ext_resource path="res://map/Map.tscn" type="PackedScene" id=4]
 [ext_resource path="res://obstacles/Preda.tscn" type="PackedScene" id=5]
-[ext_resource path="res://obstacles/Gifa.tscn" type="PackedScene" id=6]
-[ext_resource path="res://hp/hp.gd" type="Script" id=7]
-[ext_resource path="res://obstacles/Win.tscn" type="PackedScene" id=8]
+[ext_resource path="res://obstacles/Win.tscn" type="PackedScene" id=6]
+[ext_resource path="res://player/camera.gd" type="Script" id=7]
+[ext_resource path="res://hp/hp.gd" type="Script" id=8]
 
 [sub_resource type="ProceduralSky" id=2]
 sky_top_color = Color( 0.27339, 0.0858, 0.39, 1 )
@@ -30,14 +30,14 @@ glow_intensity = 3.69
 
 [node name="Game" type="Spatial"]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
+[node name="Player" parent="." instance=ExtResource( 2 )]
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 1.871, 3.493, 2.888 )
 environment = SubResource( 1 )
 fov = 60.0
 size = 2.0
-script = ExtResource( 4 )
+script = ExtResource( 7 )
 __meta__ = {
 "_editor_description_": "
 
@@ -46,65 +46,65 @@ __meta__ = {
 "
 }
 
-[node name="Map" parent="." instance=ExtResource( 3 )]
+[node name="Map" parent="." instance=ExtResource( 4 )]
 
 [node name="Obstacles" type="Spatial" parent="."]
 
-[node name="Gifa0" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa0" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -8.19611 )
 
-[node name="Gifa1" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa1" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -23.8371 )
 
-[node name="Gifa2" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa2" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -19.8162 )
 
-[node name="Gifa3" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa3" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -25.0027 )
 
-[node name="Gifa4" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa4" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -38.1278 )
 
-[node name="Gifa5" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa5" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 2, 0, -31.861 )
 
-[node name="Gifa6" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa6" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -44.1692 )
 
-[node name="Gifa7" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa7" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -53.2113 )
 
-[node name="Gifa8" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa8" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -21.1586 )
 
-[node name="Gifa9" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa9" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -38.9047 )
 
-[node name="Gifa10" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa10" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -83.9493 )
 
-[node name="Gifa11" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa11" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -92.024 )
 
-[node name="Gifa12" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa12" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -107.272 )
 
-[node name="Gifa13" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa13" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -115.925 )
 
-[node name="Gifa14" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa14" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, -0.043, -158.562 )
 
-[node name="Gifa15" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa15" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 2, -0.043, -158.677 )
 
-[node name="Gifa16" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa16" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, -0.043, -158.797 )
 
-[node name="Gifa17" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa17" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, -0.043, -161.927 )
 
-[node name="Gifa18" parent="Obstacles" instance=ExtResource( 6 )]
+[node name="Gifa18" parent="Obstacles" instance=ExtResource( 3 )]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, -0.043, -184.103 )
 
 [node name="Preda0" parent="Obstacles" instance=ExtResource( 5 )]
@@ -368,82 +368,82 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -187.853 )
 [node name="Preda85" parent="Obstacles" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -187.853 )
 
-[node name="Toco0" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco0" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -12.734 )
 
-[node name="Toco1" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco1" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -22.6359 )
 
-[node name="Toco2" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco2" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -26.03 )
 
-[node name="Toco3" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco3" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -22.634 )
 
-[node name="Toco4" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco4" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -31.9751 )
 
-[node name="Toco5" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco5" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -44.1617 )
 
-[node name="Toco6" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco6" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -47.4654 )
 
-[node name="Toco7" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco7" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -83.928 )
 
-[node name="Toco8" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco8" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -92.021 )
 
-[node name="Toco9" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco9" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -122.873 )
 
-[node name="Toco10" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco10" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -111.824 )
 
-[node name="Toco11" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco11" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -128.068 )
 
-[node name="Toco12" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco12" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -155.47 )
 
-[node name="Toco13" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco13" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -155.427 )
 
-[node name="Toco14" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco14" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -155.387 )
 
-[node name="Toco15" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco15" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -167.31 )
 
-[node name="Toco16" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco16" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -170.81 )
 
-[node name="Toco17" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco17" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -176.803 )
 
-[node name="Toco18" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco18" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -180.303 )
 
-[node name="Toco19" parent="Obstacles" instance=ExtResource( 2 )]
+[node name="Toco19" parent="Obstacles" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -187.853 )
 
-[node name="Win" parent="Obstacles" instance=ExtResource( 8 )]
+[node name="Win" parent="Obstacles" instance=ExtResource( 6 )]
 transform = Transform( 0.13, 0, 0, 0, 0.13, 0, 0, 0, 1, 2, 0, -193.916 )
 type = 3
 
-[node name="Win2" parent="Obstacles" instance=ExtResource( 8 )]
+[node name="Win2" parent="Obstacles" instance=ExtResource( 6 )]
 transform = Transform( 0.13, 0, 0, 0, 0.13, 0, 0, 0, 1, 3.19, 0, -194.072 )
 type = 3
 
-[node name="Win3" parent="Obstacles" instance=ExtResource( 8 )]
+[node name="Win3" parent="Obstacles" instance=ExtResource( 6 )]
 transform = Transform( 0.13, 0, 0, 0, 0.13, 0, 0, 0, 1, 0.81, 0, -193.872 )
 type = 3
 
 [node name="UI" type="Node2D" parent="."]
 
 [node name="HP" type="Node2D" parent="UI"]
-script = ExtResource( 7 )
+script = ExtResource( 8 )
 
 [node name="HP Regen Timer" type="Timer" parent="UI/HP"]
 one_shot = true

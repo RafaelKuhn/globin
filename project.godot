@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "Global",
 "language": "GDScript",
-"path": "res://global.gd"
+"path": "res://game/global.gd"
 } ]
 _global_script_class_icons={
 "Global": ""
@@ -22,13 +22,18 @@ _global_script_class_icons={
 
 config/name="Globin"
 run/main_scene="res://MainMenu.tscn"
-config/icon="res://icon2.png"
+config/icon="res://game/Globin.png"
 config/macos_native_icon="Globin"
 config/windows_native_icon="Globin"
 
 [autoload]
 
-Game="*res://game.gd"
+Game="*res://game/game.gd"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
 
 [input]
 
