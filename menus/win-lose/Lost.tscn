@@ -1,0 +1,197 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://made-by/MadeByScaler.tscn" type="PackedScene" id=6]
+[ext_resource path="res://custom-ui/scaler.gd" type="Script" id=8]
+[ext_resource path="res://menus/sprites/BTN3.png" type="Texture" id=9]
+[ext_resource path="res://menus/sprites/BTN2.png" type="Texture" id=10]
+[ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=12]
+[ext_resource path="res://menus/win-lose/end_game.gd" type="Script" id=13]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.333333, 0.715847 )
+colors = PoolColorArray( 0.109804, 0.215686, 0.0156863, 1, 0.377738, 0.399817, 0.0640796, 1, 0.631373, 0.572549, 0.109804, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 512
+
+[node name="Lost" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuScaler" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnvironmentHard" type="Control" parent="MenuScaler"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouWon" type="Label" parent="MenuScaler"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -234.0
+margin_right = 320.0
+margin_bottom = -149.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "YOU LOST!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="_YouWon4" type="Label" parent="MenuScaler"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -279.0
+margin_top = 57.0
+margin_right = 1001.0
+margin_bottom = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.467405, 0.467405 )
+custom_fonts/font = ExtResource( 12 )
+text = " Difficulty:
+Baby"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Difficulty" type="Label" parent="MenuScaler"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = 78.0
+margin_right = 3306.67
+margin_bottom = 163.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.45, 0.45 )
+custom_colors/font_color = Color( 1, 0.164706, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = " Difficulty:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mode" type="Label" parent="MenuScaler"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = 129.0
+margin_right = 3306.67
+margin_bottom = 214.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.45, 0.45 )
+custom_colors/font_color = Color( 1, 0.164706, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Hard"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YouWonLabel" type="Label" parent="MenuScaler"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = 322.0
+margin_right = 5440.0
+margin_bottom = 495.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/font = ExtResource( 12 )
+text = "Can you really beat it?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GoBack" type="TextureButton" parent="MenuScaler"]
+margin_left = -184.0
+margin_top = 373.0
+margin_right = 855.0
+margin_bottom = 598.0
+rect_scale = Vector2( 0.35, 0.35 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MenuScaler/GoBack"]
+margin_top = 62.857
+margin_right = 799.231
+margin_bottom = 147.857
+rect_scale = Vector2( 1.3, 1.3 )
+custom_fonts/font = ExtResource( 12 )
+text = "Retry"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OrPressSpace3" type="Label" parent="MenuScaler"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -184.0
+margin_top = 459.0
+margin_right = 2243.0
+margin_bottom = 544.0
+rect_scale = Vector2( 0.15, 0.15 )
+custom_fonts/font = ExtResource( 12 )
+text = "(press SPACE|ENTER)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadeByScaler" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[connection signal="pressed" from="MenuScaler/GoBack" to="." method="_on_ok_click"]

@@ -151,6 +151,7 @@ func tween_quad(x: float) -> float:
 func _on_any_obstacle_z_collision(lane_obstacle_x: int, obj_type) -> void:
 	if obj_type == Global.OBSTACLE_TYPE.WIN:
 		get_node(Global.GAME_MANAGER_PATH).win_game()
+		return
 	
 	var has_collided_in_current_lane = lane_obstacle_x == lane && lane_switch_progress > SWITCHING_LANES_COLLISION_GAP
 	var has_collided_while_switching_lanes = lane_obstacle_x == previous_lane && lane_switch_progress < SWITCHING_LANES_COLLISION_GAP

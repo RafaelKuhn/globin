@@ -29,6 +29,7 @@ func decrement_health() -> void:
 	current_hp -= 1
 	if current_hp == 0:
 		get_node(Global.GAME_MANAGER_PATH).lose_game()
+		return
 		
 	update_heart_sprites()
 	queue_hp_regen()

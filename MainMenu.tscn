@@ -1,14 +1,11 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://menus/sprites/GOBLIN-RUNNER-PNG.png" type="Texture" id=1]
 [ext_resource path="res://menus/sprites/BTN2.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://menus/sprites/BTN3.png" type="Texture" id=4]
 [ext_resource path="res://menus/menu.gd" type="Script" id=5]
-[ext_resource path="res://menus/sprites/EU.png" type="Texture" id=6]
-[ext_resource path="res://menus/sprites/MARI_HOV.png" type="Texture" id=7]
-[ext_resource path="res://menus/sprites/MARI.png" type="Texture" id=8]
-[ext_resource path="res://menus/sprites/EU_HOV.png" type="Texture" id=9]
+[ext_resource path="res://made-by/MadeByScaler.tscn" type="PackedScene" id=6]
 [ext_resource path="res://custom-ui/scaler.gd" type="Script" id=10]
 
 [sub_resource type="Gradient" id=1]
@@ -103,7 +100,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="MenuScaler/Menu/MenuItems"]
+[node name="PlayBtn" type="TextureButton" parent="MenuScaler/Menu/MenuItems"]
 margin_left = 480.0
 margin_right = 1519.0
 margin_bottom = 225.0
@@ -113,11 +110,10 @@ enabled_focus_mode = 0
 texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 4 )
 
-[node name="Label" type="Label" parent="MenuScaler/Menu/MenuItems/TextureButton"]
-margin_left = 341.333
-margin_top = 68.7499
-margin_right = 355.333
-margin_bottom = 82.7499
+[node name="Label" type="Label" parent="MenuScaler/Menu/MenuItems/PlayBtn"]
+margin_top = 70.0
+margin_right = 1039.0
+margin_bottom = 155.0
 custom_fonts/font = ExtResource( 3 )
 text = "Play"
 align = 1
@@ -125,20 +121,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton2" type="TextureButton" parent="MenuScaler/Menu/MenuItems"]
+[node name="HowToPlayBtn" type="TextureButton" parent="MenuScaler/Menu/MenuItems"]
 margin_left = 480.0
 margin_top = 365.0
 margin_right = 1519.0
 margin_bottom = 590.0
+focus_mode = 0
 size_flags_horizontal = 4
+enabled_focus_mode = 0
 texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
 
-[node name="Label2" type="Label" parent="MenuScaler/Menu/MenuItems/TextureButton2"]
-margin_left = 148.0
-margin_top = 81.0
-margin_right = 162.0
-margin_bottom = 95.0
-rect_scale = Vector2( 0.8, 0.8 )
+[node name="Label" type="Label" parent="MenuScaler/Menu/MenuItems/HowToPlayBtn"]
+margin_top = 70.0
+margin_right = 1039.0
+margin_bottom = 155.0
 custom_fonts/font = ExtResource( 3 )
 text = "How To Play"
 align = 1
@@ -146,60 +143,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MadeByScaler" type="Control" parent="."]
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="MadeByScaler" parent="." instance=ExtResource( 6 )]
 
-[node name="MadeBy2" type="Label" parent="MadeByScaler"]
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -328.0
-margin_top = -228.0
-margin_right = 352.0
-margin_bottom = -143.0
-rect_scale = Vector2( 0.35, 0.35 )
-custom_fonts/font = ExtResource( 3 )
-text = "Made By:"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="MadeBys2" type="HBoxContainer" parent="MadeByScaler"]
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -360.0
-margin_top = -180.0
-margin_right = -20.0
-margin_bottom = -20.0
-custom_constants/separation = 20
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureButton4" type="TextureButton" parent="MadeByScaler/MadeBys2"]
-margin_right = 160.0
-margin_bottom = 160.0
-texture_normal = ExtResource( 6 )
-texture_hover = ExtResource( 9 )
-
-[node name="TextureButton5" type="TextureButton" parent="MadeByScaler/MadeBys2"]
-margin_left = 180.0
-margin_right = 340.0
-margin_bottom = 160.0
-texture_normal = ExtResource( 8 )
-texture_hover = ExtResource( 7 )
-
-[connection signal="pressed" from="MenuScaler/Menu/MenuItems/TextureButton" to="." method="_on_PlayButton_pressed"]
-[connection signal="pressed" from="MadeByScaler/MadeBys2/TextureButton4" to="." method="_on_rafa_press"]
-[connection signal="pressed" from="MadeByScaler/MadeBys2/TextureButton5" to="." method="_on_mari_press"]
+[connection signal="pressed" from="MenuScaler/Menu/MenuItems/PlayBtn" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="MenuScaler/Menu/MenuItems/HowToPlayBtn" to="." method="_on_how_to_play_pressed"]

@@ -432,14 +432,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -187.853 )
 transform = Transform( 0.13, 0, 0, 0, 0.13, 0, 0, 0, 1, 2, 0, -193.916 )
 type = 3
 
-[node name="Win2" parent="Obstacles" instance=ExtResource( 6 )]
-transform = Transform( 0.13, 0, 0, 0, 0.13, 0, 0, 0, 1, 3.19, 0, -194.072 )
-type = 3
-
-[node name="Win3" parent="Obstacles" instance=ExtResource( 6 )]
-transform = Transform( 0.13, 0, 0, 0, 0.13, 0, 0, 0, 1, 0.81, 0, -193.872 )
-type = 3
-
 [node name="UI" type="Node2D" parent="."]
 
 [node name="HP" type="Node2D" parent="UI"]
@@ -576,7 +568,5 @@ one_shot = true
 [connection signal="on_any_collision" from="Obstacles/Toco18" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Toco19" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Win" to="Player" method="_on_any_obstacle_z_collision"]
-[connection signal="on_any_collision" from="Obstacles/Win2" to="Player" method="_on_any_obstacle_z_collision"]
-[connection signal="on_any_collision" from="Obstacles/Win3" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="needs_to_shake_camera" from="UI/HP" to="Camera" method="_on_HP_needs_to_shake_camera"]
 [connection signal="timeout" from="UI/HP/HP Regen Timer" to="UI/HP" method="_on_HP_Regen_Timer_timeout"]

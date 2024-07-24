@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/goblin abanando 1.png-145370938318ec8e4754f53377b78db9.stex"
+path="res://.import/goblin abanando 2.png-ecd8b3c1393d6fcf3da6cc38210891f0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dev/globin/goblin abanando 1.png"
-dest_files=[ "res://.import/goblin abanando 1.png-145370938318ec8e4754f53377b78db9.stex" ]
+source_file="res://globin/goblin abanando 2.png"
+dest_files=[ "res://.import/goblin abanando 2.png-ecd8b3c1393d6fcf3da6cc38210891f0.stex" ]
 
 [params]
 
@@ -22,7 +22,7 @@ compress/normal_map=0
 flags/repeat=true
 flags/filter=true
 flags/mipmaps=true
-flags/anisotropic=true
+flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
