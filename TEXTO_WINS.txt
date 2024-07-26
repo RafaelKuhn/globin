@@ -2,6 +2,10 @@
 
 
 
+# Max text in the label:
+Will doooo
+1234567890
+
 
 Congratulations, now try doing it in a difficulty
 that is not called "baby mode"
@@ -15,9 +19,14 @@ Did you know "medium" is a word for "mediocre"?
 Try doing it in hard, if you think you're good enough
 "I am"
 
-You just beat the game on hard,
-but you did nothing more than your obligation!
-"Ok"
+
+You beat the game, but you lost "2" Hp while doing it
+So I'll say you did nothing more than your obligation!
+"Oh god"
+
+How does it feel to be the king of the world?
+"Good"
+
 
 
 

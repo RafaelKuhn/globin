@@ -345,9 +345,9 @@ __meta__ = {
 
 [node name="PlayBtn" type="TextureButton" parent="MenuScaler"]
 margin_left = -184.0
-margin_top = 348.0
+margin_top = 373.0
 margin_right = 855.0
-margin_bottom = 573.0
+margin_bottom = 598.0
 rect_scale = Vector2( 0.35, 0.35 )
 size_flags_horizontal = 4
 texture_normal = ExtResource( 9 )
@@ -375,12 +375,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -184.0
-margin_top = 434.0
+margin_top = 459.0
 margin_right = 2243.0
-margin_bottom = 519.0
+margin_bottom = 544.0
 rect_scale = Vector2( 0.15, 0.15 )
 custom_fonts/font = ExtResource( 11 )
-text = "(press SPACE|ENTER)"
+text = "(press SPACE or ENTER)"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false

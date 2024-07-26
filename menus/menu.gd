@@ -11,6 +11,7 @@ var game_node: Node
 
 func _ready():
 	game_node = get_node("/root/Game")
+	OS.set_window_maximized(true)
 
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept"):

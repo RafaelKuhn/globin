@@ -188,7 +188,7 @@ margin_right = 2243.0
 margin_bottom = 544.0
 rect_scale = Vector2( 0.15, 0.15 )
 custom_fonts/font = ExtResource( 12 )
-text = "(press SPACE|ENTER)"
+text = "(press SPACE or ENTER)"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false

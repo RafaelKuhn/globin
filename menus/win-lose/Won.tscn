@@ -1372,15 +1372,17 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -960.0
-margin_top = 246.0
+margin_top = 195.0
 margin_right = 5440.0
-margin_bottom = 553.0
+margin_bottom = 672.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/line_spacing = 25
 custom_fonts/font = ExtResource( 12 )
-text = "Congratulations"
+text = "You just beat the game on hard
+but unfortunately for you,
+you did nothing more than your obligation!"
 align = 1
 valign = 2
 __meta__ = {
@@ -1401,10 +1403,11 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MenuScaler/GoBack"]
-margin_top = 62.857
-margin_right = 799.231
-margin_bottom = 147.857
-rect_scale = Vector2( 1.3, 1.3 )
+margin_top = 63.0
+margin_right = 867.0
+margin_bottom = 148.0
+grow_horizontal = 2
+rect_scale = Vector2( 1.2, 1.2 )
 custom_fonts/font = ExtResource( 12 )
 text = "Thanks"
 align = 1
@@ -1423,7 +1426,7 @@ margin_right = 2243.0
 margin_bottom = 544.0
 rect_scale = Vector2( 0.15, 0.15 )
 custom_fonts/font = ExtResource( 12 )
-text = "(press SPACE|ENTER)"
+text = "(press SPACE or ENTER)"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
