@@ -19,6 +19,9 @@ func _ready():
 		sprite.modulate.a = 0.0
 
 func _process(delta: float) -> void:
+	if !self.is_visible():
+		return
+
 	var global_pos = translation
 	translation.z += delta * speed
 	if global_pos.z > Global.GAME_Z_END:
@@ -31,4 +34,3 @@ func _process(delta: float) -> void:
 	
 	if global_pos.z > Global.GAME_Z_START:
 		sprite.modulate.a += delta * Global.ALPHA_INCREMENT_SPEED
-

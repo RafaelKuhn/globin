@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://obstacles/Toco.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://obstacles/Win.tscn" type="PackedScene" id=6]
 [ext_resource path="res://player/camera.gd" type="Script" id=7]
 [ext_resource path="res://hp/hp.gd" type="Script" id=8]
+[ext_resource path="res://custom-ui/scaler_node2d.gd" type="Script" id=10]
 
 [sub_resource type="ProceduralSky" id=2]
 sky_top_color = Color( 0.27339, 0.0858, 0.39, 1 )
@@ -51,388 +52,395 @@ __meta__ = {
 [node name="Obstacles" type="Spatial" parent="."]
 
 [node name="Gifa0" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -8.19611 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -22.9145 )
 
 [node name="Gifa1" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -23.8371 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -38.5555 )
 
 [node name="Gifa2" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -19.8162 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -34.5346 )
 
 [node name="Gifa3" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -25.0027 )
+transform = Transform( -1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -39.7211 )
 
 [node name="Gifa4" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -38.1278 )
+transform = Transform( -1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -52.8462 )
 
 [node name="Gifa5" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 2, 0, -31.861 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 2, 0, -46.5794 )
 
 [node name="Gifa6" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -44.1692 )
+transform = Transform( -1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -58.8876 )
 
 [node name="Gifa7" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -53.2113 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -67.9297 )
 
 [node name="Gifa8" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -21.1586 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -35.877 )
 
 [node name="Gifa9" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -38.9047 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -53.6231 )
 
 [node name="Gifa10" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -83.9493 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -98.6677 )
 
 [node name="Gifa11" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -92.024 )
+transform = Transform( -1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3.10673, 0, -106.742 )
 
 [node name="Gifa12" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -107.272 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, 0, -121.99 )
 
 [node name="Gifa13" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -115.925 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, 0, -130.643 )
 
 [node name="Gifa14" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, -0.043, -158.562 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, -0.043, -173.28 )
 
 [node name="Gifa15" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 2, -0.043, -158.677 )
+transform = Transform( -1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 2, -0.043, -173.395 )
 
 [node name="Gifa16" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, -0.043, -158.797 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 1, -0.043, -173.515 )
 
 [node name="Gifa17" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, -0.043, -161.927 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, -0.043, -176.645 )
 
 [node name="Gifa18" parent="Obstacles" instance=ExtResource( 3 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, -0.043, -184.103 )
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 3, -0.043, -198.821 )
 
 [node name="Preda0" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -26.0302 )
+transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -40.7486 )
 
 [node name="Preda1" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -18.493 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -33.2114 )
 
 [node name="Preda2" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -18.488 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -33.2064 )
 
 [node name="Preda3" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -26.03 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -40.7484 )
 
 [node name="Preda4" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -29.5532 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -44.2716 )
 
 [node name="Preda5" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -29.553 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -44.2714 )
 
 [node name="Preda6" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -30.8358 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -45.5542 )
 
 [node name="Preda7" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -32.0418 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -46.7602 )
 
 [node name="Preda8" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -33.3977 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -48.1161 )
 
 [node name="Preda9" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -34.6684 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -49.3868 )
 
 [node name="Preda10" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -38.9675 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -53.6859 )
 
 [node name="Preda11" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -38.9675 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -53.6859 )
 
 [node name="Preda12" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -38.967 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -53.6854 )
 
 [node name="Preda13" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -41.9923 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -56.7107 )
 
 [node name="Preda14" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -44.884 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -59.6024 )
 
 [node name="Preda15" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -47.4156 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -62.134 )
 
 [node name="Preda16" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -47.416 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -62.1344 )
 
 [node name="Preda17" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -52.1381 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -66.8565 )
 
 [node name="Preda18" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -52.1292 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -66.8475 )
 
 [node name="Preda19" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -53.1518 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -67.8701 )
 
 [node name="Preda20" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -77.3614 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -92.0798 )
 
 [node name="Preda21" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -77.361 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -92.0794 )
 
 [node name="Preda22" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -79.9798 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -94.6982 )
 
 [node name="Preda23" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -80.0121 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -94.7305 )
 
 [node name="Preda24" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -83.901 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -98.6194 )
 
 [node name="Preda25" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -88.001 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -102.719 )
 
 [node name="Preda26" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -88.001 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -102.719 )
 
 [node name="Preda27" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -92.0035 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -106.722 )
 
 [node name="Preda28" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -95.0264 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -109.745 )
 
 [node name="Preda29" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -95.026 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -109.744 )
 
 [node name="Preda30" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -97.897 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -112.615 )
 
 [node name="Preda31" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -99.0176 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -113.736 )
 
 [node name="Preda35" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -99.018 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -113.736 )
 
 [node name="Preda36" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -100.507 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -115.225 )
 
 [node name="Preda37" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -102.057 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -116.775 )
 
 [node name="Preda38" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -105.171 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -119.889 )
 
 [node name="Preda39" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -106.068 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -120.786 )
 
 [node name="Preda40" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -107.146 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -121.864 )
 
 [node name="Preda41" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -106.573 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -121.291 )
 
 [node name="Preda42" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -107.165 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -121.883 )
 
 [node name="Preda32" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -100.637 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -115.355 )
 
 [node name="Preda33" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -102.174 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -116.892 )
 
 [node name="Preda34" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -103.68 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -118.398 )
 
 [node name="Preda43" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -108.776 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -123.494 )
 
 [node name="Preda44" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -108.776 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -123.494 )
 
 [node name="Preda45" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -111.81 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -126.528 )
 
 [node name="Preda46" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -111.762 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -126.48 )
 
 [node name="Preda47" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -113.527 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -128.245 )
 
 [node name="Preda49" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -114.163 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -128.881 )
 
 [node name="Preda48" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -114.615 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -129.333 )
 
 [node name="Preda50" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -115.472 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -130.19 )
 
 [node name="Preda51" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -118.35 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -133.068 )
 
 [node name="Preda52" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -119.722 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -134.44 )
 
 [node name="Preda53" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -119.079 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -133.797 )
 
 [node name="Preda54" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -121.709 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -136.427 )
 
 [node name="Preda55" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -122.878 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -137.596 )
 
 [node name="Preda56" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -120.435 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -135.153 )
 
 [node name="Preda57" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -121.432 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -136.15 )
 
 [node name="Preda58" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -122.133 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -136.851 )
 
 [node name="Preda59" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -123.158 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -137.876 )
 
 [node name="Preda60" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -124.158 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -138.876 )
 
 [node name="Preda61" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -124.158 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -138.876 )
 
 [node name="Preda62" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -125.386 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -140.104 )
 
 [node name="Preda66" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -126.15 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -140.868 )
 
 [node name="Preda63" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -125.386 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -140.104 )
 
 [node name="Preda64" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -127.862 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -142.58 )
 
 [node name="Preda65" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -127.862 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -142.58 )
 
 [node name="Preda67" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -161.927 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -176.645 )
 
 [node name="Preda68" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -161.927 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -176.645 )
 
 [node name="Preda69" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -165.138 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -179.856 )
 
 [node name="Preda71" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -167.31 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -182.028 )
 
 [node name="Preda73" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -170.81 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -185.528 )
 
 [node name="Preda75" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -174.31 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -189.028 )
 
 [node name="Preda76" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -176.031 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -190.749 )
 
 [node name="Preda77" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -176.031 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -190.749 )
 
 [node name="Preda78" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -176.803 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -191.521 )
 
 [node name="Preda80" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -180.303 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -195.021 )
 
 [node name="Preda81" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -180.303 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -195.021 )
 
 [node name="Preda79" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -176.803 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -191.521 )
 
 [node name="Preda74" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -170.81 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -185.528 )
 
 [node name="Preda72" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -167.31 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -182.028 )
 
 [node name="Preda70" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -166.154 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -180.872 )
 
 [node name="Preda82" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -184.103 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -198.821 )
 
 [node name="Preda86" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -183.127 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -197.845 )
 
 [node name="Preda83" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -184.103 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -198.821 )
 
 [node name="Preda84" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -187.853 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -202.571 )
 
 [node name="Preda85" parent="Obstacles" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -187.853 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -202.571 )
 
 [node name="Toco0" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -12.734 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -27.4524 )
 
 [node name="Toco1" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -22.6359 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -37.3543 )
 
 [node name="Toco2" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -26.03 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -40.7484 )
 
 [node name="Toco3" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -22.634 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -37.3524 )
 
 [node name="Toco4" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -31.9751 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -46.6935 )
 
 [node name="Toco5" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -44.1617 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -58.8801 )
 
 [node name="Toco6" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -47.4654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -62.1838 )
 
 [node name="Toco7" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -83.928 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -98.6464 )
 
 [node name="Toco8" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -92.021 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -106.739 )
 
 [node name="Toco9" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -122.873 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -137.591 )
 
 [node name="Toco10" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -111.824 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -126.542 )
 
 [node name="Toco11" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -128.068 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -142.786 )
 
 [node name="Toco12" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -155.47 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -170.188 )
 
 [node name="Toco13" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -155.427 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -170.145 )
 
 [node name="Toco14" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -155.387 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -170.105 )
 
 [node name="Toco15" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -167.31 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -182.028 )
 
 [node name="Toco16" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -170.81 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -185.528 )
 
 [node name="Toco17" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -176.803 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -191.521 )
 
 [node name="Toco18" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -180.303 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -195.021 )
 
 [node name="Toco19" parent="Obstacles" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -187.853 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -202.571 )
 
 [node name="Win" parent="Obstacles" instance=ExtResource( 6 )]
-transform = Transform( 0.13, 0, 0, 0, 0.13, 0, 0, 0, 1, 2, 0, -193.916 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -216.304 )
+type = 3
+
+[node name="Win_EARLY" parent="Obstacles" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -16.8673 )
+visible = false
 type = 3
 
 [node name="UI" type="Node2D" parent="."]
+scale = Vector2( 2.25, 2.25 )
+script = ExtResource( 10 )
 
 [node name="HP" type="Node2D" parent="UI"]
 script = ExtResource( 8 )
@@ -568,5 +576,6 @@ one_shot = true
 [connection signal="on_any_collision" from="Obstacles/Toco18" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Toco19" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Win" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/Win_EARLY" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="needs_to_shake_camera" from="UI/HP" to="Camera" method="_on_HP_needs_to_shake_camera"]
 [connection signal="timeout" from="UI/HP/HP Regen Timer" to="UI/HP" method="_on_HP_Regen_Timer_timeout"]

@@ -68,23 +68,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OrPressSpace" type="Label" parent="MenuScaler/Menu"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -121.0
-margin_top = 213.0
-margin_right = 1494.0
-margin_bottom = 298.0
-rect_scale = Vector2( 0.152021, 0.152021 )
-custom_fonts/font = ExtResource( 3 )
-text = "(press SPACE|ENTER)"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="MenuItems" type="VBoxContainer" parent="MenuScaler/Menu"]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -138,6 +121,40 @@ margin_right = 1039.0
 margin_bottom = 155.0
 custom_fonts/font = ExtResource( 3 )
 text = "How To Play"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OrPressSpace" type="Label" parent="MenuScaler/Menu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -183.0
+margin_top = 213.0
+margin_right = 2211.0
+margin_bottom = 298.0
+rect_scale = Vector2( 0.152021, 0.152021 )
+custom_fonts/font = ExtResource( 3 )
+text = "(press SPACE|ENTER)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OrPressH" type="Label" parent="MenuScaler/Menu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -183.0
+margin_top = 341.0
+margin_right = 2211.0
+margin_bottom = 426.0
+rect_scale = Vector2( 0.152021, 0.152021 )
+custom_fonts/font = ExtResource( 3 )
+text = "(press H)"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false

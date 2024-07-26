@@ -31,5 +31,4 @@ texture = ExtResource( 1 )
 [node name="animator" type="AnimationPlayer" parent="."]
 root_node = NodePath("../vida-piscando")
 autoplay = "piscando"
-playback_speed = 2.0
 anims/piscando = SubResource( 2 )

@@ -369,7 +369,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OrPressSpace3" type="Label" parent="MenuScaler"]
+[node name="PressSpace" type="Label" parent="MenuScaler"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -386,28 +386,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OrPressSpace4" type="Label" parent="MenuScaler"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -184.0
-margin_top = -363.0
-margin_right = 2243.0
-margin_bottom = -278.0
-rect_scale = Vector2( 0.15, 0.15 )
-custom_fonts/font = ExtResource( 11 )
-text = "(press B)"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="GoBack" type="TextureButton" parent="MenuScaler"]
 margin_left = -184.0
-margin_top = -449.0
+margin_top = -477.0
 margin_right = 855.0
-margin_bottom = -224.0
+margin_bottom = -252.0
 rect_scale = Vector2( 0.35, 0.35 )
 size_flags_horizontal = 4
 texture_normal = ExtResource( 9 )
@@ -428,9 +411,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="PressB" type="Label" parent="MenuScaler"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -184.0
+margin_top = -391.0
+margin_right = 2243.0
+margin_bottom = -306.0
+rect_scale = Vector2( 0.15, 0.15 )
+custom_fonts/font = ExtResource( 11 )
+text = "(press B)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="MadeByScaler" parent="." instance=ExtResource( 4 )]
 
-[connection signal="pressed" from="MenuScaler/SelectDiff/BabyBtn" to="MenuScaler/SelectDiff" method="_on_easy"]
 [connection signal="pressed" from="MenuScaler/SelectDiff/BabyBtn" to="MenuScaler/SelectDiff" method="_on_baby"]
 [connection signal="pressed" from="MenuScaler/SelectDiff/EasyBtn" to="MenuScaler/SelectDiff" method="_on_easy"]
 [connection signal="pressed" from="MenuScaler/SelectDiff/MediBtn" to="MenuScaler/SelectDiff" method="_on_medi"]
