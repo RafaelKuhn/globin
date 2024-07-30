@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game-parts/hp/coracao-vida.png" type="Texture" id=1]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[node name="vida" type="Sprite"]
+material = SubResource( 1 )
+position = Vector2( 0, 38 )
+scale = Vector2( 0.07, 0.07 )
+texture = ExtResource( 1 )

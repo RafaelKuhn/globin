@@ -31,6 +31,7 @@ var root = null;
 var current_scene = null
 
 func _ready():
+	OS.set_window_maximized(true)
 	root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
 
@@ -46,7 +47,7 @@ func open_menu_scene():
 	call_deferred("_deferred_goto_scene", scene)
 
 func open_how_to_scene():
-	var scene = ResourceLoader.load("res://how-to-play/HowToPlay.tscn")
+	var scene = ResourceLoader.load("res://game-parts/how-to-play/HowToPlay.tscn")
 	call_deferred("_deferred_goto_scene", scene)
 
 func load_difficulty_scene():

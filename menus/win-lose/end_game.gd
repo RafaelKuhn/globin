@@ -82,7 +82,7 @@ func _setup_won_medi_ui():
 	$MenuScaler/Difficulty.add_color_override("font_color", orange)
 	$MenuScaler/Mode.add_color_override("font_color", orange)
 	$MenuScaler/Mode.text = "Medium"
-	$MenuScaler/YouWonLabel.text = "Did you know \"medium\" is a word for \"mediocre\"?\nTry doing it in the hard diffilty\n(if you think you're good enough)"
+	$MenuScaler/YouWonLabel.text = "Did you know \"medium\" is a word for \"mediocre\"?\nTry doing it in the hard difficulty\n(if you think you're good enough)"
 	$MenuScaler/GoBack/Label.text = "I am"
 
 func _setup_won_hard_ui():

@@ -1,12 +1,18 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://menus/sprites/GOBLIN-RUNNER-PNG.png" type="Texture" id=1]
 [ext_resource path="res://menus/sprites/BTN2.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://menus/sprites/BTN3.png" type="Texture" id=4]
 [ext_resource path="res://menus/menu.gd" type="Script" id=5]
-[ext_resource path="res://made-by/MadeByScaler.tscn" type="PackedScene" id=6]
+[ext_resource path="res://game-parts/made-by/MadeByScaler.tscn" type="PackedScene" id=6]
+[ext_resource path="res://language/icons/flag-br.png" type="Texture" id=7]
+[ext_resource path="res://menus/sprites/btn-small.png" type="Texture" id=8]
+[ext_resource path="res://menus/sprites/btn-hover.png" type="Texture" id=9]
 [ext_resource path="res://custom-ui/scaler.gd" type="Script" id=10]
+[ext_resource path="res://language/icons/flag-en.png" type="Texture" id=11]
+[ext_resource path="res://language/language.gd" type="Script" id=12]
+[ext_resource path="res://language/TRANSLATE.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.333333, 0.715847 )
@@ -38,6 +44,7 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+grow_vertical = 0
 script = ExtResource( 10 )
 
 [node name="GoblinRunner" type="TextureRect" parent="MenuScaler"]
@@ -104,6 +111,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TRANSLATE" parent="MenuScaler/Menu/MenuItems/PlayBtn/Label" instance=ExtResource( 14 )]
+term_key = "play"
+
 [node name="HowToPlayBtn" type="TextureButton" parent="MenuScaler/Menu/MenuItems"]
 margin_left = 480.0
 margin_top = 365.0
@@ -126,6 +136,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TRANSLATE" parent="MenuScaler/Menu/MenuItems/HowToPlayBtn/Label" instance=ExtResource( 14 )]
+term_key = "how_to"
+
 [node name="OrPressSpace" type="Label" parent="MenuScaler/Menu"]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -142,6 +155,9 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TRANSLATE" parent="MenuScaler/Menu/OrPressSpace" instance=ExtResource( 14 )]
+term_key = "press_space"
 
 [node name="OrPressH" type="Label" parent="MenuScaler/Menu"]
 anchor_left = 0.5
@@ -160,7 +176,169 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TRANSLATE" parent="MenuScaler/Menu/OrPressH" instance=ExtResource( 14 )]
+term_key = "press_h"
+
+[node name="TRS_REACT" type="Control" parent="MenuScaler/Menu/OrPressH"]
+
 [node name="MadeByScaler" parent="." instance=ExtResource( 6 )]
+
+[node name="UpperRightScaler" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Language" type="Control" parent="UpperRightScaler"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PressL" type="Label" parent="UpperRightScaler/Language"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -175.0
+margin_top = 93.0
+margin_right = 992.0
+margin_bottom = 178.0
+rect_scale = Vector2( 0.15, 0.15 )
+custom_fonts/font = ExtResource( 3 )
+text = "(Pressione L)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TRANSLATE" parent="UpperRightScaler/Language/PressL" instance=ExtResource( 14 )]
+term_key = "press_l"
+
+[node name="OtherLangs" type="Control" parent="UpperRightScaler/Language"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="UpperRightScaler/Language/OtherLangs"]
+margin_left = -169.0
+margin_top = 10.0
+margin_right = -7.0
+margin_bottom = 171.0
+mouse_filter = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lang1" type="Control" parent="UpperRightScaler/Language/OtherLangs"]
+margin_left = -169.0
+margin_top = 94.0
+margin_right = -10.0
+margin_bottom = 171.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LangLabel" type="Label" parent="UpperRightScaler/Language/OtherLangs/Lang1"]
+margin_right = 302.0
+margin_bottom = 242.0
+rect_scale = Vector2( 0.31819, 0.31819 )
+custom_fonts/font = ExtResource( 3 )
+text = "EN"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LangTex" type="TextureRect" parent="UpperRightScaler/Language/OtherLangs/Lang1"]
+margin_left = 85.0
+margin_right = 347.0
+margin_bottom = 262.0
+rect_scale = Vector2( 0.29, 0.29 )
+mouse_filter = 2
+texture = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LangButton" type="TextureButton" parent="UpperRightScaler/Language/OtherLangs/Lang1"]
+show_behind_parent = true
+margin_right = 225.0
+margin_bottom = 225.0
+rect_scale = Vector2( 0.7, 0.34 )
+focus_mode = 0
+size_flags_horizontal = 4
+enabled_focus_mode = 0
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LangItem" type="Control" parent="UpperRightScaler/Language"]
+margin_left = -169.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = 87.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LangLabel" type="Label" parent="UpperRightScaler/Language/LangItem"]
+margin_right = 302.0
+margin_bottom = 242.0
+rect_scale = Vector2( 0.31819, 0.31819 )
+custom_fonts/font = ExtResource( 3 )
+text = "BR"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LangTex" type="TextureRect" parent="UpperRightScaler/Language/LangItem"]
+margin_left = 85.0
+margin_right = 347.0
+margin_bottom = 262.0
+rect_scale = Vector2( 0.29, 0.29 )
+mouse_filter = 2
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LangButton" type="TextureButton" parent="UpperRightScaler/Language/LangItem"]
+show_behind_parent = true
+margin_right = 225.0
+margin_bottom = 225.0
+rect_scale = Vector2( 0.7, 0.34 )
+focus_mode = 0
+size_flags_horizontal = 4
+enabled_focus_mode = 0
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="MenuScaler/Menu/MenuItems/PlayBtn" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="MenuScaler/Menu/MenuItems/HowToPlayBtn" to="." method="_on_how_to_play_pressed"]
+[connection signal="mouse_entered" from="UpperRightScaler/Language/OtherLangs/Background" to="UpperRightScaler/Language" method="_on_hover_bg"]
+[connection signal="mouse_exited" from="UpperRightScaler/Language/OtherLangs/Background" to="UpperRightScaler/Language" method="_on_hover_bg_off"]
+[connection signal="mouse_entered" from="UpperRightScaler/Language/OtherLangs/Lang1/LangButton" to="UpperRightScaler/Language" method="_on_hover"]
+[connection signal="mouse_exited" from="UpperRightScaler/Language/OtherLangs/Lang1/LangButton" to="UpperRightScaler/Language" method="_on_hover_off"]
+[connection signal="pressed" from="UpperRightScaler/Language/OtherLangs/Lang1/LangButton" to="UpperRightScaler/Language" method="_on_click_lang_1"]
+[connection signal="mouse_entered" from="UpperRightScaler/Language/LangItem/LangButton" to="UpperRightScaler/Language" method="_on_hover"]
+[connection signal="mouse_exited" from="UpperRightScaler/Language/LangItem/LangButton" to="UpperRightScaler/Language" method="_on_hover_off"]

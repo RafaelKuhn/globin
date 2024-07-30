@@ -1,0 +1,1155 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://custom-ui/scaler.gd" type="Script" id=1]
+[ext_resource path="res://menus/sprites/BTN3.png" type="Texture" id=2]
+[ext_resource path="res://menus/sprites/BTN2.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=4]
+[ext_resource path="res://game-parts/how-to-play/how_to_play.gd" type="Script" id=5]
+[ext_resource path="res://game-parts/how-to-play/1.png" type="Texture" id=6]
+[ext_resource path="res://game-parts/how-to-play/2.png" type="Texture" id=7]
+[ext_resource path="res://menus/sprites/btn-small.png" type="Texture" id=8]
+[ext_resource path="res://menus/sprites/btn-hover.png" type="Texture" id=9]
+[ext_resource path="res://game-parts/how-to-play/3.png" type="Texture" id=10]
+[ext_resource path="res://game-parts/how-to-play/4.png" type="Texture" id=11]
+[ext_resource path="res://game-parts/how-to-play/5.png" type="Texture" id=12]
+[ext_resource path="res://game-parts/how-to-play/6.png" type="Texture" id=13]
+[ext_resource path="res://game-parts/globin/goblin abanando 1.png" type="Texture" id=14]
+[ext_resource path="res://game-parts/globin/goblin abanando 2.png" type="Texture" id=15]
+[ext_resource path="res://game-parts/map/sprites/cogumelos.png" type="Texture" id=16]
+[ext_resource path="res://game-parts/obstacles/sprites/pedra .png" type="Texture" id=17]
+[ext_resource path="res://game-parts/map/sprites/arvore-alta.png" type="Texture" id=18]
+[ext_resource path="res://game-parts/map/sprites/prancheta.png" type="Texture" id=19]
+[ext_resource path="res://game-parts/map/sprites/lua.png" type="Texture" id=20]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.333333, 0.715847 )
+colors = PoolColorArray( 0.109804, 0.215686, 0.0156863, 1, 0.377738, 0.399817, 0.0640796, 1, 0.631373, 0.572549, 0.109804, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 512
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="HowToPlay" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuScaler" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GoBack" type="TextureButton" parent="MenuScaler"]
+margin_left = -184.0
+margin_top = -477.0
+margin_right = 855.0
+margin_bottom = -252.0
+rect_scale = Vector2( 0.35, 0.35 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="MenuScaler/GoBack"]
+margin_top = 62.857
+margin_right = 799.231
+margin_bottom = 147.857
+rect_scale = Vector2( 1.3, 1.3 )
+custom_fonts/font = ExtResource( 4 )
+text = "Go Back"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PressB" type="Label" parent="MenuScaler"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -184.0
+margin_top = -391.0
+margin_right = 2243.0
+margin_bottom = -306.0
+rect_scale = Vector2( 0.15, 0.15 )
+custom_fonts/font = ExtResource( 4 )
+text = "(press B)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tips" type="Control" parent="MenuScaler"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tips1" type="Control" parent="MenuScaler/Tips"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tip00" type="TextureRect" parent="MenuScaler/Tips/Tips1"]
+margin_left = -853.0
+margin_top = -260.0
+margin_right = 369.0
+margin_bottom = 882.0
+rect_scale = Vector2( 0.833976, 0.833976 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowRight" type="Label" parent="MenuScaler/Tips/Tips1/Tip00"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 26.9076
+margin_top = 77.6994
+margin_right = 111.908
+margin_bottom = 162.699
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.830167, 0.830167 )
+custom_constants/line_spacing = 25
+custom_fonts/font = ExtResource( 4 )
+text = "→"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowLeft" type="Label" parent="MenuScaler/Tips/Tips1/Tip00"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -331.616
+margin_top = 77.6994
+margin_right = -246.616
+margin_bottom = 162.699
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.830167, 0.830167 )
+custom_constants/line_spacing = 25
+custom_fonts/font = ExtResource( 4 )
+text = "←"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tip01" type="Label" parent="MenuScaler/Tips/Tips1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -893.0
+margin_top = -329.0
+margin_right = 2637.0
+margin_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.27, 0.27 )
+custom_constants/line_spacing = 25
+custom_fonts/font = ExtResource( 4 )
+text = "Press A or ← to go LEFT 
+Press D or → to go RIGHT"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tip10" type="TextureRect" parent="MenuScaler/Tips/Tips1"]
+margin_left = 99.0
+margin_top = -310.0
+margin_right = 756.0
+margin_bottom = 453.0
+rect_scale = Vector2( 0.964348, 0.96848 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowLeft2" type="Label" parent="MenuScaler/Tips/Tips1/Tip10"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 19.9219
+margin_top = 228.734
+margin_right = 104.922
+margin_bottom = 313.734
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.830167, 0.830167 )
+custom_constants/line_spacing = 25
+custom_fonts/font = ExtResource( 4 )
+text = "←"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tip11" type="Label" parent="MenuScaler/Tips/Tips1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -56.0
+margin_top = 420.0
+margin_right = 3474.0
+margin_bottom = 727.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.27, 0.27 )
+custom_constants/line_spacing = 25
+custom_fonts/font = ExtResource( 4 )
+text = "Move in the three lanes to dodge
+incoming obstacles, like boulders"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next2" type="Control" parent="MenuScaler/Tips/Tips1"]
+margin_left = 853.0
+margin_top = 42.0
+margin_right = 853.0
+margin_bottom = 42.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextBtn" type="TextureButton" parent="MenuScaler/Tips/Tips1/Next2"]
+margin_left = -61.875
+margin_top = -61.875
+margin_right = 163.125
+margin_bottom = 163.125
+rect_scale = Vector2( 0.55, 0.55 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="MenuScaler/Tips/Tips1/Next2/NextBtn"]
+margin_left = 72.2726
+margin_top = 65.4546
+margin_right = 157.273
+margin_bottom = 150.455
+rect_scale = Vector2( 1.3, 1.3 )
+custom_fonts/font = ExtResource( 4 )
+text = ">"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MARKER" type="ColorRect" parent="MenuScaler/Tips/Tips1/Next2"]
+visible = false
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 1.0
+margin_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PressD" type="Label" parent="MenuScaler/Tips/Tips1/Next2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -91.125
+margin_top = 68.125
+margin_right = 1075.88
+margin_bottom = 153.125
+rect_scale = Vector2( 0.15, 0.15 )
+custom_fonts/font = ExtResource( 4 )
+text = "(D or →)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tips2" type="Control" parent="MenuScaler/Tips"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tip00" type="TextureRect" parent="MenuScaler/Tips/Tips2"]
+margin_left = -749.0
+margin_top = -266.0
+margin_right = -84.0
+margin_bottom = 627.0
+rect_scale = Vector2( 0.938281, 0.874247 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowLeft3" type="Label" parent="MenuScaler/Tips/Tips2/Tip00"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -41.5424
+margin_top = 172.318
+margin_right = 43.4576
+margin_bottom = 257.318
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.830167, 0.830167 )
+custom_constants/line_spacing = 25
+custom_fonts/font = ExtResource( 4 )
+text = "↑"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tip01" type="Label" parent="MenuScaler/Tips/Tips2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -914.0
+margin_top = -363.0
+margin_right = 2486.0
+margin_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.27, 0.27 )
+custom_constants/line_spacing = 25
+custom_fonts/font = ExtResource( 4 )
+text = "Press W or ↑ to JUMP
+Jump over logs to avoid them"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tip10" type="TextureRect" parent="MenuScaler/Tips/Tips2"]
+margin_left = 99.0
+margin_top = -346.0
+margin_right = 813.0
+margin_bottom = 525.0
+rect_scale = Vector2( 0.891636, 0.895457 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowLeft4" type="Label" parent="MenuScaler/Tips/Tips2/Tip10"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -26.1476
+margin_top = 14.5496
+margin_right = 58.8524
+margin_bottom = 99.5496
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.830167, 0.830167 )
+custom_constants/line_spacing = 25
+custom_fonts/font = ExtResource( 4 )
+text = "↓"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tip11" type="Label" parent="MenuScaler/Tips/Tips2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -81.0
+margin_top = 431.0
+margin_right = 3744.0
+margin_bottom = 738.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.27, 0.27 )
+custom_constants/line_spacing = 25
+custom_fonts/font = ExtResource( 4 )
+text = "Press S or ↓ to SLIDE
+Slide under Giraffes to avoid them"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next3" type="Control" parent="MenuScaler/Tips/Tips2"]
+margin_left = 853.0
+margin_top = 42.0
+margin_right = 853.0
+margin_bottom = 42.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextBtn" type="TextureButton" parent="MenuScaler/Tips/Tips2/Next3"]
+margin_left = -61.875
+margin_top = -61.875
+margin_right = 163.125
+margin_bottom = 163.125
+rect_scale = Vector2( 0.55, 0.55 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="MenuScaler/Tips/Tips2/Next3/NextBtn"]
+margin_left = 72.2726
+margin_top = 65.4546
+margin_right = 157.273
+margin_bottom = 150.455
+rect_scale = Vector2( 1.3, 1.3 )
+custom_fonts/font = ExtResource( 4 )
+text = ">"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MARKER" type="ColorRect" parent="MenuScaler/Tips/Tips2/Next3"]
+visible = false
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 1.0
+margin_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PressD" type="Label" parent="MenuScaler/Tips/Tips2/Next3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -91.125
+margin_top = 68.125
+margin_right = 1075.88
+margin_bottom = 153.125
+rect_scale = Vector2( 0.15, 0.15 )
+custom_fonts/font = ExtResource( 4 )
+text = "(D or →)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Prev" type="Control" parent="MenuScaler/Tips/Tips2"]
+margin_left = -851.875
+margin_top = 42.875
+margin_right = -851.875
+margin_bottom = 42.875
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PrevBtn" type="TextureButton" parent="MenuScaler/Tips/Tips2/Prev"]
+margin_left = -61.875
+margin_top = -61.875
+margin_right = 163.125
+margin_bottom = 163.125
+rect_scale = Vector2( 0.55, 0.55 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="MenuScaler/Tips/Tips2/Prev/PrevBtn"]
+margin_left = 55.9091
+margin_top = 67.2728
+margin_right = 140.909
+margin_bottom = 152.273
+rect_scale = Vector2( 1.3, 1.3 )
+custom_fonts/font = ExtResource( 4 )
+text = "<"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MARKER" type="ColorRect" parent="MenuScaler/Tips/Tips2/Prev"]
+visible = false
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 1.0
+margin_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PressA" type="Label" parent="MenuScaler/Tips/Tips2/Prev"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -91.125
+margin_top = 68.125
+margin_right = 1075.88
+margin_bottom = 153.125
+rect_scale = Vector2( 0.15, 0.15 )
+custom_fonts/font = ExtResource( 4 )
+text = "(A or ←)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tips3" type="Control" parent="MenuScaler/Tips"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tip00" type="TextureRect" parent="MenuScaler/Tips/Tips3"]
+margin_left = -749.0
+margin_top = -274.0
+margin_right = -160.0
+margin_bottom = 482.0
+rect_scale = Vector2( 1.05607, 1.05607 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Heart" type="Label" parent="MenuScaler/Tips/Tips3/Tip00"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -78.6049
+margin_top = 93.5602
+margin_right = 91.3951
+margin_bottom = 178.56
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 1.11766, 1.11766 )
+custom_constants/line_spacing = 25
+custom_fonts/font = ExtResource( 4 )
+text = "♥"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tip01" type="Label" parent="MenuScaler/Tips/Tips3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -920.0
+margin_top = -409.0
+margin_right = 2480.0
+margin_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.27, 0.27 )
+custom_constants/line_spacing = 25
+custom_fonts/font = ExtResource( 4 )
+text = "If you lose all your health by
+colliding with obstacles, you lose!
+Lost health regenerates after 5 seconds"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tip02" type="Label" parent="MenuScaler/Tips/Tips3"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -915.0
+margin_top = -415.0
+margin_right = 2485.0
+margin_bottom = 144.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.27, 0.27 )
+custom_constants/line_spacing = 25
+custom_fonts/font = ExtResource( 4 )
+text = "Se você perder todas as suas vidas
+colidindo com objetos, perde o jogo!
+A vida perdida regenera após 5 segundos"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tip10" type="TextureRect" parent="MenuScaler/Tips/Tips3"]
+margin_left = 99.0
+margin_top = -346.0
+margin_right = 606.0
+margin_bottom = 246.0
+rect_scale = Vector2( 1.35349, 1.35929 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowLeft5" type="Label" parent="MenuScaler/Tips/Tips3/Tip10"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.3291
+margin_top = -228.318
+margin_right = 51.6709
+margin_bottom = -143.318
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.830167, 0.830167 )
+custom_constants/line_spacing = 25
+custom_fonts/font = ExtResource( 4 )
+text = "★"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tip11" type="Label" parent="MenuScaler/Tips/Tips3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -81.0
+margin_top = 431.0
+margin_right = 3744.0
+margin_bottom = 738.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.27, 0.27 )
+custom_constants/line_spacing = 25
+custom_fonts/font = ExtResource( 4 )
+text = "Win the game by getting to the finish line"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next3" type="Control" parent="MenuScaler/Tips/Tips3"]
+margin_left = 853.0
+margin_top = 42.0
+margin_right = 853.0
+margin_bottom = 42.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextBtn" type="TextureButton" parent="MenuScaler/Tips/Tips3/Next3"]
+margin_left = -61.875
+margin_top = -61.875
+margin_right = 163.125
+margin_bottom = 163.125
+rect_scale = Vector2( 0.55, 0.55 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="MenuScaler/Tips/Tips3/Next3/NextBtn"]
+margin_left = 72.2726
+margin_top = 65.4546
+margin_right = 157.273
+margin_bottom = 150.455
+rect_scale = Vector2( 1.3, 1.3 )
+custom_fonts/font = ExtResource( 4 )
+text = ">"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MARKER" type="ColorRect" parent="MenuScaler/Tips/Tips3/Next3"]
+visible = false
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 1.0
+margin_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PressD" type="Label" parent="MenuScaler/Tips/Tips3/Next3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -57.0
+margin_top = 68.0
+margin_right = 730.0
+margin_bottom = 153.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.15, 0.15 )
+custom_fonts/font = ExtResource( 4 )
+text = "(D or →)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Prev" type="Control" parent="MenuScaler/Tips/Tips3"]
+margin_left = -851.875
+margin_top = 42.875
+margin_right = -851.875
+margin_bottom = 42.875
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PrevBtn" type="TextureButton" parent="MenuScaler/Tips/Tips3/Prev"]
+margin_left = -61.875
+margin_top = -61.875
+margin_right = 163.125
+margin_bottom = 163.125
+rect_scale = Vector2( 0.55, 0.55 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="MenuScaler/Tips/Tips3/Prev/PrevBtn"]
+margin_left = 55.9091
+margin_top = 67.2728
+margin_right = 140.909
+margin_bottom = 152.273
+rect_scale = Vector2( 1.3, 1.3 )
+custom_fonts/font = ExtResource( 4 )
+text = "<"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MARKER" type="ColorRect" parent="MenuScaler/Tips/Tips3/Prev"]
+visible = false
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 1.0
+margin_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PressA" type="Label" parent="MenuScaler/Tips/Tips3/Prev"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -91.125
+margin_top = 68.125
+margin_right = 1075.88
+margin_bottom = 153.125
+rect_scale = Vector2( 0.15, 0.15 )
+custom_fonts/font = ExtResource( 4 )
+text = "(A or ←)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tips4" type="Control" parent="MenuScaler/Tips"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -1882, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Env" type="Control" parent="MenuScaler/Tips/Tips4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -296, 57 )
+
+[node name="Lua" type="TextureRect" parent="MenuScaler/Tips/Tips4/Env"]
+margin_left = 9.00012
+margin_top = 314.0
+margin_right = 360.0
+margin_bottom = 665.0
+rect_rotation = -105.673
+rect_scale = Vector2( 1.36541, 1.35218 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Prancheta1" type="TextureRect" parent="MenuScaler/Tips/Tips4/Env"]
+margin_left = 69.0
+margin_top = -101.0
+margin_right = 326.0
+margin_bottom = 247.0
+rect_rotation = 6.92949
+rect_scale = Vector2( 1.20149, 1.20149 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Prancheta5" type="TextureRect" parent="MenuScaler/Tips/Tips4/Env"]
+modulate = Color( 0.85514, 0.8372, 0.92, 1 )
+margin_left = -485.0
+margin_top = -126.0
+margin_right = -158.0
+margin_bottom = 268.0
+rect_rotation = -12.0578
+rect_scale = Vector2( 1.43429, 1.43429 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect14" type="TextureRect" parent="MenuScaler/Tips/Tips4/Env"]
+margin_left = 166.0
+margin_top = 265.0
+margin_right = 294.0
+margin_bottom = 385.0
+rect_rotation = 12.7138
+rect_scale = Vector2( 1.06384, 1.05354 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect15" type="TextureRect" parent="MenuScaler/Tips/Tips4/Env"]
+margin_left = 75.0
+margin_top = 269.0
+margin_right = 203.0
+margin_bottom = 389.0
+rect_rotation = 0.963362
+rect_scale = Vector2( 0.807425, 0.799607 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect16" type="TextureRect" parent="MenuScaler/Tips/Tips4/Env"]
+margin_left = -208.0
+margin_top = 305.0
+margin_right = -80.0
+margin_bottom = 425.0
+rect_rotation = 0.963362
+rect_scale = Vector2( 0.807425, 0.799607 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect17" type="TextureRect" parent="MenuScaler/Tips/Tips4/Env"]
+margin_left = -135.0
+margin_top = 301.0
+margin_right = -7.0
+margin_bottom = 421.0
+rect_rotation = 0.963362
+rect_scale = Vector2( 0.807425, 0.799607 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect18" type="TextureRect" parent="MenuScaler/Tips/Tips4/Env"]
+margin_left = 84.0
+margin_top = 368.0
+margin_right = 212.0
+margin_bottom = 488.0
+rect_rotation = 0.963362
+rect_scale = Vector2( 0.632275, 0.626153 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect19" type="TextureRect" parent="MenuScaler/Tips/Tips4/Env"]
+margin_left = -141.0
+margin_top = 366.0
+margin_right = -13.0
+margin_bottom = 486.0
+rect_rotation = 0.963362
+rect_scale = Vector2( 0.632275, 0.626153 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cogu" type="TextureRect" parent="MenuScaler/Tips/Tips4/Env"]
+margin_left = 140.0
+margin_top = 377.0
+margin_right = 180.0
+margin_bottom = 417.0
+rect_rotation = 15.0
+rect_scale = Vector2( 1.58051, 1.58051 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cogu2" type="TextureRect" parent="MenuScaler/Tips/Tips4/Env"]
+margin_left = 225.0
+margin_top = 344.0
+margin_right = 265.0
+margin_bottom = 384.0
+rect_rotation = -18.215
+rect_scale = Vector2( 1.58051, 1.58051 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cogu3" type="TextureRect" parent="MenuScaler/Tips/Tips4/Env"]
+margin_left = 128.0
+margin_top = 330.0
+margin_right = 168.0
+margin_bottom = 370.0
+rect_rotation = -18.4286
+rect_scale = Vector2( 1.58051, 1.58051 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cogu4" type="TextureRect" parent="MenuScaler/Tips/Tips4/Env"]
+margin_left = 264.0
+margin_top = 331.0
+margin_right = 304.0
+margin_bottom = 371.0
+rect_rotation = 18.1482
+rect_scale = Vector2( 1.58051, 1.58051 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cogu5" type="TextureRect" parent="MenuScaler/Tips/Tips4/Env"]
+margin_left = -87.0
+margin_top = 376.0
+margin_right = -47.0
+margin_bottom = 416.0
+rect_rotation = 18.1482
+rect_scale = Vector2( 1.58051, 1.58051 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cogu6" type="TextureRect" parent="MenuScaler/Tips/Tips4/Env"]
+margin_left = -219.0
+margin_top = 355.0
+margin_right = -179.0
+margin_bottom = 395.0
+rect_rotation = -7.83645
+rect_scale = Vector2( 1.58051, 1.58051 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cogu7" type="TextureRect" parent="MenuScaler/Tips/Tips4/Env"]
+margin_left = -140.0
+margin_top = 344.0
+margin_right = -100.0
+margin_bottom = 384.0
+rect_rotation = 9.61869
+rect_scale = Vector2( 1.58051, 1.58051 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="MenuScaler/Tips/Tips4/Env"]
+position = Vector2( -10, 130 )
+rotation = -0.00209582
+scale = Vector2( 0.86198, 0.86198 )
+frames = SubResource( 3 )
+playing = true
+
+[node name="Tip01_TODO!" type="Label" parent="MenuScaler/Tips/Tips4"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -336.0
+margin_right = 6151.0
+margin_bottom = 234.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.27, 0.27 )
+custom_constants/line_spacing = 25
+custom_fonts/font = ExtResource( 4 )
+text = "Depending on the difficulty, the message at the end
+keeps changing as you lose the game repeatedly
+
+Have fun!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tip01" type="Label" parent="MenuScaler/Tips/Tips4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -336.0
+margin_right = 6151.0
+margin_bottom = 234.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.27, 0.27 )
+custom_constants/line_spacing = 25
+custom_fonts/font = ExtResource( 4 )
+text = "When you win, the message at end changes
+based on the difficulty
+
+Have fun!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Prev" type="Control" parent="MenuScaler/Tips/Tips4"]
+margin_left = -851.875
+margin_top = 42.875
+margin_right = -851.875
+margin_bottom = 42.875
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PrevBtn" type="TextureButton" parent="MenuScaler/Tips/Tips4/Prev"]
+margin_left = -61.875
+margin_top = -61.875
+margin_right = 163.125
+margin_bottom = 163.125
+rect_scale = Vector2( 0.55, 0.55 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="MenuScaler/Tips/Tips4/Prev/PrevBtn"]
+margin_left = 55.9091
+margin_top = 67.2728
+margin_right = 140.909
+margin_bottom = 152.273
+rect_scale = Vector2( 1.3, 1.3 )
+custom_fonts/font = ExtResource( 4 )
+text = "<"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MARKER" type="ColorRect" parent="MenuScaler/Tips/Tips4/Prev"]
+visible = false
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 1.0
+margin_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PressA" type="Label" parent="MenuScaler/Tips/Tips4/Prev"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -91.125
+margin_top = 68.125
+margin_right = 1075.88
+margin_bottom = 153.125
+rect_scale = Vector2( 0.15, 0.15 )
+custom_fonts/font = ExtResource( 4 )
+text = "(A or ←)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="MenuScaler/GoBack" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="MenuScaler/Tips/Tips1/Next2/NextBtn" to="." method="_on_next_tip"]
+[connection signal="pressed" from="MenuScaler/Tips/Tips2/Next3/NextBtn" to="." method="_on_next_tip"]
+[connection signal="pressed" from="MenuScaler/Tips/Tips2/Prev/PrevBtn" to="." method="_on_prev_tip"]
+[connection signal="pressed" from="MenuScaler/Tips/Tips3/Next3/NextBtn" to="." method="_on_next_tip"]
+[connection signal="pressed" from="MenuScaler/Tips/Tips3/Prev/PrevBtn" to="." method="_on_prev_tip"]
+[connection signal="pressed" from="MenuScaler/Tips/Tips4/Prev/PrevBtn" to="." method="_on_prev_tip"]

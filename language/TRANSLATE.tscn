@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://language/translate_me.gd" type="Script" id=1]
+
+[node name="TRANSLATE" type="Control"]
+script = ExtResource( 1 )

@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://game-parts/player/sprites/globin-right.png" type="Texture" id=1]
+[ext_resource path="res://game-parts/player/player.gd" type="Script" id=2]
+[ext_resource path="res://game-parts/globin/goblin abanando 2.png" type="Texture" id=3]
+[ext_resource path="res://game-parts/player/sprites/globin-left.png" type="Texture" id=4]
+[ext_resource path="res://game-parts/globin/goblin abanando 1.png" type="Texture" id=5]
+[ext_resource path="res://game-parts/player/sprites/jumping.png" type="Texture" id=6]
+[ext_resource path="res://game-parts/player/sprites/goblin se arrastando 1.png" type="Texture" id=7]
+[ext_resource path="res://game-parts/player/sprites/falling.png" type="Texture" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "falling",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "jumping",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "running",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "abananding",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "sliding",
+"speed": 5.0
+} ]
+
+[node name="player" type="Spatial" groups=["player"]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Spatial" parent="."]
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="Animated" type="AnimatedSprite3D" parent="Sprite"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.426, 0 )
+frames = SubResource( 1 )
+animation = "abananding"
+frame = 1
+playing = true
+
+[node name="JumpTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="LaneTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="JumpTimer" to="." method="_on_JumpTimer_timeout"]
+[connection signal="timeout" from="LaneTimer" to="." method="_on_LaneTimer_timeout"]

@@ -1,10 +1,8 @@
 [gd_scene load_steps=10 format=2]
 
+[ext_resource path="res://game-parts/made-by/MadeByScaler.tscn" type="PackedScene" id=1]
 [ext_resource path="res://custom-ui/scaler.gd" type="Script" id=2]
 [ext_resource path="res://difficulty/difficulty.gd" type="Script" id=3]
-[ext_resource path="res://made-by/MadeByScaler.tscn" type="PackedScene" id=4]
-[ext_resource path="res://menus/sprites/BTN3.png" type="Texture" id=6]
-[ext_resource path="res://menus/sprites/BTN2.png" type="Texture" id=9]
 [ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=11]
 
 [sub_resource type="Gradient" id=1]
@@ -14,6 +12,14 @@ colors = PoolColorArray( 0.109804, 0.215686, 0.0156863, 1, 0.377738, 0.399817, 0
 [sub_resource type="GradientTexture" id=2]
 gradient = SubResource( 1 )
 width = 512
+
+[sub_resource type="StreamTexture" id=5]
+flags = 4
+load_path = "res://.import/BTN2.png-bbbd787c40f8d99f454fffff668f5a6e.stex"
+
+[sub_resource type="StreamTexture" id=4]
+flags = 4
+load_path = "res://.import/BTN3.png-6a7610b9a8a2b46a6799cef804949f21.stex"
 
 [sub_resource type="CanvasItemMaterial" id=3]
 
@@ -186,8 +192,8 @@ grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 0.25, 0.25 )
 size_flags_horizontal = 4
-texture_normal = ExtResource( 9 )
-texture_hover = ExtResource( 6 )
+texture_normal = SubResource( 5 )
+texture_hover = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -228,8 +234,8 @@ grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 0.25, 0.25 )
 size_flags_horizontal = 4
-texture_normal = ExtResource( 9 )
-texture_hover = ExtResource( 6 )
+texture_normal = SubResource( 5 )
+texture_hover = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -270,8 +276,8 @@ margin_right = 1864.01
 margin_bottom = 848.0
 rect_scale = Vector2( 0.25, 0.25 )
 size_flags_horizontal = 4
-texture_normal = ExtResource( 9 )
-texture_hover = ExtResource( 6 )
+texture_normal = SubResource( 5 )
+texture_hover = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -310,8 +316,8 @@ margin_right = 1864.01
 margin_bottom = 928.0
 rect_scale = Vector2( 0.25, 0.25 )
 size_flags_horizontal = 4
-texture_normal = ExtResource( 9 )
-texture_hover = ExtResource( 6 )
+texture_normal = SubResource( 5 )
+texture_hover = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -350,8 +356,8 @@ margin_right = 855.0
 margin_bottom = 598.0
 rect_scale = Vector2( 0.35, 0.35 )
 size_flags_horizontal = 4
-texture_normal = ExtResource( 9 )
-texture_hover = ExtResource( 6 )
+texture_normal = SubResource( 5 )
+texture_hover = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -393,8 +399,8 @@ margin_right = 855.0
 margin_bottom = -252.0
 rect_scale = Vector2( 0.35, 0.35 )
 size_flags_horizontal = 4
-texture_normal = ExtResource( 9 )
-texture_hover = ExtResource( 6 )
+texture_normal = SubResource( 5 )
+texture_hover = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -428,7 +434,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MadeByScaler" parent="." instance=ExtResource( 4 )]
+[node name="MadeByScaler" parent="." instance=ExtResource( 1 )]
 
 [connection signal="pressed" from="MenuScaler/SelectDiff/BabyBtn" to="MenuScaler/SelectDiff" method="_on_baby"]
 [connection signal="pressed" from="MenuScaler/SelectDiff/EasyBtn" to="MenuScaler/SelectDiff" method="_on_easy"]
