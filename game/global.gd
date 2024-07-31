@@ -1,7 +1,7 @@
 extends Node
-class_name Global
+# class_name Global
 
-enum OBSTACLE_TYPE { GIFA, PREDA, TOCO, WIN }
+# enum OBSTACLE_TYPE { GIFA, PREDA, TOCO, WIN }
 
 const GAME_Z_START := -12
 const GAME_Z_END := 3.0

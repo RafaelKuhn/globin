@@ -1,7 +1,5 @@
 extends Node
 
-const Global = preload("res://game/global.gd")
-
 # EXPORT EXAMPLES
 # export (String) var game_dif: String
 # export var player_path := @""; onready var player := get_node(player_path) as Node2D

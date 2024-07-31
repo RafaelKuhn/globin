@@ -1,8 +1,6 @@
 extends Node
 
 
-const Global = preload("res://game/global.gd")
-
 const Difficulty = preload("res://difficulty/difficulty_enum.gd")
 
 const game_scene = preload("res://game/Game.tscn")
@@ -18,7 +16,7 @@ const menu_scene = preload("res://MainMenu.tscn")
 
 
 
-var game_speed := Global.EASY_GAME_SPEED
+var game_speed = Global.EASY_GAME_SPEED
 var game_difficulty = Difficulty.EASY
 
 

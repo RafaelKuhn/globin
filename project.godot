@@ -14,20 +14,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://difficulty/difficulty_enum.gd"
 }, {
-"base": "Node",
-"class": "Global",
-"language": "GDScript",
-"path": "res://game/global.gd"
-}, {
 "base": "Reference",
 "class": "Language",
 "language": "GDScript",
 "path": "res://language/language_enum.gd"
+}, {
+"base": "Reference",
+"class": "Obstacle",
+"language": "GDScript",
+"path": "res://game-parts/obstacles/obstacle_type.gd"
 } ]
 _global_script_class_icons={
 "Diff": "",
-"Global": "",
-"Language": ""
+"Language": "",
+"Obstacle": ""
 }
 
 [application]
@@ -40,6 +40,7 @@ config/windows_native_icon="Globin"
 
 [autoload]
 
+Global="*res://game/global.gd"
 Game="*res://game/game.gd"
 Translator="*res://language/translator.gd"
 

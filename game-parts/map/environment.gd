@@ -1,7 +1,5 @@
 extends Spatial
 
-const Global = preload("res://game/global.gd")
-
 var objects: Array
 var objects_last_z_position: float
 

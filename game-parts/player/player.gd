@@ -1,13 +1,12 @@
 extends Spatial
 
-signal damage_taken()
+const Obstacle = preload("res://game-parts/obstacles/obstacle_type.gd")
 
-const Global = preload("res://game/global.gd")
+signal damage_taken()
 
 enum VerticalState { DEFAULT, JUMPING, ROLLING }
 enum HorizontalState { RUNNING, SWITCHING }
 
-# constantes
 const LEFTMOST_LANE := 1
 const RIGHTMOST_LANE := 3
 
@@ -153,7 +152,7 @@ func tween_quad(x: float) -> float:
 ##################### colisão dos objetos #####################
 # callback para quando algum objeto 'obstacle' chega na posição z do player
 func _on_any_obstacle_z_collision(lane_obstacle_x: int, obj_type) -> void:
-	if obj_type == Global.OBSTACLE_TYPE.WIN:
+	if obj_type == Obstacle.Type.WIN:
 		get_node(Global.GAME_MANAGER_PATH).win_game()
 		return
 	
@@ -165,12 +164,12 @@ func _on_any_obstacle_z_collision(lane_obstacle_x: int, obj_type) -> void:
 
 func try_to_collide_based_on_type(obj_type):
 	match obj_type:
-		Global.OBSTACLE_TYPE.PREDA:
+		Obstacle.Type.PREDA:
 			lose_hp()
-		Global.OBSTACLE_TYPE.GIFA:
+		Obstacle.Type.GIFA:
 			if (vertical_state != VerticalState.ROLLING):
 				lose_hp()
-		Global.OBSTACLE_TYPE.TOCO:
+		Obstacle.Type.TOCO:
 			if (vertical_state != VerticalState.JUMPING):
 				lose_hp()
 

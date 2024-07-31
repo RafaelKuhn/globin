@@ -1,6 +1,5 @@
 extends Control
 
-const Global = preload("res://game/global.gd")
 const Difficulty = preload("res://difficulty/difficulty_enum.gd")
 
 
