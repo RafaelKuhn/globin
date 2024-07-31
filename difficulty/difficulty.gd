@@ -2,11 +2,9 @@ extends Node
 
 const Difficulty = preload("res://difficulty/difficulty_enum.gd")
 
-var game_node: Node
 
 func _ready():
-	game_node = get_node("/root/Game")
-	match game_node.game_difficulty:
+	match Game.game_difficulty:
 		Difficulty.BABY:
 			baby_ui()
 		Difficulty.EASY:
@@ -17,7 +15,7 @@ func _ready():
 			hard_ui()
 		_:
 			easy_ui()
-			push_error("UNHANDLED ENUM CASE: %s" % game_node.game_difficulty)
+			push_error("UNHANDLED ENUM CASE: %s" % Game.game_difficulty)
 
 func _input(_event) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
@@ -35,28 +33,28 @@ func _input(_event) -> void:
 
 
 func _on_go_back():
-	game_node.open_menu_scene()
+	Game.open_menu_scene()
 
 func _on_play_pressed():
-	game_node.load_game_scene()
+	Game.load_game_scene()
 
 
 
 func _on_baby():
 	baby_ui()
-	game_node.set_baby_difficulty()
+	Game.set_baby_difficulty()
 
 func _on_easy():
 	easy_ui()
-	game_node.set_easy_difficulty()
+	Game.set_easy_difficulty()
 
 func _on_medi():
 	medi_ui()
-	game_node.set_medi_difficulty()
+	Game.set_medi_difficulty()
 
 func _on_hard():
 	hard_ui()
-	game_node.set_hard_difficulty()
+	Game.set_hard_difficulty()
 
 
 func baby_ui():
@@ -117,36 +115,36 @@ func disable_arrows_tooltips():
 
 
 func difficulty_up():
-	if game_node.game_difficulty == Difficulty.HARD:
+	if Game.game_difficulty == Difficulty.HARD:
 		return
 
-	if game_node.game_difficulty == Difficulty.MEDI:
+	if Game.game_difficulty == Difficulty.MEDI:
 		_on_hard()
 		return
 
-	if game_node.game_difficulty == Difficulty.EASY:
+	if Game.game_difficulty == Difficulty.EASY:
 		_on_medi()
 		return
 
-	if game_node.game_difficulty == Difficulty.BABY:
+	if Game.game_difficulty == Difficulty.BABY:
 		_on_easy()
 		return
 
 	push_error("Unhandled difficulty %s" % self.game_difficulty)
 
 func difficulty_down():
-	if game_node.game_difficulty == Difficulty.BABY:
+	if Game.game_difficulty == Difficulty.BABY:
 		return
 
-	if game_node.game_difficulty == Difficulty.EASY:
+	if Game.game_difficulty == Difficulty.EASY:
 		_on_baby()
 		return
 	
-	if game_node.game_difficulty == Difficulty.MEDI:
+	if Game.game_difficulty == Difficulty.MEDI:
 		_on_easy()
 		return
 	
-	if game_node.game_difficulty == Difficulty.HARD:
+	if Game.game_difficulty == Difficulty.HARD:
 		_on_medi()
 		return
 	

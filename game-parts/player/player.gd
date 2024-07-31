@@ -36,11 +36,6 @@ var jump_progress := 0.0
 func _ready() -> void:
 	start_in_second_lane()
 
-func start_in_second_lane():
-	previous_lane = 2
-	lane = 2
-	translation.x = lane
-
 func _input(_event) -> void:
 	if Input.is_action_just_pressed("W_key"):
 		try_jumping()
@@ -59,18 +54,27 @@ func _process(delta: float) -> void:
 	update_vertical_movement(delta)
 
 
+func start_in_second_lane():
+	previous_lane = 2
+	lane = 2
+	translation.x = lane
+
+
+static func sync_inverse_game_speed(input: float, new_speed: float) -> float:
+	return input * 5.0 / new_speed
+
 ##################### movimento vertical #####################
 func try_jumping() -> void:
 	if vertical_state != VerticalState.DEFAULT:
 		return
 	vertical_state = VerticalState.JUMPING
-	$JumpTimer.start(Global.sync_inverse_game_speed(JUMP_DURATION, speed))
+	$JumpTimer.start(sync_inverse_game_speed(JUMP_DURATION, speed))
 	
 func try_rolling() -> void:
 	if vertical_state != VerticalState.DEFAULT:
 		return
 	vertical_state = VerticalState.ROLLING
-	$JumpTimer.start(Global.sync_inverse_game_speed(ROLLING_DURATION, speed))
+	$JumpTimer.start(sync_inverse_game_speed(ROLLING_DURATION, speed))
 
 func _on_JumpTimer_timeout() -> void:
 	vertical_state = VerticalState.DEFAULT
@@ -85,7 +89,7 @@ func try_switching_right() -> void:
 	
 	switch_right()
 	horizontal_state = HorizontalState.SWITCHING
-	$LaneTimer.start(Global.sync_inverse_game_speed(LANE_SWITCH_DURATION, speed))
+	$LaneTimer.start(sync_inverse_game_speed(LANE_SWITCH_DURATION, speed))
 	
 func try_switching_left() -> void:
 	if lane_switch_progress < MIN_PERCENTAGE_TO_SWITCH_LANE_AGAIN:
@@ -95,7 +99,7 @@ func try_switching_left() -> void:
 	
 	switch_left()
 	horizontal_state = HorizontalState.SWITCHING
-	$LaneTimer.start(Global.sync_inverse_game_speed(LANE_SWITCH_DURATION, speed))
+	$LaneTimer.start(sync_inverse_game_speed(LANE_SWITCH_DURATION, speed))
 
 # início da troca de lane
 func switch_right() -> void:
@@ -120,7 +124,7 @@ func update_horizontal_movement(delta: float) -> void:
 	if horizontal_state != HorizontalState.SWITCHING:
 		return
 
-	lane_switch_progress += delta * 1.0 / Global.sync_inverse_game_speed(LANE_SWITCH_DURATION, speed)
+	lane_switch_progress += delta * 1.0 / sync_inverse_game_speed(LANE_SWITCH_DURATION, speed)
 	translation.x = lerp(previous_lane, lane, tween_quad(lane_switch_progress))
 	
 

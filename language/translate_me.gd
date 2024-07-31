@@ -26,7 +26,3 @@ func _update_term_by_key():
 	var term = Translator.get_term(term_key);
 	parent_label.text = term
 	# print("GOT TERM %s" % term)
-
-
-func _on_Language_language_changed():
-	pass # Replace with function body.

@@ -1,5 +1,6 @@
 extends Node
 
+
 const Global = preload("res://game/global.gd")
 
 const Difficulty = preload("res://difficulty/difficulty_enum.gd")
@@ -12,15 +13,9 @@ const lost_scene = preload("res://menus/win-lose/Lost.tscn")
 const difficulty_scene = preload("res://difficulty/Difficulty.tscn")
 
 #const how_to_scene = preload("res://how-to-play/HowToPlay.tscn")
-#const menu_scene = preload("res://MainMenu.tscn")
+const menu_scene = preload("res://MainMenu.tscn")
 #const difficulty_scene = preload("res://difficulty/Difficulty.tscn")
 
-
-
-# UNUSED
-const GAME_INSTANCE_NAME = "GAME_INSTANCE"
-const WIN_INSTANCE_NAME  = "WIN_INSTANCE"
-const LOST_INSTANCE_NAME = "LOST_INSTANCE"
 
 
 var game_speed := Global.EASY_GAME_SPEED
@@ -35,20 +30,20 @@ func _ready():
 	root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
 
+
 func lose_game():
 	load_lost_scene()
 
 func win_game():
 	load_won_scene()
 
-
-func open_menu_scene():
-	var scene = ResourceLoader.load("res://MainMenu.tscn")
-	call_deferred("_deferred_goto_scene", scene)
-
 func open_how_to_scene():
 	var scene = ResourceLoader.load("res://game-parts/how-to-play/HowToPlay.tscn")
 	call_deferred("_deferred_goto_scene", scene)
+
+func open_menu_scene():
+	call_deferred("_deferred_goto_scene", menu_scene)
+
 
 func load_difficulty_scene():
 	call_deferred("_deferred_goto_scene", difficulty_scene)
@@ -56,41 +51,16 @@ func load_difficulty_scene():
 func load_game_scene():
 	call_deferred("_deferred_goto_scene", game_scene)
 
+
 func load_won_scene():
 	var win_scene_instance = win_scene.instance()
 	win_scene_instance.setup_won_scene(game_difficulty)
 	call_deferred("_deferred_goto_scene_instance", win_scene_instance)
 
-	#var root = get_tree().get_root()
-	#var bug = root.has_node(WIN_INSTANCE_NAME)
-	#if bug:
-	#	push_error("ERROR, ALREADY HAD A WON SCENE THERE")
-	#	return;
-
-	# var win_instance = win_scene.instance()
-	# win_instance.name = WIN_INSTANCE_NAME
-
-	#var game = root.get_node(GAME_INSTANCE_NAME)
-	#game.queue_free()
-	#root.add_child(win_instance)
-	
-	#current_scene = win_instance
-	
-	#print("\nafter load WON SCENE:")
-	#Global.dump_tree(get_tree().get_root(), 2)
-
 func load_lost_scene():
 	var lost_scene_instance = lost_scene.instance()
 	lost_scene_instance.setup_lost_scene(game_difficulty)
 	call_deferred("_deferred_goto_scene_instance", lost_scene_instance)
-	return
-	
-	#var lost_instance = lost_scene.instance()
-	# lost_instance.name = LOST_INSTANCE_NAME
-	#var root = get_tree().get_root()
-	#var game = root.get_node(GAME_INSTANCE_NAME)
-	#game.queue_free()
-	#root.add_child(lost_instance)
 
 
 func _deferred_goto_scene(new_scene):
@@ -120,3 +90,9 @@ func set_medi_difficulty():
 func set_hard_difficulty():
 	self.game_speed = Global.HARD_GAME_SPEED
 	self.game_difficulty = Difficulty.HARD
+
+
+var cyan   := Color(0.000, 0.973, 1.000, 1.000)
+var white  := Color(1.000, 1.000, 1.000, 1.000)
+var orange := Color(1.000, 0.702, 0.000, 1.000)
+var red    := Color(1.000, 0.165, 0.000, 1.000)

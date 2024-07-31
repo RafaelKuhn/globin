@@ -11,6 +11,9 @@ onready var lang_item1_tex = $"OtherLangs/Lang1/LangTex" as TextureRect;
 onready var lang_item1_label = $"OtherLangs/Lang1/LangLabel";
 
 
+onready var press_l_label = $"PressL";
+
+
 const br_data = {
 	"text": "BR",
 	"icon": preload("res://language/icons/flag-br.png"),
@@ -27,18 +30,22 @@ func _ready():
 	# print("language init: %s " % Translator.language)
 
 	other_langs.visible = false
+	press_l_label.visible = true
 	_update_icons()
 
 var amnt_hover := 0
 
-func _process(_delta):
+func _input(_delta):
 	if Input.is_action_just_pressed("L_key"):
 		_cycle_language()
 
+func _process(_delta):
 	if amnt_hover > 0:
 		other_langs.visible = true
+		press_l_label.visible = false
 	else:
 		other_langs.visible = false
+		press_l_label.visible = true
 
 
 func _update_icons():
@@ -60,7 +67,6 @@ func _update_icons():
 		_:
 			push_error("UNHANDLED LANGUAGE")
 			return -1
-
 
 
 func _on_hover():

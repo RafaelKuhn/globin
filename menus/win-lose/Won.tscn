@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://game-parts/obstacles/sprites/pedra .png" type="Texture" id=1]
 [ext_resource path="res://game-parts/map/sprites/cogumelos.png" type="Texture" id=2]
@@ -10,8 +10,9 @@
 [ext_resource path="res://custom-ui/scaler.gd" type="Script" id=8]
 [ext_resource path="res://game-parts/made-by/MadeByScaler.tscn" type="PackedScene" id=9]
 [ext_resource path="res://game-parts/map/sprites/lua.png" type="Texture" id=10]
+[ext_resource path="res://language/TRANSLATE.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=12]
-[ext_resource path="res://menus/win-lose/end_game.gd" type="Script" id=13]
+[ext_resource path="res://menus/win-lose/end_game_won.gd" type="Script" id=13]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.333333, 0.715847 )
@@ -1309,7 +1310,6 @@ position = Vector2( -771, 279 )
 rotation = -0.00209582
 scale = Vector2( 0.409934, 0.409934 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 
 [node name="YouWon" type="Label" parent="MenuScaler"]
@@ -1332,6 +1332,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TRANSLATE" parent="MenuScaler/YouWon" instance=ExtResource( 11 )]
+term_key = "you_won"
+
 [node name="Difficulty" type="Label" parent="MenuScaler"]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -1351,6 +1354,9 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TRANSLATE" parent="MenuScaler/Difficulty" instance=ExtResource( 11 )]
+term_key = "difficulty"
 
 [node name="Mode" type="Label" parent="MenuScaler"]
 anchor_left = 0.5
@@ -1438,6 +1444,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TRANSLATE" parent="MenuScaler/OrPressSpace3" instance=ExtResource( 11 )]
+term_key = "press_space"
+
 [node name="MadeByScaler" parent="." instance=ExtResource( 9 )]
 
-[connection signal="pressed" from="MenuScaler/GoBack" to="." method="_on_ok_click"]
+[connection signal="pressed" from="MenuScaler/GoBack" to="." method="_on_win_ok_click"]

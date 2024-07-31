@@ -11,7 +11,7 @@
 [ext_resource path="res://menus/sprites/btn-hover.png" type="Texture" id=9]
 [ext_resource path="res://custom-ui/scaler.gd" type="Script" id=10]
 [ext_resource path="res://language/icons/flag-en.png" type="Texture" id=11]
-[ext_resource path="res://language/language.gd" type="Script" id=12]
+[ext_resource path="res://language/language_ui.gd" type="Script" id=12]
 [ext_resource path="res://language/TRANSLATE.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Gradient" id=1]

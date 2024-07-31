@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://game-parts/made-by/MadeByScaler.tscn" type="PackedScene" id=1]
+[ext_resource path="res://language/TRANSLATE.tscn" type="PackedScene" id=2]
+[ext_resource path="res://menus/win-lose/end_game_lost.gd" type="Script" id=3]
 [ext_resource path="res://custom-ui/scaler.gd" type="Script" id=8]
 [ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=12]
-[ext_resource path="res://menus/win-lose/end_game.gd" type="Script" id=13]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.333333, 0.715847 )
@@ -24,7 +25,7 @@ load_path = "res://.import/BTN3.png-6a7610b9a8a2b46a6799cef804949f21.stex"
 [node name="Lost" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 13 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -55,7 +56,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="YouWon" type="Label" parent="MenuScaler"]
+[node name="YouLost" type="Label" parent="MenuScaler"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -75,26 +76,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="_YouWon4" type="Label" parent="MenuScaler"]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -279.0
-margin_top = 57.0
-margin_right = 1001.0
-margin_bottom = 230.0
-grow_horizontal = 2
-grow_vertical = 2
-rect_scale = Vector2( 0.467405, 0.467405 )
-custom_fonts/font = ExtResource( 12 )
-text = " Difficulty:
-Baby"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="TRANSLATE" parent="MenuScaler/YouLost" instance=ExtResource( 2 )]
+term_key = "you_lost"
 
 [node name="Difficulty" type="Label" parent="MenuScaler"]
 anchor_left = 0.5
@@ -115,6 +98,9 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TRANSLATE" parent="MenuScaler/Difficulty" instance=ExtResource( 2 )]
+term_key = "difficulty"
 
 [node name="Mode" type="Label" parent="MenuScaler"]
 anchor_left = 0.5
@@ -200,7 +186,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TRANSLATE" parent="MenuScaler/OrPressSpace3" instance=ExtResource( 2 )]
+term_key = "press_space"
+
 [node name="MadeByScaler" parent="." instance=ExtResource( 1 )]
 visible = false
 
-[connection signal="pressed" from="MenuScaler/GoBack" to="." method="_on_ok_click"]
+[connection signal="pressed" from="MenuScaler/GoBack" to="." method="_on_lost_ok_click"]

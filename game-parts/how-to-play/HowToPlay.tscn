@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://custom-ui/scaler.gd" type="Script" id=1]
 [ext_resource path="res://menus/sprites/BTN3.png" type="Texture" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://game-parts/map/sprites/arvore-alta.png" type="Texture" id=18]
 [ext_resource path="res://game-parts/map/sprites/prancheta.png" type="Texture" id=19]
 [ext_resource path="res://game-parts/map/sprites/lua.png" type="Texture" id=20]
+[ext_resource path="res://language/TRANSLATE.tscn" type="PackedScene" id=21]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.333333, 0.715847 )
@@ -89,6 +90,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TRANSLATE" parent="MenuScaler/GoBack/Label2" instance=ExtResource( 21 )]
+term_key = "go_back"
+
 [node name="PressB" type="Label" parent="MenuScaler"]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -105,6 +109,9 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TRANSLATE" parent="MenuScaler/PressB" instance=ExtResource( 21 )]
+term_key = "press_b"
 
 [node name="Tips" type="Control" parent="MenuScaler"]
 anchor_right = 1.0
@@ -196,6 +203,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TRANSLATE" parent="MenuScaler/Tips/Tips1/Tip01" instance=ExtResource( 21 )]
+term_key = "how_to_0"
+
 [node name="Tip10" type="TextureRect" parent="MenuScaler/Tips/Tips1"]
 margin_left = 99.0
 margin_top = -310.0
@@ -249,6 +259,9 @@ valign = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TRANSLATE" parent="MenuScaler/Tips/Tips1/Tip11" instance=ExtResource( 21 )]
+term_key = "how_to_1"
 
 [node name="Next2" type="Control" parent="MenuScaler/Tips/Tips1"]
 margin_left = 853.0
@@ -313,6 +326,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TRANSLATE" parent="MenuScaler/Tips/Tips1/Next2/PressD" instance=ExtResource( 21 )]
+term_key = "d_or"
+
 [node name="Tips2" type="Control" parent="MenuScaler/Tips"]
 visible = false
 anchor_right = 1.0
@@ -375,6 +391,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TRANSLATE" parent="MenuScaler/Tips/Tips2/Tip01" instance=ExtResource( 21 )]
+term_key = "how_to_2"
+
 [node name="Tip10" type="TextureRect" parent="MenuScaler/Tips/Tips2"]
 margin_left = 99.0
 margin_top = -346.0
@@ -428,6 +447,9 @@ valign = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TRANSLATE" parent="MenuScaler/Tips/Tips2/Tip11" instance=ExtResource( 21 )]
+term_key = "how_to_3"
 
 [node name="Next3" type="Control" parent="MenuScaler/Tips/Tips2"]
 margin_left = 853.0
@@ -492,6 +514,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TRANSLATE" parent="MenuScaler/Tips/Tips2/Next3/PressD" instance=ExtResource( 21 )]
+term_key = "d_or"
+
 [node name="Prev" type="Control" parent="MenuScaler/Tips/Tips2"]
 margin_left = -851.875
 margin_top = 42.875
@@ -555,7 +580,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TRANSLATE" parent="MenuScaler/Tips/Tips2/Prev/PressA" instance=ExtResource( 21 )]
+term_key = "a_or"
+
 [node name="Tips3" type="Control" parent="MenuScaler/Tips"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -617,29 +646,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Tip02" type="Label" parent="MenuScaler/Tips/Tips3"]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -915.0
-margin_top = -415.0
-margin_right = 2485.0
-margin_bottom = 144.0
-grow_horizontal = 2
-grow_vertical = 2
-rect_scale = Vector2( 0.27, 0.27 )
-custom_constants/line_spacing = 25
-custom_fonts/font = ExtResource( 4 )
-text = "Se você perder todas as suas vidas
-colidindo com objetos, perde o jogo!
-A vida perdida regenera após 5 segundos"
-align = 1
-valign = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="TRANSLATE" parent="MenuScaler/Tips/Tips3/Tip01" instance=ExtResource( 21 )]
+term_key = "how_to_4"
 
 [node name="Tip10" type="TextureRect" parent="MenuScaler/Tips/Tips3"]
 margin_left = 99.0
@@ -693,6 +701,9 @@ valign = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TRANSLATE" parent="MenuScaler/Tips/Tips3/Tip11" instance=ExtResource( 21 )]
+term_key = "how_to_5"
 
 [node name="Next3" type="Control" parent="MenuScaler/Tips/Tips3"]
 margin_left = 853.0
@@ -759,6 +770,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TRANSLATE" parent="MenuScaler/Tips/Tips3/Next3/PressD" instance=ExtResource( 21 )]
+term_key = "d_or"
+
 [node name="Prev" type="Control" parent="MenuScaler/Tips/Tips3"]
 margin_left = -851.875
 margin_top = 42.875
@@ -822,8 +836,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TRANSLATE" parent="MenuScaler/Tips/Tips3/Prev/PressA" instance=ExtResource( 21 )]
+term_key = "a_or"
+
 [node name="Tips4" type="Control" parent="MenuScaler/Tips"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( -1882, 0 )
@@ -1034,6 +1050,7 @@ position = Vector2( -10, 130 )
 rotation = -0.00209582
 scale = Vector2( 0.86198, 0.86198 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="Tip01_TODO!" type="Label" parent="MenuScaler/Tips/Tips4"]
@@ -1082,6 +1099,9 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TRANSLATE" parent="MenuScaler/Tips/Tips4/Tip01" instance=ExtResource( 21 )]
+term_key = "how_to_6"
 
 [node name="Prev" type="Control" parent="MenuScaler/Tips/Tips4"]
 margin_left = -851.875
@@ -1145,6 +1165,9 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TRANSLATE" parent="MenuScaler/Tips/Tips4/Prev/PressA" instance=ExtResource( 21 )]
+term_key = "a_or"
 
 [connection signal="pressed" from="MenuScaler/GoBack" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="MenuScaler/Tips/Tips1/Next2/NextBtn" to="." method="_on_next_tip"]
