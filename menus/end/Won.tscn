@@ -1,18 +1,20 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://game-parts/obstacles/sprites/pedra .png" type="Texture" id=1]
-[ext_resource path="res://game-parts/map/sprites/cogumelos.png" type="Texture" id=2]
-[ext_resource path="res://game-parts/map/sprites/arvore-alta.png" type="Texture" id=3]
-[ext_resource path="res://game-parts/map/sprites/pinheiro.png" type="Texture" id=4]
-[ext_resource path="res://game-parts/globin/goblin abanando 2.png" type="Texture" id=5]
+[ext_resource path="res://language/TRANSLATE.tscn" type="PackedScene" id=1]
+[ext_resource path="res://language/LanguageScaler.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game-parts/made-by/MadeByScaler.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=4]
+[ext_resource path="res://game-parts/obstacles/sprites/pedra .png" type="Texture" id=5]
 [ext_resource path="res://game-parts/map/sprites/prancheta.png" type="Texture" id=6]
-[ext_resource path="res://game-parts/globin/goblin abanando 1.png" type="Texture" id=7]
-[ext_resource path="res://custom-ui/scaler.gd" type="Script" id=8]
-[ext_resource path="res://game-parts/made-by/MadeByScaler.tscn" type="PackedScene" id=9]
-[ext_resource path="res://game-parts/map/sprites/lua.png" type="Texture" id=10]
-[ext_resource path="res://language/TRANSLATE.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=12]
-[ext_resource path="res://menus/win-lose/end_game_won.gd" type="Script" id=13]
+[ext_resource path="res://game-parts/map/sprites/arvore-alta.png" type="Texture" id=7]
+[ext_resource path="res://game-parts/map/sprites/pinheiro.png" type="Texture" id=8]
+[ext_resource path="res://game-parts/map/sprites/cogumelos.png" type="Texture" id=9]
+[ext_resource path="res://game-parts/globin/goblin abanando 2.png" type="Texture" id=10]
+[ext_resource path="res://game-parts/globin/goblin abanando 1.png" type="Texture" id=11]
+[ext_resource path="res://custom-ui/scaler.gd" type="Script" id=12]
+[ext_resource path="res://game-parts/map/sprites/lua.png" type="Texture" id=13]
+[ext_resource path="res://menus/end/end_game_won.gd" type="Script" id=14]
+[ext_resource path="res://language/REFRESH_TRANSLATION.tscn" type="PackedScene" id=15]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.333333, 0.715847 )
@@ -24,7 +26,7 @@ width = 512
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -41,7 +43,7 @@ load_path = "res://.import/BTN3.png-6a7610b9a8a2b46a6799cef804949f21.stex"
 [node name="Won" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 13 )
+script = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -60,7 +62,7 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-script = ExtResource( 8 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -79,7 +81,7 @@ margin_right = 951.0
 margin_bottom = 155.0
 rect_rotation = -105.673
 rect_scale = Vector2( 0.855465, 0.84718 )
-texture = ExtResource( 10 )
+texture = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -91,7 +93,7 @@ margin_right = 571.0
 margin_bottom = 224.0
 rect_rotation = 11.4345
 rect_scale = Vector2( 0.898224, 0.889526 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -103,7 +105,7 @@ margin_right = 436.0
 margin_bottom = 233.0
 rect_rotation = 11.4345
 rect_scale = Vector2( 0.700598, 0.693813 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -115,7 +117,7 @@ margin_right = 686.0
 margin_bottom = 65.0
 rect_rotation = 11.4345
 rect_scale = Vector2( 1.1891, 1.17758 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -127,7 +129,7 @@ margin_right = 296.0
 margin_bottom = 17.0
 rect_rotation = 6.43363
 rect_scale = Vector2( 0.781733, 0.774163 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -139,7 +141,7 @@ margin_right = 111.0
 margin_bottom = 39.0
 rect_rotation = -7.24955
 rect_scale = Vector2( 1.06384, 1.05354 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -151,7 +153,7 @@ margin_right = -188.0
 margin_bottom = 6.0
 rect_rotation = 7.48707
 rect_scale = Vector2( 0.855465, 0.84718 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -163,7 +165,7 @@ margin_right = 530.0
 margin_bottom = -233.0
 rect_rotation = -5.78441
 rect_scale = Vector2( 0.855465, 0.84718 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -175,7 +177,7 @@ margin_right = 753.0
 margin_bottom = -137.0
 rect_rotation = 14.46
 rect_scale = Vector2( 0.855465, 0.84718 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -187,7 +189,7 @@ margin_right = 329.0
 margin_bottom = -319.0
 rect_rotation = 11.088
 rect_scale = Vector2( 0.855465, 0.84718 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -199,7 +201,7 @@ margin_right = -81.0
 margin_bottom = -315.0
 rect_rotation = -10.5264
 rect_scale = Vector2( 0.855465, 0.84718 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -211,7 +213,7 @@ margin_right = -199.0
 margin_bottom = 193.0
 rect_rotation = 15.0811
 rect_scale = Vector2( 0.677517, 0.670956 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -223,7 +225,7 @@ margin_right = -711.0
 margin_bottom = 34.0
 rect_rotation = -1.51603
 rect_scale = Vector2( 0.855465, 0.84718 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -235,7 +237,7 @@ margin_right = -529.0
 margin_bottom = -319.0
 rect_rotation = -1.51603
 rect_scale = Vector2( 1.05572, 1.0455 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -247,7 +249,7 @@ margin_right = 195.0
 margin_bottom = -253.0
 rect_rotation = -1.51603
 rect_scale = Vector2( 0.855465, 0.84718 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -267,7 +269,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -278,7 +280,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control"]
 margin_left = 12.0
@@ -286,7 +288,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control"]
 margin_left = -12.0
@@ -294,7 +296,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control"]
 margin_left = -44.0
@@ -302,7 +304,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control2" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = 356.0
@@ -319,7 +321,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -330,7 +332,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control2"]
 margin_left = 12.0
@@ -338,7 +340,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control2"]
 margin_left = -12.0
@@ -346,7 +348,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control2"]
 margin_left = -44.0
@@ -354,7 +356,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control3" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = 120.0
@@ -371,7 +373,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -382,7 +384,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control3"]
 margin_left = 12.0
@@ -390,7 +392,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control3"]
 margin_left = -12.0
@@ -398,7 +400,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control3"]
 margin_left = -44.0
@@ -406,7 +408,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control4" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = -104.0
@@ -423,7 +425,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -434,7 +436,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control4"]
 margin_left = 12.0
@@ -442,7 +444,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control4"]
 margin_left = -12.0
@@ -450,7 +452,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control4"]
 margin_left = -44.0
@@ -458,7 +460,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control5" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = -367.0
@@ -475,7 +477,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -486,7 +488,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control5"]
 margin_left = 12.0
@@ -494,7 +496,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control5"]
 margin_left = -12.0
@@ -502,7 +504,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control5"]
 margin_left = -44.0
@@ -510,7 +512,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control6" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = -543.0
@@ -527,7 +529,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -538,7 +540,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control6"]
 margin_left = 12.0
@@ -546,7 +548,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control6"]
 margin_left = -12.0
@@ -554,7 +556,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control6"]
 margin_left = -44.0
@@ -562,7 +564,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control18" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = 537.0
@@ -579,7 +581,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -590,7 +592,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control18"]
 margin_left = 12.0
@@ -598,7 +600,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control18"]
 margin_left = -12.0
@@ -606,7 +608,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control18"]
 margin_left = -44.0
@@ -614,7 +616,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control7" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = -318.0
@@ -632,7 +634,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -643,7 +645,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control7"]
 margin_left = 12.0
@@ -651,7 +653,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control7"]
 margin_left = -12.0
@@ -659,7 +661,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control7"]
 margin_left = -44.0
@@ -667,7 +669,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control8" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = -145.0
@@ -685,7 +687,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -696,7 +698,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control8"]
 margin_left = 12.0
@@ -704,7 +706,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control8"]
 margin_left = -12.0
@@ -712,7 +714,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control8"]
 margin_left = -44.0
@@ -720,7 +722,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control9" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = 74.0
@@ -738,7 +740,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -749,7 +751,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control9"]
 margin_left = 12.0
@@ -757,7 +759,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control9"]
 margin_left = -12.0
@@ -765,7 +767,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control9"]
 margin_left = -44.0
@@ -773,7 +775,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control11" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = 64.0
@@ -791,7 +793,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -802,7 +804,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control11"]
 margin_left = 12.0
@@ -810,7 +812,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control11"]
 margin_left = -12.0
@@ -818,7 +820,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control11"]
 margin_left = -44.0
@@ -826,7 +828,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control12" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = -240.0
@@ -844,7 +846,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -855,7 +857,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control12"]
 margin_left = 12.0
@@ -863,7 +865,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control12"]
 margin_left = -12.0
@@ -871,7 +873,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control12"]
 margin_left = -44.0
@@ -879,7 +881,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control13" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = -508.0
@@ -897,7 +899,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -908,7 +910,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control13"]
 margin_left = 12.0
@@ -916,7 +918,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control13"]
 margin_left = -12.0
@@ -924,7 +926,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control13"]
 margin_left = -44.0
@@ -932,7 +934,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control14" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = -456.0
@@ -950,7 +952,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -961,7 +963,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control14"]
 margin_left = 12.0
@@ -969,7 +971,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control14"]
 margin_left = -12.0
@@ -977,7 +979,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control14"]
 margin_left = -44.0
@@ -985,7 +987,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control15" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = 396.0
@@ -1003,7 +1005,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1014,7 +1016,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control15"]
 margin_left = 12.0
@@ -1022,7 +1024,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control15"]
 margin_left = -12.0
@@ -1030,7 +1032,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control15"]
 margin_left = -44.0
@@ -1038,7 +1040,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control16" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = 532.0
@@ -1055,7 +1057,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1066,7 +1068,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control16"]
 margin_left = 12.0
@@ -1074,7 +1076,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control16"]
 margin_left = -12.0
@@ -1082,7 +1084,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control16"]
 margin_left = -44.0
@@ -1090,7 +1092,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control17" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = 216.0
@@ -1108,7 +1110,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1119,7 +1121,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control17"]
 margin_left = 12.0
@@ -1127,7 +1129,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control17"]
 margin_left = -12.0
@@ -1135,7 +1137,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control17"]
 margin_left = -44.0
@@ -1143,7 +1145,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="Control10" type="Control" parent="MenuScaler/EnvironmentHard"]
 margin_left = 244.0
@@ -1160,7 +1162,7 @@ margin_top = -21.6472
 margin_right = 16.0
 margin_bottom = 18.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1171,7 +1173,7 @@ margin_top = -29.6472
 margin_right = 44.0
 margin_bottom = 10.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect3" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control10"]
 margin_left = 12.0
@@ -1179,7 +1181,7 @@ margin_top = -13.6472
 margin_right = 52.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect4" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control10"]
 margin_left = -12.0
@@ -1187,7 +1189,7 @@ margin_top = -13.6472
 margin_right = 28.0
 margin_bottom = 26.3528
 rect_rotation = 15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect5" type="TextureRect" parent="MenuScaler/EnvironmentHard/Control10"]
 margin_left = -44.0
@@ -1195,7 +1197,7 @@ margin_top = -1.64725
 margin_right = -4.0
 margin_bottom = 38.3528
 rect_rotation = -15.0
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect21" type="TextureRect" parent="MenuScaler/EnvironmentHard"]
 margin_left = -643.0
@@ -1204,7 +1206,7 @@ margin_right = -515.0
 margin_bottom = 69.0
 rect_rotation = -1.51603
 rect_scale = Vector2( 1.00864, 0.998876 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1240,7 +1242,7 @@ margin_right = 976.0
 margin_bottom = 410.0
 rect_rotation = 6.30715
 rect_scale = Vector2( 0.98471, 0.98471 )
-texture = ExtResource( 3 )
+texture = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1252,7 +1254,7 @@ margin_right = -261.0
 margin_bottom = 263.0
 rect_rotation = -3.99651
 rect_scale = Vector2( 0.855465, 0.84718 )
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1264,7 +1266,7 @@ margin_right = 631.0
 margin_bottom = 230.0
 rect_rotation = 11.4345
 rect_scale = Vector2( 0.855465, 0.84718 )
-texture = ExtResource( 4 )
+texture = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1276,7 +1278,7 @@ margin_right = -353.0
 margin_bottom = -272.0
 rect_rotation = -3.36198
 rect_scale = Vector2( 0.955001, 0.945753 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1288,7 +1290,7 @@ margin_right = -414.0
 margin_bottom = 251.0
 rect_rotation = -1.51603
 rect_scale = Vector2( 0.855465, 0.84718 )
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1300,7 +1302,7 @@ margin_right = -401.0
 margin_bottom = 411.0
 rect_rotation = -3.89353
 rect_scale = Vector2( 0.744841, 0.744841 )
-texture = ExtResource( 3 )
+texture = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1326,14 +1328,14 @@ grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 1.5, 1.5 )
 custom_colors/font_color = Color( 0.286275, 1, 0.596078, 1 )
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 4 )
 text = "YOU WON!"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TRANSLATE" parent="MenuScaler/YouWon" instance=ExtResource( 11 )]
+[node name="TRANSLATE" parent="MenuScaler/YouWon" instance=ExtResource( 1 )]
 term_key = "you_won"
 
 [node name="Difficulty" type="Label" parent="MenuScaler"]
@@ -1349,14 +1351,14 @@ grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 0.45, 0.45 )
 custom_colors/font_color = Color( 1, 0.164706, 0, 1 )
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 4 )
 text = " Difficulty:"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TRANSLATE" parent="MenuScaler/Difficulty" instance=ExtResource( 11 )]
+[node name="TRANSLATE" parent="MenuScaler/Difficulty" instance=ExtResource( 1 )]
 term_key = "difficulty"
 
 [node name="Mode" type="Label" parent="MenuScaler"]
@@ -1372,12 +1374,14 @@ grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 0.45, 0.45 )
 custom_colors/font_color = Color( 1, 0.164706, 0, 1 )
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 4 )
 text = "Hard"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="REFRESH_TRANSLATION" parent="MenuScaler/Mode" instance=ExtResource( 15 )]
 
 [node name="YouWonLabel" type="Label" parent="MenuScaler"]
 anchor_left = 0.5
@@ -1392,15 +1396,17 @@ grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/line_spacing = 25
-custom_fonts/font = ExtResource( 12 )
-text = "You just beat the game on hard
-but unfortunately for you,
-you did nothing more than your obligation!"
+custom_fonts/font = ExtResource( 4 )
+text = "Você venceu, mas perdeu \"2\" de HP no
+processo, então eu diria que você
+não fez mais que sua obrigação!"
 align = 1
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="REFRESH_TRANSLATION" parent="MenuScaler/YouWonLabel" instance=ExtResource( 15 )]
 
 [node name="GoBack" type="TextureButton" parent="MenuScaler"]
 margin_left = -184.0
@@ -1422,12 +1428,14 @@ margin_right = 867.0
 margin_bottom = 148.0
 grow_horizontal = 2
 rect_scale = Vector2( 1.2, 1.2 )
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 4 )
 text = "Thanks"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="REFRESH_TRANSLATION" parent="MenuScaler/GoBack/Label" instance=ExtResource( 15 )]
 
 [node name="OrPressSpace3" type="Label" parent="MenuScaler"]
 anchor_left = 0.5
@@ -1439,16 +1447,18 @@ margin_top = 459.0
 margin_right = 2243.0
 margin_bottom = 544.0
 rect_scale = Vector2( 0.15, 0.15 )
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 4 )
 text = "(press SPACE or ENTER)"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TRANSLATE" parent="MenuScaler/OrPressSpace3" instance=ExtResource( 11 )]
+[node name="TRANSLATE" parent="MenuScaler/OrPressSpace3" instance=ExtResource( 1 )]
 term_key = "press_space"
 
-[node name="MadeByScaler" parent="." instance=ExtResource( 9 )]
+[node name="MadeByScaler" parent="." instance=ExtResource( 3 )]
+
+[node name="LanguageScaler" parent="." instance=ExtResource( 2 )]
 
 [connection signal="pressed" from="MenuScaler/GoBack" to="." method="_on_win_ok_click"]

@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://game-parts/made-by/MadeByScaler.tscn" type="PackedScene" id=1]
-[ext_resource path="res://language/TRANSLATE.tscn" type="PackedScene" id=2]
-[ext_resource path="res://menus/win-lose/end_game_lost.gd" type="Script" id=3]
-[ext_resource path="res://custom-ui/scaler.gd" type="Script" id=8]
-[ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=12]
+[ext_resource path="res://language/TRANSLATE.tscn" type="PackedScene" id=1]
+[ext_resource path="res://game-parts/made-by/MadeByScaler.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://custom-ui/scaler.gd" type="Script" id=4]
+[ext_resource path="res://menus/end/end_game_lost.gd" type="Script" id=5]
+[ext_resource path="res://language/LanguageScaler.tscn" type="PackedScene" id=6]
+[ext_resource path="res://language/REFRESH_TRANSLATION.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.333333, 0.715847 )
@@ -25,7 +27,7 @@ load_path = "res://.import/BTN3.png-6a7610b9a8a2b46a6799cef804949f21.stex"
 [node name="Lost" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 3 )
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -44,7 +46,7 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-script = ExtResource( 8 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -69,14 +71,14 @@ grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 1.5, 1.5 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 3 )
 text = "YOU LOST!"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TRANSLATE" parent="MenuScaler/YouLost" instance=ExtResource( 2 )]
+[node name="TRANSLATE" parent="MenuScaler/YouLost" instance=ExtResource( 1 )]
 term_key = "you_lost"
 
 [node name="Difficulty" type="Label" parent="MenuScaler"]
@@ -92,14 +94,14 @@ grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 0.45, 0.45 )
 custom_colors/font_color = Color( 1, 0.164706, 0, 1 )
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 3 )
 text = " Difficulty:"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TRANSLATE" parent="MenuScaler/Difficulty" instance=ExtResource( 2 )]
+[node name="TRANSLATE" parent="MenuScaler/Difficulty" instance=ExtResource( 1 )]
 term_key = "difficulty"
 
 [node name="Mode" type="Label" parent="MenuScaler"]
@@ -115,12 +117,14 @@ grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 0.45, 0.45 )
 custom_colors/font_color = Color( 1, 0.164706, 0, 1 )
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 3 )
 text = "Hard"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="REFRESH_TRANSLATION" parent="MenuScaler/Mode" instance=ExtResource( 7 )]
 
 [node name="YouWonLabel" type="Label" parent="MenuScaler"]
 anchor_left = 0.5
@@ -135,7 +139,7 @@ grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/line_spacing = 25
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 3 )
 text = "Can you really do it on medium? The frame time
 scale gets sped up by 20% or something"
 align = 1
@@ -143,6 +147,8 @@ valign = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="REFRESH_TRANSLATION" parent="MenuScaler/YouWonLabel" instance=ExtResource( 7 )]
 
 [node name="GoBack" type="TextureButton" parent="MenuScaler"]
 margin_left = -184.0
@@ -163,12 +169,14 @@ margin_top = 62.857
 margin_right = 799.231
 margin_bottom = 147.857
 rect_scale = Vector2( 1.3, 1.3 )
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 3 )
 text = "Retry"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="REFRESH_TRANSLATION" parent="MenuScaler/GoBack/Label" instance=ExtResource( 7 )]
 
 [node name="OrPressSpace3" type="Label" parent="MenuScaler"]
 anchor_left = 0.5
@@ -180,17 +188,19 @@ margin_top = 459.0
 margin_right = 2243.0
 margin_bottom = 544.0
 rect_scale = Vector2( 0.15, 0.15 )
-custom_fonts/font = ExtResource( 12 )
+custom_fonts/font = ExtResource( 3 )
 text = "(press SPACE or ENTER)"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TRANSLATE" parent="MenuScaler/OrPressSpace3" instance=ExtResource( 2 )]
+[node name="TRANSLATE" parent="MenuScaler/OrPressSpace3" instance=ExtResource( 1 )]
 term_key = "press_space"
 
-[node name="MadeByScaler" parent="." instance=ExtResource( 1 )]
+[node name="MadeByScaler" parent="." instance=ExtResource( 2 )]
 visible = false
+
+[node name="LanguageScaler" parent="." instance=ExtResource( 6 )]
 
 [connection signal="pressed" from="MenuScaler/GoBack" to="." method="_on_lost_ok_click"]

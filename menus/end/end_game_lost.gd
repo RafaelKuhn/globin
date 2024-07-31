@@ -1,5 +1,6 @@
 extends Control
 
+
 const Difficulty = preload("res://difficulty/difficulty_enum.gd")
 
 
@@ -11,7 +12,7 @@ func _on_lost_ok_click():
 	Game.load_difficulty_scene()
 
 
-func setup_lost_scene(difficulty):
+func setup_lost_scene(difficulty, times_lost_in_row):
 	match difficulty:
 		Difficulty.BABY:
 			_setup_lost_baby_ui()
@@ -28,27 +29,27 @@ func setup_lost_scene(difficulty):
 func _setup_lost_baby_ui():
 	$MenuScaler/Difficulty.add_color_override("font_color", Global.CYAN)
 	$MenuScaler/Mode.add_color_override("font_color", Global.CYAN)
-	$MenuScaler/Mode.text = Translator.get_term("baby")
-	$MenuScaler/YouWonLabel.text = Translator.get_term("try_again")
-	$MenuScaler/GoBack/Label.text = Translator.get_term("retry")
+	Translator.bind_label($MenuScaler/Mode, "baby")
+	Translator.bind_label($MenuScaler/YouWonLabel, "try_again")
+	Translator.bind_label($MenuScaler/GoBack/Label, "retry")
 
 func _setup_lost_easy_ui():
 	$MenuScaler/Difficulty.add_color_override("font_color", Global.WHITE)
 	$MenuScaler/Mode.add_color_override("font_color", Global.WHITE)
-	$MenuScaler/Mode.text = Translator.get_term("easy")
-	$MenuScaler/YouWonLabel.text = Translator.get_term("try_again")
-	$MenuScaler/GoBack/Label.text = Translator.get_term("retry")
+	Translator.bind_label($MenuScaler/Mode, "easy")
+	Translator.bind_label($MenuScaler/YouWonLabel, "try_again")
+	Translator.bind_label($MenuScaler/GoBack/Label, "retry")
 
 func _setup_lost_medi_ui():
 	$MenuScaler/Difficulty.add_color_override("font_color", Global.ORANGE)
 	$MenuScaler/Mode.add_color_override("font_color", Global.ORANGE)
-	$MenuScaler/Mode.text = Translator.get_term("medi")
-	$MenuScaler/YouWonLabel.text = Translator.get_term("try_again")
-	$MenuScaler/GoBack/Label.text = Translator.get_term("retry")
+	Translator.bind_label($MenuScaler/Mode, "medi")
+	Translator.bind_label($MenuScaler/YouWonLabel, "try_again")
+	Translator.bind_label($MenuScaler/GoBack/Label, "retry")
 
 func _setup_lost_hard_ui():
 	$MenuScaler/Difficulty.add_color_override("font_color", Global.RED)
 	$MenuScaler/Mode.add_color_override("font_color", Global.RED)
-	$MenuScaler/Mode.text = Translator.get_term("hard")
-	$MenuScaler/YouWonLabel.text = Translator.get_term("try_again")
-	$MenuScaler/GoBack/Label.text = Translator.get_term("retry")
+	Translator.bind_label($MenuScaler/Mode, "hard")
+	Translator.bind_label($MenuScaler/YouWonLabel, "try_again")
+	Translator.bind_label($MenuScaler/GoBack/Label, "retry")

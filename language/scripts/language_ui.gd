@@ -1,6 +1,6 @@
 extends Control
 
-const Language = preload("res://language/language_enum.gd")
+const Language = preload("res://language/scripts/language_enum.gd")
 
 onready var other_langs = $"OtherLangs";
 

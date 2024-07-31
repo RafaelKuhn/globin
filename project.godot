@@ -17,7 +17,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "Language",
 "language": "GDScript",
-"path": "res://language/language_enum.gd"
+"path": "res://language/scripts/language_enum.gd"
 }, {
 "base": "Reference",
 "class": "Obstacle",
@@ -42,7 +42,7 @@ config/windows_native_icon="Globin"
 
 Global="*res://game/global.gd"
 Game="*res://game/game.gd"
-Translator="*res://language/translator.gd"
+Translator="*res://language/scripts/translator.gd"
 
 [display]
 

@@ -1056,7 +1056,6 @@ position = Vector2( -10, 130 )
 rotation = -0.00209582
 scale = Vector2( 0.86198, 0.86198 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 
 [node name="Tip01_TODO!" type="Label" parent="MenuScaler/Tips/Tips4"]

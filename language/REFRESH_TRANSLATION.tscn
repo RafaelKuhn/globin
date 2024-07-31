@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://language/scripts/refresh_translation.gd" type="Script" id=1]
+
+[node name="REFRESH_TRANSLATION" type="Control"]
+script = ExtResource( 1 )

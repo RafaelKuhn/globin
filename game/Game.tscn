@@ -435,7 +435,6 @@ type = 3
 
 [node name="Win_EARLY" parent="Obstacles" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -30.7456 )
-visible = false
 type = 3
 
 [node name="UI" type="Node2D" parent="."]

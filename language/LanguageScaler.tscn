@@ -1,0 +1,170 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://language/TRANSLATE.tscn" type="PackedScene" id=2]
+[ext_resource path="res://custom-ui/scaler.gd" type="Script" id=3]
+[ext_resource path="res://language/scripts/language_ui.gd" type="Script" id=5]
+[ext_resource path="res://menus/sprites/btn-hover.png" type="Texture" id=6]
+[ext_resource path="res://language/icons/flag-br.png" type="Texture" id=7]
+[ext_resource path="res://menus/sprites/btn-small.png" type="Texture" id=8]
+[ext_resource path="res://language/icons/flag-en.png" type="Texture" id=9]
+
+[node name="LanguageScaler" type="Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Language" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PressL" type="Label" parent="Language"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -175.0
+margin_top = 93.0
+margin_right = 992.0
+margin_bottom = 178.0
+rect_scale = Vector2( 0.15, 0.15 )
+custom_fonts/font = ExtResource( 1 )
+text = "(Pressione L)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TRANSLATE" parent="Language/PressL" instance=ExtResource( 2 )]
+term_key = "press_l"
+
+[node name="OtherLangs" type="Control" parent="Language"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="Language/OtherLangs"]
+margin_left = -169.0
+margin_top = 10.0
+margin_right = -7.0
+margin_bottom = 171.0
+mouse_filter = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lang1" type="Control" parent="Language/OtherLangs"]
+margin_left = -169.0
+margin_top = 94.0
+margin_right = -10.0
+margin_bottom = 171.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LangLabel" type="Label" parent="Language/OtherLangs/Lang1"]
+margin_right = 302.0
+margin_bottom = 242.0
+rect_scale = Vector2( 0.31819, 0.31819 )
+custom_fonts/font = ExtResource( 1 )
+text = "EN"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LangTex" type="TextureRect" parent="Language/OtherLangs/Lang1"]
+margin_left = 85.0
+margin_right = 347.0
+margin_bottom = 262.0
+rect_scale = Vector2( 0.29, 0.29 )
+mouse_filter = 2
+texture = ExtResource( 9 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LangButton" type="TextureButton" parent="Language/OtherLangs/Lang1"]
+show_behind_parent = true
+margin_right = 225.0
+margin_bottom = 225.0
+rect_scale = Vector2( 0.7, 0.34 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 4
+enabled_focus_mode = 0
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LangItem" type="Control" parent="Language"]
+margin_left = -169.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = 87.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LangLabel" type="Label" parent="Language/LangItem"]
+margin_right = 302.0
+margin_bottom = 242.0
+rect_scale = Vector2( 0.31819, 0.31819 )
+custom_fonts/font = ExtResource( 1 )
+text = "BR"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LangTex" type="TextureRect" parent="Language/LangItem"]
+margin_left = 85.0
+margin_right = 347.0
+margin_bottom = 262.0
+rect_scale = Vector2( 0.29, 0.29 )
+mouse_filter = 2
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LangButton" type="TextureButton" parent="Language/LangItem"]
+show_behind_parent = true
+margin_right = 225.0
+margin_bottom = 225.0
+rect_scale = Vector2( 0.7, 0.34 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 4
+enabled_focus_mode = 0
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="mouse_entered" from="Language/OtherLangs/Background" to="Language" method="_on_hover_bg"]
+[connection signal="mouse_exited" from="Language/OtherLangs/Background" to="Language" method="_on_hover_bg_off"]
+[connection signal="mouse_entered" from="Language/OtherLangs/Lang1/LangButton" to="Language" method="_on_hover"]
+[connection signal="mouse_exited" from="Language/OtherLangs/Lang1/LangButton" to="Language" method="_on_hover_off"]
+[connection signal="pressed" from="Language/OtherLangs/Lang1/LangButton" to="Language" method="_on_click_lang_1"]
+[connection signal="mouse_entered" from="Language/LangItem/LangButton" to="Language" method="_on_hover"]
+[connection signal="mouse_exited" from="Language/LangItem/LangButton" to="Language" method="_on_hover_off"]

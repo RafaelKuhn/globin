@@ -7,25 +7,23 @@ Will doooo
 1234567890
 
 
-Congratulations, now try doing it in a difficulty
-that is not called "baby mode"
-"Ok.."
 
-Easy peasy lemon squeezy?
-Congratulations, now try beating the game on a real difficulty
-"Will do"
-
-Did you know "medium" is a word for "mediocre"?
-Try doing it in hard, if you think you're good enough
-"I am"
-
-
-You beat the game, but you lost "2" Hp while doing it
-So I'll say you did nothing more than your obligation!
+You beat the game, but you lost "2" HP
+while doing it, so I'll say you did
+nothing more than your obligation!
 "Oh god"
+
+Você venceu, mas perdeu "2" de HP no
+processo, então eu diria que você
+não fez mais que sua obrigação!
+
 
 How does it feel to be the king of the world?
 "Good"
+
+Parabéns, tu és oficialmente o bichão
+"Valeu"
+
 
 
 
@@ -44,6 +42,7 @@ You can do it!
 
 
 
+
 EASY:
 Check the "How to play" section
 in the main menu "Retry"
@@ -56,7 +55,7 @@ C'mon, you can do it!
 
 You're learning, I'm proud of you
 
-You almost did it this try!
+You almost did it this time!
 
 Push harder than yesterday if you
 want a different tomorrow!
@@ -65,13 +64,13 @@ want a different tomorrow!
 If you fall again, I'll be here for you!
 (said the floor)
 
+Work when they sleep!
+(also sleep when they work, if you're
+on an international team like me)
+
 If you keep following your dreams
 like this, they might go file a
 restraining order
-
-Work when they sleep!
-(also sleep when they work, if you're
-on an international team like me ... welp)
 
 I've got nothing more to say
 But you're doing great!

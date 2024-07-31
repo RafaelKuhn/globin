@@ -5,8 +5,8 @@ const Difficulty = preload("res://difficulty/difficulty_enum.gd")
 
 const game_scene = preload("res://game/Game.tscn")
 
-const win_scene  = preload("res://menus/win-lose/Won.tscn")
-const lost_scene = preload("res://menus/win-lose/Lost.tscn")
+const win_scene  = preload("res://menus/end/Won.tscn")
+const lost_scene = preload("res://menus/end/Lost.tscn")
 
 const difficulty_scene = preload("res://difficulty/Difficulty.tscn")
 
@@ -15,16 +15,27 @@ const menu_scene = preload("res://MainMenu.tscn")
 #const difficulty_scene = preload("res://difficulty/Difficulty.tscn")
 
 
-var times_lost = {
-	Difficulty.BABY: 0,
-	Difficulty.EASY: 0,
-	Difficulty.MEDI: 0,
-	Difficulty.HARD: 0,
-}
+# var times_lost = {
+# 	Difficulty.BABY: 0,
+# 	Difficulty.EASY: 0,
+# 	Difficulty.MEDI: 0,
+# 	Difficulty.HARD: 0,
+# }
+
+# var times_won = {
+# 	Difficulty.BABY: 0,
+# 	Difficulty.EASY: 0,
+# 	Difficulty.MEDI: 0,
+# 	Difficulty.HARD: 0,
+# }
 
 
 var game_speed = Global.EASY_GAME_SPEED
 var game_difficulty = Difficulty.EASY
+
+
+var times_lost_in_same_diff_in_a_row := 0
+var last_lost_difficulty = null
 
 
 var root = null;
@@ -32,14 +43,32 @@ var current_scene = null
 
 func _ready():
 	OS.set_window_maximized(true)
+	if OS.is_debug_build():
+		OS.set_window_maximized(false)
+		OS.window_position.x = 700
+		OS.window_position.y = 170
+		OS.window_size.x = 1920 - OS.window_position.x - 20
+		OS.window_size.y = 1080 - OS.window_position.y - 80
+
 	root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
 
 
 func lose_game():
+	var same_difficulty = last_lost_difficulty == game_difficulty
+	if same_difficulty:
+		times_lost_in_same_diff_in_a_row += 1
+	else:
+		times_lost_in_same_diff_in_a_row = 0
+
+	last_lost_difficulty = game_difficulty
+	print("lost in a new difficulty: %s, %s times in a row" % [ !same_difficulty, times_lost_in_same_diff_in_a_row ])
 	load_lost_scene()
 
 func win_game():
+	last_lost_difficulty = null
+	times_lost_in_same_diff_in_a_row = 0
+	# print("times won: %s" % times_won)
 	load_won_scene()
 
 func open_how_to_scene():
@@ -64,7 +93,7 @@ func load_won_scene():
 
 func load_lost_scene():
 	var lost_scene_instance = lost_scene.instance()
-	lost_scene_instance.setup_lost_scene(game_difficulty)
+	lost_scene_instance.setup_lost_scene(game_difficulty, times_lost_in_same_diff_in_a_row)
 	call_deferred("_deferred_goto_scene_instance", lost_scene_instance)
 
 

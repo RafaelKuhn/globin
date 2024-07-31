@@ -1,15 +1,17 @@
 extends Node
 
 
-const Language = preload("res://language/language_enum.gd")
+const Language = preload("res://language/scripts/language_enum.gd")
 
 var language := Language.EN
 signal language_changed
 
 
 func _ready():
+	_initialize_end_game_terms()
+
 	if OS.is_debug_build():
-		sanity()
+		_sanity()
 
 	var url_lang = JavaScript.eval("new URL(window.location.href).searchParams.get('lang')")
 	if url_lang == null:
@@ -41,6 +43,26 @@ func get_term(term_key):
 	return term_list[lang_index]
 
 
+func bind_label(label: Label, term_key):
+	if label.get_child_count() == 0:
+		push_error("no refresher found under %s/%s " % [ label.get_parent().name, label.name ])
+		return
+
+	var refresher = label.get_child(0)
+	if OS.is_debug_build():
+		if refresher.name.find("REFRESH_TRANSLATION") == -1:
+			push_error("no refresher found under %s/%s " % [ label.get_parent().name, label.name ])
+			return
+
+	label.text = get_term(term_key)
+	var __ = connect("language_changed", refresher, "refresh_label", [ term_key ])
+
+
+func _refresh_dynamic_label(label, term_key):
+	print("refreshing dynamic label %s w term %s lang %s new term: %s" % [ label, term_key, Translator.language, get_term(term_key)])
+	label.text = get_term(term_key)
+
+
 func _lang_to_index(lang) -> int:
 	match lang:
 		Language.EN:
@@ -52,10 +74,13 @@ func _lang_to_index(lang) -> int:
 			return -1
 
 
-func sanity():
+func _sanity():
 	# TODO: check if all terms have "language.count" items
-	# print(" SANITY CHECKS: ")
 	pass
+
+func _initialize_end_game_terms():
+	pass
+
 
 var term_arr_by_key := {
 
@@ -159,4 +184,8 @@ var term_arr_by_key := {
 	"you_lost": [ "YOU LOST!", "VOCÊ PERDEU!"],
 	"try_again": [ "Try again?", "Tentar novamente?"],
 	"retry": [ "Retry", "Tentar"],
+}
+
+var lost_hard = {
+	"hard_lost_in_row0": [  ]
 }
