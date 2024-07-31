@@ -26,29 +26,29 @@ func setup_won_scene(difficulty):
 
 
 func _setup_won_baby_ui():
-	$MenuScaler/Difficulty.add_color_override("font_color", Game.cyan)
-	$MenuScaler/Mode.add_color_override("font_color", Game.cyan)
+	$MenuScaler/Difficulty.add_color_override("font_color", Global.CYAN)
+	$MenuScaler/Mode.add_color_override("font_color", Global.CYAN)
 	$MenuScaler/Mode.text = Translator.get_term("baby")
 	$MenuScaler/YouWonLabel.text = Translator.get_term("baby_win_label")
 	$MenuScaler/GoBack/Label.text = Translator.get_term("baby_win_ans")
 
 func _setup_won_easy_ui():
-	$MenuScaler/Difficulty.add_color_override("font_color", Game.white)
-	$MenuScaler/Mode.add_color_override("font_color", Game.white)
+	$MenuScaler/Difficulty.add_color_override("font_color", Global.WHITE)
+	$MenuScaler/Mode.add_color_override("font_color", Global.WHITE)
 	$MenuScaler/Mode.text = Translator.get_term("easy")
 	$MenuScaler/YouWonLabel.text = Translator.get_term("easy_win_label")
 	$MenuScaler/GoBack/Label.text = Translator.get_term("easy_win_ans")
 
 func _setup_won_medi_ui():
-	$MenuScaler/Difficulty.add_color_override("font_color", Game.orange)
-	$MenuScaler/Mode.add_color_override("font_color", Game.orange)
+	$MenuScaler/Difficulty.add_color_override("font_color", Global.ORANGE)
+	$MenuScaler/Mode.add_color_override("font_color", Global.ORANGE)
 	$MenuScaler/Mode.text = Translator.get_term("medi")
 	$MenuScaler/YouWonLabel.text = Translator.get_term("medi_win_label")
 	$MenuScaler/GoBack/Label.text = Translator.get_term("medi_win_ans")
 
 func _setup_won_hard_ui():
-	$MenuScaler/Difficulty.add_color_override("font_color", Game.red)
-	$MenuScaler/Mode.add_color_override("font_color", Game.red)
+	$MenuScaler/Difficulty.add_color_override("font_color", Global.RED)
+	$MenuScaler/Mode.add_color_override("font_color", Global.RED)
 	$MenuScaler/Mode.text = Translator.get_term("hard")
 	$MenuScaler/YouWonLabel.text = Translator.get_term("hard_win_label")
 	$MenuScaler/GoBack/Label.text = Translator.get_term("hard_win_ans")

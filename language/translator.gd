@@ -33,7 +33,7 @@ func change_language(new_lang):
 
 
 func get_term(term_key):
-	var term_list = dict.get(term_key)
+	var term_list = term_arr_by_key.get(term_key)
 	if term_list == null:
 		push_error("NULL ITEM %s" % term_key)
 		return
@@ -57,7 +57,7 @@ func sanity():
 	# print(" SANITY CHECKS: ")
 	pass
 
-var dict := {
+var term_arr_by_key := {
 
 	# General
 	"go_back": [ "Go Back", "Voltar" ],
@@ -127,11 +127,6 @@ var dict := {
 	"press_s": [ "(press S)", "(pressione S)" ],
 
 
-	# Lose screen
-	"you_lost": [ "YOU LOST!", "VOCÊ PERDEU!"],
-	"try_again": [ "Try again?", "Tentar novamente?"],
-	"retry": [ "Retry", "Tentar"],
-
 	# Win screen
 	"you_won": [ "YOU WON!", "VENCEU!" ],
 
@@ -159,4 +154,9 @@ var dict := {
 	],
 	"hard_win_ans": [ "I know", "Eu sei" ],
 
+
+	# Lose screen
+	"you_lost": [ "YOU LOST!", "VOCÊ PERDEU!"],
+	"try_again": [ "Try again?", "Tentar novamente?"],
+	"retry": [ "Retry", "Tentar"],
 }

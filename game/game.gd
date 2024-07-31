@@ -10,10 +10,17 @@ const lost_scene = preload("res://menus/win-lose/Lost.tscn")
 
 const difficulty_scene = preload("res://difficulty/Difficulty.tscn")
 
-#const how_to_scene = preload("res://how-to-play/HowToPlay.tscn")
 const menu_scene = preload("res://MainMenu.tscn")
+#const how_to_scene = preload("res://how-to-play/HowToPlay.tscn")
 #const difficulty_scene = preload("res://difficulty/Difficulty.tscn")
 
+
+var times_lost = {
+	Difficulty.BABY: 0,
+	Difficulty.EASY: 0,
+	Difficulty.MEDI: 0,
+	Difficulty.HARD: 0,
+}
 
 
 var game_speed = Global.EASY_GAME_SPEED
@@ -88,9 +95,3 @@ func set_medi_difficulty():
 func set_hard_difficulty():
 	self.game_speed = Global.HARD_GAME_SPEED
 	self.game_difficulty = Difficulty.HARD
-
-
-var cyan   := Color(0.000, 0.973, 1.000, 1.000)
-var white  := Color(1.000, 1.000, 1.000, 1.000)
-var orange := Color(1.000, 0.702, 0.000, 1.000)
-var red    := Color(1.000, 0.165, 0.000, 1.000)

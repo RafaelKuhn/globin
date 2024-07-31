@@ -150,6 +150,7 @@ margin_top = 373.0
 margin_right = 855.0
 margin_bottom = 598.0
 rect_scale = Vector2( 0.35, 0.35 )
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 4
 texture_normal = SubResource( 5 )
 texture_hover = SubResource( 4 )

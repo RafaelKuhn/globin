@@ -18,6 +18,13 @@ const MEDI_GAME_SPEED := 10.0
 const HARD_GAME_SPEED := 12.0
 
 
+
+const CYAN   := Color(0.000, 0.973, 1.000, 1.000)
+const WHITE  := Color(1.000, 1.000, 1.000, 1.000)
+const ORANGE := Color(1.000, 0.702, 0.000, 1.000)
+const RED    := Color(1.000, 0.165, 0.000, 1.000)
+
+
 # debug
 static func dump_tree(node, depth):
 	dump_tree2(node, depth, "")
