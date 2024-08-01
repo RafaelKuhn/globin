@@ -65,7 +65,7 @@ func bind_label(label: Label, term_key):
 	label.text = term
 	var __ = connect("language_changed", refresher, "refresh_label", [ term_key ])
 
-func bind_label_dyn(label: Label, term_key, times_lost):
+func bind_label_dyn(label: Label, term_key, dynamic_variable):
 	if label.get_child_count() == 0:
 		push_error("no refresher found under %s/%s " % [ label.get_parent().name, label.name ])
 		return
@@ -82,8 +82,8 @@ func bind_label_dyn(label: Label, term_key, times_lost):
 		return
 
 	# print(" BOUND language changed dyn!")
-	label.text = term % times_lost
-	var __ = connect("language_changed", refresher, "refresh_label_dyn", [ term_key, times_lost ])
+	label.text = term % dynamic_variable
+	var __ = connect("language_changed", refresher, "refresh_label_dyn", [ term_key, dynamic_variable ])
 
 
 func _refresh_dynamic_label(label, term_key):
@@ -187,10 +187,6 @@ var term_arr_by_key := {
 		"Vença o jogo ao chegar na linha de chegada"
 	],
 
-	# "how_to_6": [
-	# 	"When you win, the message at end changes\nbased on the difficulty\n\nHave fun!",
-	# 	"Ao vencer o game, a mensagem final muda\nde acordo com a dificuldade\n\nDivirta-se!"
-	# ],
 	"how_to_6": [
 		"The message at end can change based on\nthe difficulty and consecutive losses\nin the same difficulty\n\nHave fun!",
 		"A mensagem final pode mudar de acordo com\na dificuldade ou derrotas consecutivas\nna mesma dificuldade\n\nDivirta-se!"
@@ -204,8 +200,8 @@ var term_arr_by_key := {
 	"medi": [ "Medium", "Médio" ],
 	"hard": [ "Hard",   "Difícil" ],
 
-	"press_w": [ "(press W)", "(pressione W)" ],
-	"press_s": [ "(press S)", "(pressione S)" ],
+	"press_w": [ "(press W or ↑)", "(pressione W ou ↑)" ],
+	"press_s": [ "(press S or ↓)", "(pressione S ou ↓)" ],
 
 
 	# Win screen
@@ -229,11 +225,20 @@ var term_arr_by_key := {
 	],
 	"medi_win_ans": [ "I am", "Eu sou" ],
 
-	"hard_win_label": [
-		"You just beat the game on hard\nbut unfortunately for you,\nyou did nothing more than your obligation!",
-		"Você acabou de vencer o game no difícil\nmas, infelizmente para você,\nnão fez mais que sua obrigação!"
+	"hard_win_label_lost_hp": [
+		"You just beat the game on hard, but you have\nlost '%s' HP in the process, so I'll say you\ndid less than your obligation!",
+		"Você venceu o game no difícil, mas perdeu '%s' vidas\nno processo, então eu diria que você fez\nmenos que sua obrigação!"
 	],
-	"hard_win_ans": [ "I know", "Eu sei" ],
+	"hard_win_label_lost_1_hp": [
+		"You just beat the game on hard, but you have\nlost '%s' HP in the process, so I'll say you\ndid nothing more than your obligation!",
+		"Você venceu o game no difícil, mas perdeu '%s' vida\nno processo, então eu diria que você não\nfez mais que sua obrigação!"
+	],
+	"hard_win_ans_lost_hp": [ "I know", "Eu sei" ],
+	"hard_win_label": [
+		"How does it feel to be the king of the world?",
+		"Parabéns, tu és oficialmente o bichão!"
+	],
+	"hard_win_ans": [ "Good", "Obrigado!" ],
 
 
 	# Lose screen

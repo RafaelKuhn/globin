@@ -38,6 +38,9 @@ var times_lost_in_same_diff_in_a_row := 0
 var last_lost_difficulty = null
 
 
+var collective_hp_lost := 0
+
+
 var root = null;
 var current_scene = null
 
@@ -63,13 +66,13 @@ func lose_game():
 
 	last_lost_difficulty = game_difficulty
 	# print("lost in a new difficulty: %s, %s index in a row" % [ !same_difficulty, times_lost_in_same_diff_in_a_row ])
-	load_lost_scene()
+	_load_lost_scene()
 
 func win_game():
 	last_lost_difficulty = null
 	times_lost_in_same_diff_in_a_row = 0
 	# print("times won: %s" % times_won)
-	load_won_scene()
+	_load_won_scene()
 
 func open_how_to_scene():
 	var scene = ResourceLoader.load("res://game-parts/how-to-play/HowToPlay.tscn")
@@ -86,12 +89,12 @@ func load_game_scene():
 	call_deferred("_deferred_goto_scene", game_scene)
 
 
-func load_won_scene():
+func _load_won_scene():
 	var win_scene_instance = win_scene.instance()
 	win_scene_instance.setup_won_scene(game_difficulty)
 	call_deferred("_deferred_goto_scene_instance", win_scene_instance)
 
-func load_lost_scene():
+func _load_lost_scene():
 	var lost_scene_instance = lost_scene.instance()
 	lost_scene_instance.setup_lost_scene(game_difficulty, times_lost_in_same_diff_in_a_row)
 	call_deferred("_deferred_goto_scene_instance", lost_scene_instance)

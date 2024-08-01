@@ -2,7 +2,7 @@ extends Spatial
 
 const Obstacle = preload("res://game-parts/obstacles/obstacle_type.gd")
 
-signal damage_taken()
+signal damage_taken
 
 enum VerticalState { DEFAULT, JUMPING, ROLLING }
 enum HorizontalState { RUNNING, SWITCHING }
@@ -34,6 +34,7 @@ var jump_progress := 0.0
 ##################### callbacks #####################
 func _ready() -> void:
 	start_in_second_lane()
+	Game.collective_hp_lost = 0
 
 func _input(_event) -> void:
 	if Input.is_action_just_pressed("W_key"):
@@ -174,4 +175,5 @@ func try_to_collide_based_on_type(obj_type):
 				lose_hp()
 
 func lose_hp():
+	Game.collective_hp_lost += 1
 	emit_signal("damage_taken")

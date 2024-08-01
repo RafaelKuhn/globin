@@ -1312,7 +1312,6 @@ position = Vector2( -771, 279 )
 rotation = -0.00209582
 scale = Vector2( 0.409934, 0.409934 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 
 [node name="YouWon" type="Label" parent="MenuScaler"]

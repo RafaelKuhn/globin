@@ -51,9 +51,12 @@ func _setup_won_hard_ui():
 	$MenuScaler/Difficulty.add_color_override("font_color", Global.ORANGE)
 	$MenuScaler/Mode.add_color_override("font_color", Global.ORANGE)
 	Translator.bind_label($MenuScaler/Mode, "hard")
-	Translator.bind_label($MenuScaler/YouWonLabel, "hard_win_label")
-	Translator.bind_label($MenuScaler/GoBack/Label, "hard_win_ans")
-
-
-
-
+	if Game.collective_hp_lost == 1:
+		Translator.bind_label_dyn($MenuScaler/YouWonLabel, "hard_win_label_lost_1_hp", Game.collective_hp_lost)
+		Translator.bind_label($MenuScaler/GoBack/Label, "hard_win_ans_lost_hp")
+	elif Game.collective_hp_lost > 0:
+		Translator.bind_label_dyn($MenuScaler/YouWonLabel, "hard_win_label_lost_hp", Game.collective_hp_lost)
+		Translator.bind_label($MenuScaler/GoBack/Label, "hard_win_ans_lost_hp")
+	else:
+		Translator.bind_label($MenuScaler/YouWonLabel, "hard_win_label")
+		Translator.bind_label($MenuScaler/GoBack/Label, "hard_win_ans")
