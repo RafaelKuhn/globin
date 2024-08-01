@@ -1350,7 +1350,7 @@ margin_bottom = 163.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 0.45, 0.45 )
-custom_colors/font_color = Color( 1, 0.164706, 0, 1 )
+custom_colors/font_color = Color( 0.913725, 0.988235, 0.0392157, 1 )
 custom_fonts/font = ExtResource( 4 )
 text = " Difficulty:"
 align = 1
@@ -1423,14 +1423,14 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MenuScaler/GoBack"]
-margin_top = 63.0
-margin_right = 867.0
-margin_bottom = 148.0
+margin_right = 990.0
+margin_bottom = 215.0
 grow_horizontal = 2
-rect_scale = Vector2( 1.2, 1.2 )
+rect_scale = Vector2( 1.05, 1.05 )
 custom_fonts/font = ExtResource( 4 )
-text = "Thanks"
+text = "Nah Im good"
 align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

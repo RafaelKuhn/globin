@@ -316,10 +316,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -91.125
-margin_top = 68.125
-margin_right = 1075.88
-margin_bottom = 153.125
+margin_left = -62.0
+margin_top = 68.0
+margin_right = 765.0
+margin_bottom = 153.0
 rect_scale = Vector2( 0.15, 0.15 )
 custom_fonts/font = ExtResource( 4 )
 text = "(D or →)"
@@ -505,10 +505,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -91.125
-margin_top = 68.125
-margin_right = 1075.88
-margin_bottom = 153.125
+margin_left = -62.0
+margin_top = 68.0
+margin_right = 765.0
+margin_bottom = 153.0
 rect_scale = Vector2( 0.15, 0.15 )
 custom_fonts/font = ExtResource( 4 )
 text = "(D or →)"
@@ -761,9 +761,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -57.0
+margin_left = -62.0
 margin_top = 68.0
-margin_right = 730.0
+margin_right = 765.0
 margin_bottom = 153.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -1056,6 +1056,7 @@ position = Vector2( -10, 130 )
 rotation = -0.00209582
 scale = Vector2( 0.86198, 0.86198 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="Tip01_TODO!" type="Label" parent="MenuScaler/Tips/Tips4"]
@@ -1088,18 +1089,19 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -960.0
-margin_top = -336.0
+margin_top = -346.0
 margin_right = 6151.0
-margin_bottom = 234.0
+margin_bottom = 224.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_scale = Vector2( 0.27, 0.27 )
 custom_constants/line_spacing = 25
 custom_fonts/font = ExtResource( 4 )
-text = "When you win, the message at end changes
-based on the difficulty
+text = "A mensagem final pode mudar de acordo com
+a dificuldade ou perdas consecutivas
+na mesma dificuldade
 
-Have fun!"
+Divirta-se!"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false

@@ -21,7 +21,9 @@ const HARD_GAME_SPEED := 12.0
 
 const CYAN   := Color(0.000, 0.973, 1.000, 1.000)
 const WHITE  := Color(1.000, 1.000, 1.000, 1.000)
+const GREEN  := Color(0.039, 0.988, 0.353, 1.000)
 const ORANGE := Color(1.000, 0.702, 0.000, 1.000)
+const YELLOW := Color(0.914, 0.988, 0.039, 1.000)
 const RED    := Color(1.000, 0.165, 0.000, 1.000)
 
 

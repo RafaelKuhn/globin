@@ -62,7 +62,7 @@ func lose_game():
 		times_lost_in_same_diff_in_a_row = 0
 
 	last_lost_difficulty = game_difficulty
-	print("lost in a new difficulty: %s, %s times in a row" % [ !same_difficulty, times_lost_in_same_diff_in_a_row ])
+	# print("lost in a new difficulty: %s, %s index in a row" % [ !same_difficulty, times_lost_in_same_diff_in_a_row ])
 	load_lost_scene()
 
 func win_game():

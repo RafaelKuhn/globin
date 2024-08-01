@@ -165,13 +165,13 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="MenuScaler/GoBack"]
-margin_top = 62.857
-margin_right = 799.231
-margin_bottom = 147.857
-rect_scale = Vector2( 1.3, 1.3 )
+margin_right = 990.0
+margin_bottom = 215.0
+rect_scale = Vector2( 1.05, 1.05 )
 custom_fonts/font = ExtResource( 3 )
 text = "Retry"
 align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

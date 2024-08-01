@@ -433,8 +433,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -202.571 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -216.304 )
 type = 3
 
+[node name="LOSE_EARLY" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3.61412 )
+visible = false
+
+[node name="LOSE_EARLY2" parent="Obstacles" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4.45139 )
+visible = false
+
 [node name="Win_EARLY" parent="Obstacles" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -30.7456 )
+visible = false
 type = 3
 
 [node name="UI" type="Node2D" parent="."]
@@ -575,6 +584,8 @@ one_shot = true
 [connection signal="on_any_collision" from="Obstacles/Toco18" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Toco19" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Win" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/LOSE_EARLY" to="Player" method="_on_any_obstacle_z_collision"]
+[connection signal="on_any_collision" from="Obstacles/LOSE_EARLY2" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="on_any_collision" from="Obstacles/Win_EARLY" to="Player" method="_on_any_obstacle_z_collision"]
 [connection signal="needs_to_shake_camera" from="UI/HP" to="Camera" method="_on_HP_needs_to_shake_camera"]
 [connection signal="timeout" from="UI/HP/HP Regen Timer" to="UI/HP" method="_on_HP_Regen_Timer_timeout"]
