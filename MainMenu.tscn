@@ -71,15 +71,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TheDemo" type="Label" parent="MenuScaler/Menu"]
+margin_top = 605.0
+margin_right = 2133.33
+margin_bottom = 690.0
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = ExtResource( 3 )
+text = "- The Demo -"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TRANSLATE" parent="MenuScaler/Menu/TheDemo" instance=ExtResource( 14 )]
+term_key = "the_demo"
+
 [node name="MenuItems" type="VBoxContainer" parent="MenuScaler/Menu"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -351.0
-margin_top = 128.0
+margin_top = 209.0
 margin_right = 1648.0
-margin_bottom = 1258.0
+margin_bottom = 799.0
 rect_scale = Vector2( 0.35, 0.35 )
 custom_constants/separation = 140
 __meta__ = {
@@ -143,9 +158,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -183.0
-margin_top = 213.0
+margin_top = 294.0
 margin_right = 2211.0
-margin_bottom = 298.0
+margin_bottom = 379.0
 rect_scale = Vector2( 0.152021, 0.152021 )
 custom_fonts/font = ExtResource( 3 )
 text = "(press SPACE or ENTER)"
@@ -163,9 +178,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -183.0
-margin_top = 341.0
+margin_top = 422.0
 margin_right = 2211.0
-margin_bottom = 426.0
+margin_bottom = 507.0
 rect_scale = Vector2( 0.152021, 0.152021 )
 custom_fonts/font = ExtResource( 3 )
 text = "(press H)"

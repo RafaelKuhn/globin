@@ -147,6 +147,7 @@ var term_arr_by_key := {
 	# Menu
 	"play": [ "Play", "Jogar" ],
 	"how_to": [ "How To Play", "Como Jogar?" ],
+	"the_demo": [ "- The Demo -", "- A Demo -" ],
 	"game_by": [ "Game By:", "Jogo:" ],
 	"art_by":  [ "Art By:", "Arte:" ],
 
@@ -250,152 +251,220 @@ var term_arr_by_key := {
 
 
 var lost_easy_texts = [
+	# 0
 	[ "Check the \"How to play\" section\nin the main menu",
 	  "Confira a seção \"Como Jogar?\" no menu principal!" ],
+	# 1
 	[ "Trying leads to failure, but\nfailure leads to knowledge!\nKeep going!",
-	  "A tentativa leva à falha, porém\na falha leva ao conhecimento!\nContinue tentando!" ],
+	  "A tentativa leva à falha, mas\na falha leva ao conhecimento!\nContinue tentando!" ],
+	# 2
 	[ "C'mon, you can do it!",
 	  "Vamos lá, você consegue!" ],
+	# 3
 	[ "You almost did it this time!",
 	  "Quase conseguiu dessa vez!" ],
+	# 4
 	[ "Push harder than yesterday if you\nwant a different tomorrow!",
 	  "Faça melhor que ontem se você\nquiser um amanhã diferente!" ],
+	# 5
 	[ "Don't let your dreams be dreams\nJust do it!",
 	  "Não deixe seus sonhos serem só sonhos\nApenas faça!" ],
+	# 6
 	[ "One must imagine Sysyphus happy",
 	  "É preciso imaginar Sísifo feliz" ],
+	# 7
 	[ "If you fall again, I'll be there for you!\n(said the floor)",
 	  "Se você cair, eu estarei lá por você\n(disse o chão)" ],
+	# 8
 	[ "If you keep following your dreams like this\nthey might go file a restraining order!",
 	  "Se você continuar perseguindo seus sonhos assim\neles irão atrás de uma medida protetiva!" ],
+	# 9
 	[ "I've got nothing more to say\nBut you're doing great!\nKeep going!",
 	  "Não tenho mais nada a dizer\nMas você está indo bem!\nContinue tentando!" ],
 ]
 
 var lost_medi_texts = [
+	# 0
 	[ "Can you really do it on medium? The frame time\nscale gets sped up by 20% or something",
 	  "Você consegue mesmo fazer no médio? A escala de tempo\ndas frames é acelerada em uns 20% ou algo assim" ],
+	# 1
 	[ "Maybe try the easy difficulty\nif you can't do it on medium...",
 	  "Talvez tente na dificuldade fácil\nse você não consegue no médio!" ],
+	# 2
 	[ "If you keep going, you will eventually\nmake it! ... Or will you?",
 	  "Se você continuar tentando, eventualmente consegue!\n ... Ou será que consegue?" ],
-	[ "Work hard, you will do it eventually\nIf you don't give up before it, that is",
-	  "Trabalhe duro, talvez você consiga,\nisso se não desistir antes né" ],
+	# 3
+	[ "Work hard, you will do it eventually\nIf you don't give up beforehand",
+	  "Trabalhe duro, talvez você consiga,\nisso se não desistir antes, né" ],
+	# 4
 	[ "C'mon, you're not so bad, you almost made it!\n... probably",
-	  "Vamos lá você não é tão ruim, quase conseguiu!\n... provavelmente" ],
+	  "Vamos lá, você não é tão ruim, quase conseguiu!\n... provavelmente" ],
+	# 5
 	[ "If you keep failing like this, I might\nsing a song to motivate you",
 	  "Se você continuar tentando, talvez eu cante\numa música para motivar você" ],
+	# 6
 	[ "♪♪ Quantas vezes ... como agora\nA reunião ... se estendeu\nAté que ... chegou a aurora\nE ... nos surpreendeu ♪♪",
 	  "♪♪ Quantas vezes ... como agora\nA reunião ... se estendeu\nAté que ... chegou a aurora\nE ... nos surpreendeu ♪♪" ],
+	# 7
 	[ "♪♪ As estrelas ... testemunham\nNosso amor ... e semelhança\nBoa noite ... meus amigos\nBoa noite ... vizinhança ♪♪",
 	  "♪♪ As estrelas ... testemunham\nNosso amor ... e semelhança\nBoa noite ... meus amigos\nBoa noite ... vizinhança ♪♪" ],
+	# 8
 	[ "Maybe try again later,\ngo get a drink first, or something",
 	  "Talvez tente novamente mais tarde,\nvá pegar uma bebida antes, ou algo assim" ],
+	# 9
 	[ "Well, if most of my dumb ass friends managed\nto do it on medium difficulty, maybe you have a shot",
 	  "Bom, se a maioria dos meus amigos tontos conseguiu\n vencer no médio, talvez você tenha uma chance" ],
+	# 10
 	[ "A couple of my friends even managed to beat it on hard\nBut if medium is too much for you...",
 	  "Alguns amigos meus até conseguiram vencer no difícil,\nmas se o médio é de mais pra você..." ],
+	# 11
 	[ "Looks like you're not having an excellent time\nMaybe don't try the hard difficulty after this, lol",
 	  "Parece que você não está tendo o melhor dos seus dias,\ntalvez não tente o difícil não, lol" ],
-	[ "Oh, you're still trying after 13 fails in a row?\nI'll just count and let you concentrate from now on",
-	  "Oh, ainda tentando após 13 derrotas consecutivas?\nAgora só irei contar quantas foram,\ndeixarei você se concentrar" ],
-	[ "%s fails in a row on medium, keep going tho!\nDon't let me hold you back!",
+	# 12
+	[ "Oh, you're still trying after 13 failures in a row?\nI'll just count and let you concentrate from now on",
+	  "Oh, ainda tentando após 13 derrotas consecutivas?\nVou só contar quantas foram e deixar você se concentrar!" ],
+	# 13
+	[ "%s failures in a row on medium, keep going tho!\nDon't let me hold you back!",
 	  "%s derrotas consecutivas no médio, mas continue\ntentando, não me deixe te atrapalhar!" ],
 ]
 
 var lost_medi_answers = [
+	# 0
 	[ "I Can",
 	  "Consigo" ],
+	# 1
 	[ "Nah Im good",
 	  "Nah to bem" ],
+	# 2
 	[ "Will do",
 	  "Conseguirei" ],
+	# 3
 	[ "Let's go",
 	  "Vamos lá" ],
+	# 4
 	[ "Not so bad?",
 	  "Tão ruim?" ],
+	# 5
 	[ "Let's hear",
-	  "Vamos ouvir" ],
+	  "Ouvirei" ],
+	# 6
 	[ "♪ ♪ ♪",
 	  "♪ ♪ ♪" ],
+	# 7
 	[ "El Chavo..",
 	  "Chaves..." ],
+	# 8
 	[ "Something?",
 	  "Algo assim?" ],
+	# 9
 	[ "I Do!",
 	  "Eu Tenho!" ],
+	# 10
 	[ "Is it?",
 	  "É??" ],
+	# 11
 	[ ":(",
 	  ":(" ],
+	# 12
 	[ "Please do",
 	  "Por favor" ],
+	# 13
 	[ "Try again",
 	  "Continuar" ],
 ]
 
 var lost_hard_texts = [
+	# 0
 	[ "Lol you can't do it on hard",
 	  "Lol tu não consegue no difícil" ],
-	[ "Are you really going to try it?\nGive up",
-	  "Vai realmente tentar no difícil?\nDesiste logo" ],
-	[ "Don't worry if you can't do it on hard\nThere's always babymode for you!",
-	  "Não se preocupe por não conseguir fazer no difícil\nHá sempre um \"Modo bebê\" pra essas horas!" ],
-	[ "Just so you know, the developer\nmanaged to beat this on second try",
+	# 1
+	[ "Are you really going to try it?\nHa ha give up",
+	  "Vai realmente tentar no difícil?\nHa ha desiste logo" ],
+	# 2
+	[ "Don't worry if you can't do it on hard\nThere's always \"babymode\" for you!",
+	  "Não se preocupe por não conseguir fazer no difícil\nHá sempre um \"modo bebê\" pra essas horas!" ],
+	# 3
+	[ "Just so you know, the developer managed\nto beat this on second try",
 	  "Antes que pergunte, o desenvolvedor conseguiu\nvencer no difícil na segunda tentativa" ],
+	# 4
 	[ "If you keep trying you might end up\ngetting bitten by a space snake",
 	  "Se você continuar tentando, talvez você acabe\nsendo mordido por uma cobra do espaço" ],
-	[ "C'mon, this is getting tiresome\nI'll count the times you failed\nJust for fun, let's start: 6",
-	  "Isso está me cansando, vou contar as vezes\nconsecutivas que você falhou no difícil\nVai ser divertido, vamos lá: 6" ],
-	[ "You failed to do it seven times in a row\nSeven is my favorite number!",
+	# 5
+	[ "Six failures in a row! I think someone is\nnot as good as they thought they were",
+	  "Seis derrotas consecutivas e subindo! Acho que alguém\nnão é tão bom assim quanto achava que era!" ],
+	# 6
+	[ "You failed to do it seven times in a row,\nSe7en is my favorite number!",
 	  "Você falhou sete vezes consecutivas,\nsete é meu número preferido!" ],
-	[ "You failed to do it eight times in a row\nEight is the amount of bits in a byte!",
+	# 7
+	[ "You failed to do it eight times in a row,\neight is the amount of bits in a byte!",
 	  "Você falhou oito vezes consecutivas,\noito é o número de bits em um byte!" ],
-	[ "You failed to do it nine times in a row\nThat's the amount of planets in the solar system!",
-	  "Você falhou nove vezes consecutivas,\nessa é a quantidade de planetas no sistema solar!" ],
-	[ "You failed to do it ten times in a row\nThat's the amount of hands in your fingers\n(no... wait!)",
-	  "Você falhou dez vezes consecutivas,\nessa é a quantidade de mãos nos seus dedos\n(não... pera)" ],
-	[ "You failed to do it eleven times in a row\nThat's more than the amount\nof fucks I give lol",
-	  "Você falhou ONZE vezes consecutivas,\nessa é uma quantidade maior que as vezes\nque eu dei a mínima pra você hoje" ],
-	[ "You failed to do it a dozen times in a row\nThat's the amount of eggs in a dozen eggs",
-	  "Você falhou uma dúzia de vezes consecutivas,\nessa é a quantidade de ovos em uma dúzia de ovos" ],
+	# 8
+	[ "You failed to do it nine times in a row, that's\nthe amount of planets in the solar system!",
+	  "Você falhou nove vezes consecutivas, essa é a\nquantidade de planetas no sistema solar!" ],
+	# 9
+	[ "You failed to do it ten times in a row,\nthere are only 10 types of people in the world, those\nwho understand binary and those who don't!",
+	  "Você falhou dez vezes consecutivas,\nhá apenas 10 tipos de pessoas no mundo, as que\nentendem binário e as que não entendem" ],
+	# 10
+	[ "You failed to do it eleven times in a row,\nthat's more than the amount\nof fucks I give lol",
+	  "Você falhou ONZE vezes consecutivas, essa é uma\nquantidade maior que as vezes que\neu dei a mínima pra você hoje" ],
+	# 11
+	[ "You failed to do it a dozen times in a row, that's\n the amount of eggs in a dozen eggs",
+	  "Você falhou uma dúzia de vezes consecutivas, essa é\na quantidade de ovos em uma dúzia de ovos" ],
+	# 12
 	[ "Just failed 13 times in a row\nPapyrus is very sad with you",
 	  "Acabou de falhar treze vezes consecutivas,\nPapyrus está muito triste com você" ],
-	[ "Ok, I'll just count from now on\nHere we go: 14 fails in a row",
-	  "Ok, vou só contar daqui pra frente\nVamos lá: 14 derrotas consecutivas" ],
-	[ "%s fails in a row...\nStill waiting for you to give up :)",
+	# 13
+	[ "Ok, I'll just count from now on\nHere we go: 14 failures in a row\nCongratulations!",
+	  "Ok, vou só contar daqui pra frente\nVamos lá: 14 derrotas consecutivas\nMeus parabéns!" ],
+	# 14
+	[ "%s failures in a row...\nStill waiting for you to give up :)",
 	  "%s derrotas consecutivas...\nAinda estou esperando você desistir :)" ],
 ]
-
+#  79 #
 var lost_hard_answers = [
+	# 0
 	[ "I Can",
 	  "Consigo" ],
+	# 1
 	[ "Will not",
 	  "Eu não" ],
+	# 2
 	[ "Thx lol",
 	  "Valeu kk" ],
+	# 3
 	[ "He good",
 	  "Ele é bom" ],
+	# 4
 	[ "Ok Morty",
 	  "Ok Morty" ],
+	# 5
 	[ "Oh God",
 	  "Oh Deus" ],
+	# 6
 	[ "Really?",
 	  "Sério?" ],
+	# 7
 	[ "Nerd",
 	  "Nerdola" ],
+	# 8
 	[ "Pluto?",
 	  "Plutão?" ],
-	[ "Drunk",
-	  "Bêbado" ],
+	# 9
+	[ "59 45 53",
+	  "53 49 4D" ],
+	# 10
 	[ "Spare me",
 	  "Poupe-me" ],
+	# 11
 	[ "Omelette",
 	  "Omelete" ],
+	# 12
 	[ "Nyeh heheh",
 	  "Nyeh heheh" ],
+	# 13
 	[ "Already?",
 	  "Mas já?" ],
+	# 14
 	[ "Will not",
 	  "Não irei" ],
 ]

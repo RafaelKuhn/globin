@@ -140,8 +140,8 @@ grow_vertical = 2
 rect_scale = Vector2( 0.3, 0.3 )
 custom_constants/line_spacing = 25
 custom_fonts/font = ExtResource( 3 )
-text = "Can you really do it on medium? The frame time
-scale gets sped up by 20% or something"
+text = "Seis derrotas consecutivas e subindo! acho que alguém
+não é tão bom assim quanto achava que era!"
 align = 1
 valign = 2
 __meta__ = {

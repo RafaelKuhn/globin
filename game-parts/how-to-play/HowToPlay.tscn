@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://custom-ui/scaler.gd" type="Script" id=1]
 [ext_resource path="res://menus/sprites/BTN3.png" type="Texture" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://game-parts/map/sprites/prancheta.png" type="Texture" id=19]
 [ext_resource path="res://game-parts/map/sprites/lua.png" type="Texture" id=20]
 [ext_resource path="res://language/TRANSLATE.tscn" type="PackedScene" id=21]
+[ext_resource path="res://language/LanguageScaler.tscn" type="PackedScene" id=22]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.333333, 0.715847 )
@@ -1056,7 +1057,6 @@ position = Vector2( -10, 130 )
 rotation = -0.00209582
 scale = Vector2( 0.86198, 0.86198 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 
 [node name="Tip01_TODO!" type="Label" parent="MenuScaler/Tips/Tips4"]
@@ -1176,6 +1176,8 @@ __meta__ = {
 
 [node name="TRANSLATE" parent="MenuScaler/Tips/Tips4/Prev/PressA" instance=ExtResource( 21 )]
 term_key = "a_or"
+
+[node name="LanguageScaler" parent="." instance=ExtResource( 22 )]
 
 [connection signal="pressed" from="MenuScaler/GoBack" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="MenuScaler/Tips/Tips1/Next2/NextBtn" to="." method="_on_next_tip"]

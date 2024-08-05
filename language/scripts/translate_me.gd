@@ -12,7 +12,7 @@ func _on_language_changed():
 
 func _update_term_by_key():
 	if term_key.empty():
-		push_error("EMPTY TERM KEY ON TODO:")
+		push_error("EMPTY TERM KEY ON '%s/%s'" % [ self.get_parent().name, self.name ])
 		return
 	# sanity check for empty term
 

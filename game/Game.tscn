@@ -36,6 +36,7 @@ glow_intensity = 3.69
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 1.871, 3.493, 2.888 )
 environment = SubResource( 1 )
+current = true
 fov = 60.0
 size = 2.0
 script = ExtResource( 7 )
