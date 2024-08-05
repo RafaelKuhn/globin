@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://menus/sprites/GOBLIN-RUNNER-PNG.png" type="Texture" id=1]
 [ext_resource path="res://menus/sprites/BTN2.png" type="Texture" id=2]
@@ -7,7 +7,9 @@
 [ext_resource path="res://menus/menu.gd" type="Script" id=5]
 [ext_resource path="res://game-parts/made-by/MadeByScaler.tscn" type="PackedScene" id=6]
 [ext_resource path="res://language/LanguageScaler.tscn" type="PackedScene" id=7]
+[ext_resource path="res://game-parts/made-by/made_in_gd.gd" type="Script" id=8]
 [ext_resource path="res://custom-ui/scaler.gd" type="Script" id=10]
+[ext_resource path="res://godot.png" type="Texture" id=11]
 [ext_resource path="res://language/TRANSLATE.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Gradient" id=1]
@@ -196,7 +198,79 @@ term_key = "press_h"
 
 [node name="MadeByScaler" parent="." instance=ExtResource( 6 )]
 
+[node name="MadeInGodotScaler" type="Control" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadeInGodot" type="Control" parent="MadeInGodotScaler"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadeIn3" type="Label" parent="MadeInGodotScaler/MadeInGodot"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = -216.0
+margin_right = 867.0
+margin_bottom = -131.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.245927, 0.245927 )
+custom_fonts/font = ExtResource( 3 )
+text = "Feito em:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TRANSLATE" parent="MadeInGodotScaler/MadeInGodot/MadeIn3" instance=ExtResource( 14 )]
+term_key = "made_in"
+
+[node name="OrPress3" type="Label" parent="MadeInGodotScaler/MadeInGodot"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 25.0
+margin_top = -25.0
+margin_right = 1025.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.15, 0.15 )
+custom_fonts/font = ExtResource( 3 )
+text = "GODOT 3"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GodotBtn" type="TextureButton" parent="MadeInGodotScaler/MadeInGodot"]
+margin_left = 7.0
+margin_top = -203.0
+margin_right = 167.0
+margin_bottom = -43.0
+rect_scale = Vector2( 1.1649, 1.1649 )
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="LanguageScaler" parent="." instance=ExtResource( 7 )]
 
 [connection signal="pressed" from="MenuScaler/Menu/MenuItems/PlayBtn" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="MenuScaler/Menu/MenuItems/HowToPlayBtn" to="." method="_on_how_to_play_pressed"]
+[connection signal="mouse_entered" from="MadeInGodotScaler/MadeInGodot/GodotBtn" to="MadeInGodotScaler/MadeInGodot" method="_on_hover_godot_btn"]
+[connection signal="mouse_exited" from="MadeInGodotScaler/MadeInGodot/GodotBtn" to="MadeInGodotScaler/MadeInGodot" method="_on_hover_off_godot_btn"]
+[connection signal="pressed" from="MadeInGodotScaler/MadeInGodot/GodotBtn" to="MadeInGodotScaler/MadeInGodot" method="_on_click_godot_btn"]

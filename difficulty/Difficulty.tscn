@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
+[ext_resource path="res://language/LanguageScaler.tscn" type="PackedScene" id=1]
 [ext_resource path="res://custom-ui/scaler.gd" type="Script" id=2]
 [ext_resource path="res://difficulty/difficulty.gd" type="Script" id=3]
 [ext_resource path="res://language/TRANSLATE.tscn" type="PackedScene" id=4]
@@ -486,6 +487,8 @@ __meta__ = {
 
 [node name="TRANSLATE" parent="MenuScaler/PressB" instance=ExtResource( 4 )]
 term_key = "press_b"
+
+[node name="LanguageScaler" parent="." instance=ExtResource( 1 )]
 
 [connection signal="pressed" from="MenuScaler/SelectDiff/BabyBtn" to="MenuScaler/SelectDiff" method="_on_baby"]
 [connection signal="pressed" from="MenuScaler/SelectDiff/EasyBtn" to="MenuScaler/SelectDiff" method="_on_easy"]

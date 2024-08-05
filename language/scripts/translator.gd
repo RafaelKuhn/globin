@@ -138,7 +138,7 @@ var term_arr_by_key := {
 
 	# General
 	"go_back": [ "Go Back", "Voltar" ],
-	"press_b": [ "(press B)", "(pressione B)" ],
+	"press_b": [ "(press ESC)", "(pressione ESC)" ],
 	"playzao": [ "PLAY", "JOGAR" ],
 	"press_space": [ "(press SPACE or ENTER)", "(pressione SPACE ou ENTER)" ],
 	"difficulty": [ "Difficulty:", "Dificuldade:" ],
@@ -150,11 +150,13 @@ var term_arr_by_key := {
 	"the_demo": [ "- The Demo -", "- A Demo -" ],
 	"game_by": [ "Game By:", "Jogo:" ],
 	"art_by":  [ "Art By:", "Arte:" ],
+	"made_in": [ "Made In:", "Feito Em:" ],
 
 	"press_h": [ "(press H)", "(pressione H)" ],
 	"press_l": [ "(press L)", "(pressione L)" ],
 	"press_1": [ "(press 1)", "(pressione 1)" ],
 	"press_2": [ "(press 2)", "(pressione 2)" ],
+	"press_3": [ "(press 3)", "(pressione 3)" ],
 
 
 	# How To Play
