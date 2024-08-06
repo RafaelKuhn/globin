@@ -11,22 +11,10 @@ func _ready():
 	_initialize_end_game_terms()
 
 	if OS.is_debug_build():
-		_sanity()
+		# TODO: sanity, check if all terms have "language.count" items
+		pass
 
-	var url_lang = JavaScript.eval("new URL(window.location.href).searchParams.get('lang')")
-	if url_lang == null:
-		return
-
-	url_lang = url_lang.to_lower()
-	# print("LANG : '%s'" % url_lang)
-
-	match url_lang:
-		"en":
-			change_language(Language.EN)
-		"br" || "pt" || "pt-br":
-			change_language(Language.BR)
-		_:
-			print("unknown language: '%s' try 'en' or 'br'" % url_lang)
+	_try_updating_language_from_get_lang_params()
 
 
 func change_language(new_lang):
@@ -101,10 +89,21 @@ func _lang_to_index(lang) -> int:
 			push_error("UNHANDLED LANGUAGE %s" % lang)
 			return -1
 
+func _try_updating_language_from_get_lang_params():
+	var url_lang = JavaScript.eval("new URL(window.location.href).searchParams.get('lang')")
+	if url_lang == null:
+		return
 
-func _sanity():
-	# TODO: check if all terms have "language.count" items
-	pass
+	url_lang = url_lang.to_lower()
+	# print("LANG : '%s'" % url_lang)
+
+	if url_lang == "en":
+		change_language(Language.EN)
+	elif url_lang == "br" || url_lang == "pt" || url_lang == "pt-br":
+		change_language(Language.BR)
+	else:
+		print("unknown language: '%s' try 'en' or 'br'" % url_lang)
+
 
 func _initialize_end_game_terms():
 	for i in lost_hard_texts.size():
@@ -142,6 +141,8 @@ var term_arr_by_key := {
 	"playzao": [ "PLAY", "JOGAR" ],
 	"press_space": [ "(press SPACE or ENTER)", "(pressione SPACE ou ENTER)" ],
 	"difficulty": [ "Difficulty:", "Dificuldade:" ],
+	"unsupported_mobile": [ "Unsupported\non\nmobile\nbrowsers!", "Indisponível\nem\nnavegadores\nmobile!" ],
+	"ignore": [ "Ignore", "Ignorar" ],
 
 
 	# Menu

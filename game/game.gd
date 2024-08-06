@@ -15,28 +15,12 @@ const menu_scene = preload("res://MainMenu.tscn")
 #const difficulty_scene = preload("res://difficulty/Difficulty.tscn")
 
 
-# var times_lost = {
-# 	Difficulty.BABY: 0,
-# 	Difficulty.EASY: 0,
-# 	Difficulty.MEDI: 0,
-# 	Difficulty.HARD: 0,
-# }
-
-# var times_won = {
-# 	Difficulty.BABY: 0,
-# 	Difficulty.EASY: 0,
-# 	Difficulty.MEDI: 0,
-# 	Difficulty.HARD: 0,
-# }
-
-
 var game_speed = Global.EASY_GAME_SPEED
 var game_difficulty = Difficulty.EASY
 
 
 var times_lost_in_same_diff_in_a_row := 0
 var last_lost_difficulty = null
-
 
 var collective_hp_lost := 0
 
@@ -57,6 +41,10 @@ func _ready():
 	current_scene = root.get_child(root.get_child_count() - 1)
 
 
+func open_unsupported_scene():
+	call_deferred("_deferred_goto_scene", load("res://menus/unsupported/Unsupported.tscn"))
+
+
 func lose_game():
 	var same_difficulty = last_lost_difficulty == game_difficulty
 	if same_difficulty:
@@ -73,6 +61,7 @@ func win_game():
 	times_lost_in_same_diff_in_a_row = 0
 	# print("times won: %s" % times_won)
 	_load_won_scene()
+
 
 func open_how_to_scene():
 	var scene = ResourceLoader.load("res://game-parts/how-to-play/HowToPlay.tscn")

@@ -43,6 +43,7 @@ config/windows_native_icon="Globin"
 Global="*res://game/global.gd"
 Game="*res://game/game.gd"
 Translator="*res://language/scripts/translator.gd"
+AfterGameLoads="*res://game/after_game_loads.gd"
 
 [display]
 

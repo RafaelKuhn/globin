@@ -12,12 +12,12 @@
 [ext_resource path="res://godot.png" type="Texture" id=11]
 [ext_resource path="res://language/TRANSLATE.tscn" type="PackedScene" id=14]
 
-[sub_resource type="Gradient" id=1]
+[sub_resource type="Gradient" id=3]
 offsets = PoolRealArray( 0, 0.333333, 0.715847 )
 colors = PoolColorArray( 0.109804, 0.215686, 0.0156863, 1, 0.377738, 0.399817, 0.0640796, 1, 0.631373, 0.572549, 0.109804, 1 )
 
 [sub_resource type="GradientTexture" id=2]
-gradient = SubResource( 1 )
+gradient = SubResource( 3 )
 width = 512
 
 [node name="MainMenu" type="Control"]
@@ -44,6 +44,9 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_vertical = 0
 script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="GoblinRunner" type="TextureRect" parent="MenuScaler"]
 anchor_left = 0.5

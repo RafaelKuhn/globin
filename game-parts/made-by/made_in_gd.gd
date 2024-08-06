@@ -1,9 +1,9 @@
 extends Control
 
 
-func _input(_evt):
-	if Input.is_action_just_pressed("ui_3"):
-		_on_click_godot_btn()
+# func _input(_evt):
+# 	if Input.is_action_just_pressed("ui_3"):
+# 		_on_click_godot_btn()
 
 
 func _on_click_godot_btn():
